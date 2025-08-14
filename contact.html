@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Patrick Adegbesan | Web Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for professional icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <header class="order-header">
+        <h1>Get In Touch</h1>
+        <p>Let's discuss your next project</p>
+    </header>
+    
+    <nav>
+        <div class="nav-header">
+            <div class="nav-left">
+                <div class="logo">Patrick Adegbesan</div>
+                <img src="img/profile_pic.jpg" alt="Patrick Adegbesan" class="nav-profile-pic">
+            </div>
+            <div class="nav-center">
+                <div class="nav-menu">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="work.html">Work</a>
+                    <a href="contact.html" class="active">Contact</a>
+                </div>
+            </div>
+            <div class="nav-right">
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <section id="contact">
+        <div class="container">
+            <h2>Let's Build Something Amazing Together</h2>
+            <p>Have a project in mind? I'm always excited to collaborate on new ideas and help bring your vision to life. 
+               Whether you need a complete website, a web application, or just want to discuss your next digital project, 
+               I'd love to hear from you!</p>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> <a href="mailto:adegbesanpatrick14@gmail.com">adegbesanpatrick14@gmail.com</a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+2349054448465">+234 905 444 8465</a></p>
+                <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/patrick-adegbesan-708631346/" target="_blank">patrick-adegbesan</a></p>
+                <p><i class="fab fa-github"></i> <a href="https://github.com/patrickAdegbesan" target="_blank">patrick-adegbesan</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</p>
+            </div>
+            
+            <div class="contact-form-section">
+                <h3>Send me a message</h3>
+                <form class="contact-form" id="contact-form" novalidate>
+                    <div class="form-group">
+                        <input type="text" id="name" name="from_name" placeholder="Your Name" required minlength="2" maxlength="50">
+                        <label for="name">Name</label>
+                        <span class="error-message" id="name-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="from_email" placeholder="Your Email" required>
+                        <label for="email">Email</label>
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required minlength="5" maxlength="100">
+                        <label for="subject">Subject</label>
+                        <span class="error-message" id="subject-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="6" required minlength="10" maxlength="1000"></textarea>
+                        <label for="message">Message</label>
+                        <span class="error-message" id="message-error"></span>
+                        <span class="char-count">0/1000</span>
+                    </div>
+                    
+                    <!-- Honeypot field for spam protection -->
+                    <input type="text" name="honeypot" id="honeypot" style="display: none;" tabindex="-1" autocomplete="off">
+                    
+                    <!-- reCAPTCHA would go here in production -->
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="privacy" name="privacy" required>
+                        <label for="privacy" class="checkbox-label">
+                            I agree to the <a href="#" target="_blank">Privacy Policy</a> and consent to my data being processed for this inquiry.
+                        </label>
+                        <span class="error-message" id="privacy-error"></span>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary" id="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+            
+            <p style="margin-top: 2rem; font-style: italic;">
+                "Ready to turn your ideas into reality? Let's start the conversation!"
+            </p>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="mailto:adegbesanpatrick14@gmail.com" aria-label="Email Patrick Adegbesan">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://wa.me/2349054448465" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Patrick Adegbesan">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/patrick-adegbesan-708631346/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Patrick Adegbesan">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/patrickAdegbesan" target="_blank" rel="noopener noreferrer" aria-label="GitHub Patrick Adegbesan">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <p>&copy; 2024 Patrick Adegbesan. All rights reserved. | Built with passion and lots of coffee ☕</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // EmailJS Configuration
+        // Replace these with your actual EmailJS credentials
+        const EMAIL_CONFIG = {
+            publicKey: 'y3OD9xEoEyc4YHO0s', // Replace with your EmailJS public key
+            serviceID: 'service_dcjtj6p', // Replace with your EmailJS service ID
+            templateID: 'template_ricqxza' // Replace with your EmailJS template ID
+        };
+
+        // Initialize EmailJS
+        emailjs.init(EMAIL_CONFIG.publicKey);
+        
+        // Form validation patterns
+        const VALIDATION_PATTERNS = {
+            email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+            name: /^[a-zA-Z\s]{2,50}$/,
+            subject: /^.{5,100}$/,
+            message: /^[\s\S]{10,1000}$/
+        };
+
+        // Form elements
+        const form = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const messageTextarea = document.getElementById('message');
+        const charCount = document.querySelector('.char-count');
+
+        // Validation functions
+        function validateField(field) {
+            const value = field.value.trim();
+            const fieldName = field.name;
+            const errorElement = document.getElementById(`${field.id}-error`);
+            let isValid = true;
+            let errorMessage = '';
+
+            // Reset previous state
+            field.classList.remove('error', 'success');
+            field.parentElement.classList.remove('has-error', 'has-success');
+            
+            // Check if field is empty
+            if (!value && field.hasAttribute('required')) {
+                errorMessage = `${getFieldDisplayName(fieldName)} is required.`;
+                isValid = false;
+            } else if (value) {
+                // Validate based on field type
+                switch (fieldName) {
+                    case 'from_name':
+                        if (!VALIDATION_PATTERNS.name.test(value)) {
+                            errorMessage = 'Name must be 2-50 characters and contain only letters and spaces.';
+                            isValid = false;
+                        }
+                        break;
+                    case 'from_email':
+                        if (!VALIDATION_PATTERNS.email.test(value)) {
+                            errorMessage = 'Please enter a valid email address.';
+                            isValid = false;
+                        }
+                        break;
+                    case 'subject':
+                        if (!VALIDATION_PATTERNS.subject.test(value)) {
+                            errorMessage = 'Subject must be 5-100 characters long.';
+                            isValid = false;
+                        }
+                        break;
+                    case 'message':
+                        if (!VALIDATION_PATTERNS.message.test(value)) {
+                            errorMessage = 'Message must be 10-1000 characters long.';
+                            isValid = false;
+                        }
+                        break;
+                    case 'privacy':
+                        if (!field.checked) {
+                            errorMessage = 'You must agree to the privacy policy.';
+                            isValid = false;
+                        }
+                        break;
+                }
+            }
+
+            // Check honeypot (spam protection)
+            if (fieldName === 'honeypot' && value) {
+                isValid = false;
+                // Don't show error message for honeypot
+            }
+
+            // Update UI based on validation result
+            if (errorElement) {
+                errorElement.textContent = errorMessage;
+                errorElement.classList.toggle('show', !isValid);
+            }
+
+            if (value || field.type === 'checkbox') {
+                field.classList.add(isValid ? 'success' : 'error');
+                field.parentElement.classList.add(isValid ? 'has-success' : 'has-error');
+            }
+
+            return isValid;
+        }
+
+        function validateForm() {
+            const fields = form.querySelectorAll('input, textarea');
+            let isFormValid = true;
+
+            fields.forEach(field => {
+                if (field.name !== 'honeypot') {
+                    const isFieldValid = validateField(field);
+                    if (!isFieldValid) isFormValid = false;
+                }
+            });
+
+            return isFormValid;
+        }
+
+        function getFieldDisplayName(fieldName) {
+            const displayNames = {
+                'from_name': 'Name',
+                'from_email': 'Email',
+                'subject': 'Subject',
+                'message': 'Message',
+                'privacy': 'Privacy agreement'
+            };
+            return displayNames[fieldName] || fieldName;
+        }
+
+        // Character counter for message
+        function updateCharCount() {
+            const currentLength = messageTextarea.value.length;
+            const maxLength = 1000;
+            charCount.textContent = `${currentLength}/${maxLength}`;
+            
+            charCount.classList.remove('warning', 'danger');
+            if (currentLength > maxLength * 0.8) {
+                charCount.classList.add('warning');
+            }
+            if (currentLength > maxLength * 0.95) {
+                charCount.classList.add('danger');
+            }
+        }
+
+        // Button state management
+        function setButtonState(state, message = '') {
+            submitBtn.classList.remove('loading', 'success', 'error');
+            submitBtn.disabled = false;
+            
+            switch (state) {
+                case 'loading':
+                    submitBtn.classList.add('loading');
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                    break;
+                case 'success':
+                    submitBtn.classList.add('success');
+                    submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                    break;
+                case 'error':
+                    submitBtn.classList.add('error');
+                    submitBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Failed to Send';
+                    break;
+                default:
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+            }
+        }
+
+        // Notification system
+        function showNotification(message, type = 'info', duration = 5000) {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.innerHTML = `
+                <i class="fas ${getNotificationIcon(type)}"></i>
+                <span>${message}</span>
+                <button onclick="this.parentElement.remove()" aria-label="Close notification">
+                    <i class="fas fa-times"></i>
+                </button>
+            `;
+            
+            // Add ARIA attributes for accessibility
+            notification.setAttribute('role', 'alert');
+            notification.setAttribute('aria-live', 'assertive');
+            
+            document.body.appendChild(notification);
+            
+            // Auto remove after duration
+            setTimeout(() => {
+                if (notification.parentElement) {
+                    notification.style.transform = 'translateX(400px)';
+                    setTimeout(() => notification.remove(), 300);
+                }
+            }, duration);
+        }
+
+        function getNotificationIcon(type) {
+            const icons = {
+                'success': 'fa-check-circle',
+                'error': 'fa-exclamation-triangle',
+                'warning': 'fa-exclamation-circle',
+                'info': 'fa-info-circle'
+            };
+            return icons[type] || icons['info'];
+        }
+
+        // Form submission handler
+        async function handleSubmit(e) {
+            e.preventDefault();
+            
+            // Validate form
+            if (!validateForm()) {
+                showNotification('Please fix the errors in the form before submitting.', 'error');
+                return;
+            }
+
+            // Check honeypot
+            if (document.getElementById('honeypot').value) {
+                showNotification('Spam detected. Submission blocked.', 'error');
+                return;
+            }
+
+            setButtonState('loading');
+
+            try {
+                // Send email using EmailJS
+                const result = await emailjs.sendForm(
+                    EMAIL_CONFIG.serviceID,
+                    EMAIL_CONFIG.templateID,
+                    form
+                );
+
+                console.log('Email sent successfully:', result);
+                
+                // Success handling
+                setButtonState('success');
+                showNotification(
+                    'Thank you! Your message has been sent successfully. I\'ll get back to you soon!',
+                    'success'
+                );
+                
+                // Reset form
+                form.reset();
+                updateCharCount();
+                
+                // Clear validation states
+                form.querySelectorAll('.error, .success').forEach(el => {
+                    el.classList.remove('error', 'success');
+                });
+                form.querySelectorAll('.has-error, .has-success').forEach(el => {
+                    el.classList.remove('has-error', 'has-success');
+                });
+                form.querySelectorAll('.error-message.show').forEach(el => {
+                    el.classList.remove('show');
+                });
+
+            } catch (error) {
+                console.error('Email sending failed:', error);
+                
+                setButtonState('error');
+                showNotification(
+                    'Sorry, there was an error sending your message. Please try again or contact me directly.',
+                    'error'
+                );
+            }
+
+            // Reset button after 3 seconds
+            setTimeout(() => {
+                setButtonState('default');
+            }, 3000);
+        }
+
+        // Event listeners
+        form.addEventListener('submit', handleSubmit);
+
+        // Real-time validation
+        form.querySelectorAll('input, textarea').forEach(field => {
+            if (field.name !== 'honeypot') {
+                field.addEventListener('blur', () => validateField(field));
+                field.addEventListener('input', () => {
+                    // Clear error state on input
+                    if (field.classList.contains('error')) {
+                        field.classList.remove('error');
+                        field.parentElement.classList.remove('has-error');
+                    }
+                });
+            }
+        });
+
+        // Character counter
+        messageTextarea.addEventListener('input', updateCharCount);
+
+        // Form focus handling for labels
+        form.querySelectorAll('.form-group input, .form-group textarea').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.classList.add('focused');
+            });
+            
+            input.addEventListener('blur', function() {
+                if (!this.value) {
+                    this.parentElement.classList.remove('focused');
+                }
+            });
+        });
+
+        // Initialize character counter
+        updateCharCount();
+
+        // Prevent form submission on Enter key in input fields (except textarea)
+        form.querySelectorAll('input').forEach(input => {
+            input.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    // Move to next field or submit if last field
+                    const fields = Array.from(form.querySelectorAll('input, textarea, button'));
+                    const currentIndex = fields.indexOf(this);
+                    const nextField = fields[currentIndex + 1];
+                    if (nextField) {
+                        nextField.focus();
+                    }
+                }
+            });
+        });
+    </script>
+    
+    <!-- Mobile Navigation Script -->
+    <script src="navigation.js"></script>
+</body>
+</html>
