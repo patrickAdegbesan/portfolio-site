@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick Adegbesan - Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .resume-container {
+            max-width: 800px;
+            margin: 3rem auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+            padding: 2.5rem 2rem;
+        }
+        .fixed-action-btn {
+            position: fixed;
+            z-index: 1000;
+        }
+        #back-home-btn {
+            top: 2rem;
+            left: 2rem;
+        }
+        #download-resume-btn {
+            bottom: 2rem;
+            right: 2rem;
+        }
+        @media (max-width: 600px) {
+            .fixed-action-btn {
+                position: static !important;
+                margin: 1rem 0 0 0;
+                box-shadow: none !important;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+            #back-home-btn {
+                top: auto !important;
+                left: auto !important;
+                margin-bottom: 1rem;
+            }
+            #download-resume-btn {
+                bottom: auto !important;
+                right: auto !important;
+                margin-bottom: 1rem;
+            }
+            .resume-container {
+                padding: 1rem 0.5rem;
+            }
+            .resume-header h1 {
+                font-size: 1.5rem;
+            }
+        }
+        .resume-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .resume-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .resume-header .resume-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            justify-content: center;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+        .resume-section {
+            margin-bottom: 2rem;
+        }
+        .resume-section h2 {
+            font-size: 1.3rem;
+            color: #0066ff;
+            margin-bottom: 0.7rem;
+        }
+        .resume-section ul {
+            margin: 0;
+            padding-left: 1.2rem;
+        }
+        .resume-section li {
+            margin-bottom: 0.5rem;
+        }
+        .resume-projects ul {
+            list-style: disc inside;
+        }
+        .resume-education ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .resume-education li {
+            margin-bottom: 0.5rem;
+        }
+        @media (max-width: 600px) {
+            .resume-container {
+                padding: 1rem 0.5rem;
+            }
+            .resume-header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="fixed-action-btn" id="back-home-btn">
+        <a href="index.html" class="btn-primary" style="display:inline-block;padding:0.7rem 1.5rem;background:#0066ff;color:#fff;font-weight:600;border-radius:8px;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <i class="fas fa-arrow-left" style="margin-right:8px;"></i> Back to Home
+        </a>
+    </div>
+    <div class="resume-container">
+        
+        <div class="resume-header">
+            <h1>Patrick Adegbesan</h1>
+            <div class="resume-links">
+                <span>📍 Lagos, Nigeria</span>
+                <span>✉️ <a href="mailto:adegbesanpatrick14@gmail.com">adegbesanpatrick14@gmail.com</a></span>
+                <span>🔗 <a href="https://www.linkedin.com/in/patrick-adegbesan-708631346/" target="_blank">LinkedIn</a></span>
+                <span>💻 <a href="https://github.com/patrickAdegbesan" target="_blank">GitHub</a></span>
+                <span>🌐 <a href="https://patrickadegbesan.github.io/portfolio-site/" target="_blank">Portfolio</a></span>
+            </div>
+        </div>
+        <div class="resume-section">
+            <h2>Profile</h2>
+            <p>Hands-on and detail-oriented developer with strong technical expertise in full-stack web development. Skilled in delivering responsive, user-friendly applications and solving real-world problems through modern technologies. Demonstrated ability to contribute effectively in collaborative projects and independent builds.</p>
+        </div>
+        <div class="resume-section">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> Python, JavaScript, TypeScript, HTML, CSS, C#</li>
+                <li><strong>Frameworks & Libraries:</strong> Django, React, Next.js, Node.js, Express, Redux, Tailwind CSS, Vue.js</li>
+                <li><strong>Tools & Practices:</strong> Git/GitHub, CI/CD, RESTful APIs, Django ORM & migrations, Agile workflows, responsive design, authentication (OAuth, JWT)</li>
+                <li><strong>Other:</strong> Database design (PostgreSQL, SQLite, MySQL), Redis caching, deployment (Vercel, Heroku, Docker basics)</li>
+            </ul>
+        </div>
+        <div class="resume-section">
+            <h2>Technical Experience</h2>
+            <ul>
+                <li><strong>Web Development Projects (2024 – Present):</strong>
+                    <ul>
+                        <li>Designed and deployed Django-powered applications (Cedarside Concept Limited, The Code Center, nova_store, property-portfolio) with migrations, templates, authentication, and clean UI.</li>
+                        <li>Built static and dynamic sites (landing pages, task apps, portfolio site) using HTML, CSS, and JavaScript.</li>
+                        <li>Created structured documentation (README & setup guides) to support project deployment and collaboration.</li>
+                        <li>Integrated APIs, managed relational databases, and applied responsive design principles for user-centric builds.</li>
+                    </ul>
+                </li>
+                <li><strong>Collaborative Development Experience (2024 – Present):</strong>
+                    <ul>
+                        <li>Contributed to small Agile teams, writing clean code, fixing bugs, and participating in reviews.</li>
+                        <li>Built reusable UI components in React/Tailwind and optimized frontend workflows.</li>
+                        <li>Applied version control (Git/GitHub) for collaboration and deployment.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="resume-section resume-projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Cedarside Concept Limited</strong> – Django app with responsive UI, authentication, and migration-based backend.</li>
+                <li><strong>The Code Center</strong> – Django app leveraging JSON for content and data handling.</li>
+                <li><strong>nova_store</strong> – Prototype e-commerce site using Django backend.</li>
+                <li><strong>task management</strong> – JavaScript-powered task app with dynamic updates.</li>
+                <li><strong>portfolio site</strong> – Personal showcase site with projects and contact integration.</li>
+            </ul>
+            <p>(Full list at: <a href="https://patrickadegbesan.github.io/portfolio-site/" target="_blank">Portfolio</a>)</p>
+        </div>
+        <div class="resume-section resume-education">
+            <h2>Education</h2>
+            <ul>
+                <li>Kings College, Lagos – Secondary School Certificate</li>
+                <li>Cale University Secondary School – High School Diploma</li>
+            </ul>
+        </div>
+    </div>
+    <div class="fixed-action-btn" id="download-resume-btn">
+        <a href="asset/resume.pdf" download class="btn-primary" style="display:inline-block;padding:0.7rem 1.5rem;background:#0066ff;color:#fff;font-weight:600;border-radius:8px;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+            <i class="fas fa-download" style="margin-right:8px;"></i> Download Resume
+        </a>
+    </div>
+</body>
+</html>
