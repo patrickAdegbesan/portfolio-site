@@ -102,6 +102,49 @@
                 font-size: 1.5rem;
             }
         }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+        }
+
+        .certification-card {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            background: #fff;
+        }
+
+        .certification-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .certification-caption {
+            padding: 0.75rem 0.9rem;
+            font-size: 0.95rem;
+            color: #222;
+        }
+
+        @media print {
+            body {
+                background: #fff !important;
+            }
+            .fixed-action-btn {
+                display: none !important;
+            }
+            .resume-container {
+                margin: 0 !important;
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                padding: 0 !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -114,6 +157,7 @@
         
         <div class="resume-header">
             <h1>Patrick Adegbesan</h1>
+            <p style="margin:0.25rem 0 0.75rem 0;font-size:1.05rem;font-weight:600;color:#222;">Full-Stack Developer | React | Node.js/Express | Python | SQL | AI Integration</p>
             <div class="resume-links">
                 <span>📍 Lagos, Nigeria</span>
                 <span>✉️ <a href="mailto:adegbesanpatrick14@gmail.com">adegbesanpatrick14@gmail.com</a></span>
@@ -124,7 +168,7 @@
         </div>
         <div class="resume-section">
             <h2>Professional Summary</h2>
-            <p>Full-stack developer with expertise in building responsive, user-centric applications using modern technologies. Strong background in Python, JavaScript, and framework-based development with hands-on experience in both frontend and backend systems. Proven ability to deliver end-to-end solutions from concept to deployment, with particular interest in AI integration and algorithmic trading systems. Effective collaborator in Agile environments with a focus on clean code and optimal user experiences.</p>
+            <p>Full-stack developer focused on building responsive web applications and production-ready APIs using React, Node.js/Express, and Python. Experienced delivering freelance client solutions end-to-end—from requirements and UX to deployment—plus AI-powered features using OpenAI, LangChain, and vector search (FAISS). Strong foundation in SQL/databases, API integration, and clean, maintainable code.</p>
         </div>
         <div class="resume-section">
             <h2>Technical Skills</h2>
@@ -133,7 +177,8 @@
                 <li><strong>Frontend:</strong> React, Next.js, Vue.js, Redux, Tailwind CSS, Vite, Responsive Design</li>
                 <li><strong>Backend:</strong> Node.js, Express, Django, RESTful APIs, Authentication (JWT, OAuth)</li>
                 <li><strong>Databases:</strong> PostgreSQL, MongoDB, MySQL, SQLite, Redis, Vector Embeddings</li>
-                <li><strong>AI & ML:</strong> OpenAI API, Vector Embeddings, AI Integration, Natural Language Processing</li>
+                <li><strong>Data Analytics:</strong> Data Cleaning, Exploratory Data Analysis (EDA), Data Visualization, Spreadsheets (Excel/Google Sheets), SQL</li>
+                <li><strong>AI & ML:</strong> OpenAI API, Vector Embeddings, LangChain, FAISS, PyPDF2, AI Integration, Natural Language Processing</li>
                 <li><strong>Tools & DevOps:</strong> Git/GitHub, CI/CD, Docker, Agile/Scrum, Vercel, Heroku, Netlify</li>
                 <li><strong>Specializations:</strong> Algorithmic Trading, MQL5, Financial APIs, Technical Analysis</li>
             </ul>
@@ -141,7 +186,7 @@
         <div class="resume-section">
             <h2>Technical Experience</h2>
             <ul>
-                <li><strong>AI-Powered Document Processing System (2024 – Present):</strong>
+                <li><strong>AI PDF Reader Bot (2024 – Present):</strong>
                     <ul>
                         <li>Engineered a Streamlit chatbot using LangChain and OpenAI GPT to process and analyze multiple PDF documents</li>
                         <li>Implemented vector embeddings with FAISS for efficient semantic search and document retrieval</li>
@@ -149,7 +194,7 @@
                         <li>Integrated PyPDF2 for text extraction and created a responsive UI for seamless document interactions</li>
                     </ul>
                 </li>
-                <li><strong>Autonomous Algorithmic Trading Platform (2024 – Present):</strong>
+                <li><strong>Autonomous Crypto Trading Agent (2024 – Present):</strong>
                     <ul>
                         <li>Developed a self-improving crypto trading agent using reinforcement learning and real-time market data</li>
                         <li>Integrated multiple cryptocurrency exchanges via APIs for live trading and portfolio management</li>
@@ -157,46 +202,61 @@
                         <li>Built backtesting framework to validate trading strategies against historical market data</li>
                     </ul>
                 </li>
-                <li><strong>Full-Stack Inventory & POS System (2024 – Present):</strong>
+                <li><strong>F&amp;F Inventory Management System — Fortune et Feveur (Inventory &amp; POS) (2024 – Present):</strong>
                     <ul>
-                        <li>Built cross-platform desktop application using Electron with React frontend and Node.js backend</li>
-                        <li>Implemented real-time inventory tracking, sales processing, and comprehensive reporting dashboard</li>
-                        <li>Designed relational database schema for products, customers, sales, and inventory management</li>
-                        <li>Created responsive UI components with modern CSS and integrated receipt printing functionality</li>
+                        <li>Built the F&amp;F Inventory Management System for Fortune et Feveur (tiling company), delivering both the company website and an internal inventory &amp; POS solution</li>
+                        <li>Developed a cross-platform desktop application using Electron with a React frontend and Node.js backend</li>
+                        <li>Implemented inventory tracking, sales processing, and reporting to support day-to-day operations</li>
+                        <li>Designed a relational database schema for products, customers, sales, and inventory management</li>
+                        <li>Created responsive UI components and integrated receipt printing for POS workflows</li>
+                        <li>Delivered and deployed the public-facing company website: <a href="https://www.fortuneetfeveur.com/" target="_blank" rel="noopener">www.fortuneetfeveur.com</a></li>
                     </ul>
                 </li>
-                <li><strong>Full-Stack Web Applications (2024 – Present):</strong>
+                <li><strong>Event Management &amp; Service Booking Platform — Palmwine Merchants (2024 – Present):</strong>
                     <ul>
-                        <li>Developed Django-powered applications with PostgreSQL, authentication systems, and RESTful APIs</li>
-                        <li>Built responsive frontends using React, Tailwind CSS, and modern JavaScript frameworks</li>
-                        <li>Implemented CI/CD pipelines using GitHub Actions for automated testing and deployment</li>
-                        <li>Deployed applications on cloud platforms including Render, Vercel, and Netlify</li>
+                        <li>Built an online booking platform for Palmwine Merchants to advertise products and promote events</li>
+                        <li>Implemented customer-facing flows for discovering events and purchasing tickets online</li>
+                        <li>Enabled event organization and ticket sales workflows to support recurring event operations</li>
+                        <li>Delivered a responsive, mobile-friendly UI aligned with brand presentation and conversion goals</li>
                     </ul>
                 </li>
-                <li><strong>Collaborative Development & Agile Workflows (2024 – Present):</strong>
+                <li><strong>Corporate Business Website — 301ATech (2024 – Present):</strong>
                     <ul>
-                        <li>Contributed to Agile development teams, participating in code reviews and iterative development cycles</li>
-                        <li>Developed reusable React components with Tailwind CSS for consistent and scalable UI systems</li>
-                        <li>Managed version control using Git/GitHub and implemented CI/CD pipelines for automated deployments</li>
-                        <li>Collaborated on full-stack features integrating frontend interfaces with backend APIs and databases</li>
+                        <li>Designed and developed the corporate website for 301ATech (software company) as a freelance engagement</li>
+                        <li>Implemented a responsive, modern layout with clear service positioning, navigation, and strong UX</li>
+                        <li>Delivered production-ready pages and content structure for company overview, services, and contact</li>
+                        <li>Published and maintained the live site: <a href="https://www.301atech.com/" target="_blank" rel="noopener">www.301atech.com</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
         <p class="portfolio-reference"><em>Detailed project portfolio with live demonstrations available at:
     <a href="https://patrickadegbesan.github.io/portfolio-site/" rel="noopener">patrickadegbesan.github.io/portfolio-site</a></em></p>
+        <div class="resume-section">
+            <h2>Certifications</h2>
+            <div class="certifications-grid">
+                <a class="certification-card" href="asset/Adegbesan%20Patrick%20Oluwaseun.pdf" target="_blank" rel="noopener">
+                    <img src="img/Screenshot%202026-01-13%20143832.png" alt="Cisco Networking Academy - Data Analytics Essentials certificate" loading="lazy">
+                    <div class="certification-caption">Cisco Networking Academy — Data Analytics Essentials (Issued: May 6, 2025)</div>
+                </a>
+                <a class="certification-card" href="asset/Adegbesan%20Patrick%20O%20(1).pdf" target="_blank" rel="noopener">
+                    <img src="img/Screenshot%202026-01-13%20143807.png" alt="The Code Center - AI & Software Development certificate" loading="lazy">
+                    <div class="certification-caption">The Code Center — AI &amp; Software Development (Issued: Nov 25, 2025)</div>
+                </a>
+            </div>
+        </div>
         <div class="resume-section resume-education">
             <h2>Education</h2>
             <ul>
-                <li>Kings College, Lagos – Secondary School Certificate</li>
-                <li>Cale University Secondary School – High School Diploma</li>
+                <li>King’s College, Lagos — Secondary Education (Sep 2016 – Jun 2026, Expected)</li>
+                <li>Kileb University — Undergraduate (2022 – Present, Expected Graduation: 2026)</li>
             </ul>
         </div>
     </div>
     <div class="fixed-action-btn" id="download-resume-btn">
-        <a href="asset/resume.pdf" download class="btn-primary" style="display:inline-block;padding:0.7rem 1.5rem;background:#0066ff;color:#fff;font-weight:600;border-radius:8px;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+        <button type="button" class="btn-primary" onclick="window.print()" style="display:inline-block;padding:0.7rem 1.5rem;background:#0066ff;color:#fff;font-weight:600;border-radius:8px;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,0.08);border:none;cursor:pointer;">
             <i class="fas fa-download" style="margin-right:8px;"></i> Download Resume
-        </a>
+        </button>
     </div>
 </body>
 </html>

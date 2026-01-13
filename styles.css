@@ -1691,3 +1691,110 @@ h2,
         padding: 1.5rem 1rem;
     }
 }
+
+.card-video-bg[role="button"] {
+    cursor: pointer;
+}
+
+.card-video-bg[role="button"]:focus-visible {
+    outline: 3px solid rgba(0, 102, 255, 0.7);
+    outline-offset: 3px;
+}
+
+.video-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+}
+
+.video-modal.is-open {
+    display: block;
+}
+
+.video-modal__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(2px);
+}
+
+.video-modal__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(1000px, calc(100vw - 2rem));
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    padding: 1rem;
+}
+
+.video-modal__close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-modal__close:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.video-modal__title {
+    margin: 0.25rem 2.75rem 0.75rem 0.25rem;
+    font-size: 1.1rem;
+    color: #111;
+}
+
+.video-modal__player {
+    width: 100%;
+    max-height: min(70vh, 620px);
+    border-radius: 12px;
+    background: #000;
+}
+
+.video-modal__player video {
+    width: 100%;
+    height: auto;
+    max-height: min(70vh, 620px);
+    border-radius: 12px;
+    display: block;
+    background: #000;
+}
+
+.video-modal__message {
+    margin: 0.75rem 0.25rem 0.25rem 0.25rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+.video-modal__message a {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.project-private-note {
+    margin: 0.75rem 0 0.9rem 0;
+    padding: 0.6rem 0.75rem;
+    border-radius: 10px;
+    background: rgba(0, 102, 255, 0.08);
+    color: #0b2a62;
+    font-size: 0.95rem;
+    line-height: 1.45;
+}
+
+.project-private-note a {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-decoration: underline;
+}
