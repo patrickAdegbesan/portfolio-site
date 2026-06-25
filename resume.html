@@ -145,6 +145,46 @@
                 padding: 0 !important;
             }
         }
+
+        /* ── Override dark-theme globals for the white resume ── */
+        body::before { display: none; }
+
+        body {
+            background: #f4f6f9;
+            color: #1a1a1a;
+        }
+
+        .resume-container,
+        .resume-container h1,
+        .resume-container h2,
+        .resume-container h3,
+        .resume-container p,
+        .resume-container li,
+        .resume-container span,
+        .resume-container strong {
+            color: #1a1a1a;
+        }
+
+        .resume-section h2 {
+            color: #0066ff !important;
+        }
+
+        .resume-container a {
+            color: #0066ff;
+            text-decoration: none;
+        }
+
+        .resume-container a:hover {
+            text-decoration: underline;
+        }
+
+        .resume-links span {
+            color: #444;
+        }
+
+        .certification-caption {
+            color: #333;
+        }
     </style>
 </head>
 <body>

@@ -3,29 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patrick Adegbesan | Full-Stack Developer Portfolio</title>
+    <title>Patrick Adegbesan | Full-Stack Developer</title>
+    <script>(function(){var t=localStorage.getItem('theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');})();</script>
     <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome for professional icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 </head>
 <body>
-    <header class="home-header" >
-        <div class="profile-text">
-            <h1>Hi, I'm Patrick Adegbesan</h1>
-            <p>Welcome to my portfolio</p>
-            <p>Transforming ideas into websites and code into real-world solutions</p>
-        </div>
-        <picture class="profile-pic-wrapper">
-            
-            <img src="img/profile_pic.jpg" alt="Photo of Patrick Adegbesan" loading="lazy" class="profile-pic">
-        </picture>
-    </header>
-    
+
     <nav>
         <div class="nav-header">
             <div class="nav-left">
-                <div class="logo">Patrick Adegbesan</div>
-                <img src="img/profile_pic.jpg" alt="Patrick Adegbesan" class="nav-profile-pic">
+                <a href="index.html" class="logo">Mr-Path<span class="accent">.</span></a>
             </div>
             <div class="nav-center">
                 <div class="nav-menu">
@@ -36,6 +26,11 @@
                 </div>
             </div>
             <div class="nav-right">
+                <a href="contact.html" class="nav-cta">Hire Me</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+                    <i class="fas fa-sun  icon-sun"></i>
+                    <i class="fas fa-moon icon-moon"></i>
+                </button>
                 <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
                     <span></span>
                     <span></span>
@@ -44,53 +39,245 @@
             </div>
         </div>
     </nav>
-    
-    <section id="home-intro">
-        <div class="container">
-            <h2>Welcome to My Digital World</h2>
-            <p>
-                I'm Patrick Adegbesan, a passionate full-stack developer from Lagos, Nigeria. 
-                I create modern, responsive websites that bring your ideas to life through clean code and innovative design.
-            </p>
-            <div class="cta-buttons">
-                <a href="work.html" class="btn-primary">View My Work</a>
-                <a href="contact.html" class="btn-secondary">Get In Touch</a>
+
+    <main>
+
+        <!-- ===== HERO ===== -->
+        <section class="hero-section">
+            <div class="hero">
+                <div class="hero-content">
+                    <span class="hero-badge">Available for work</span>
+                    <h1 class="hero-name">
+                        <span class="reveal-word"><span>Patrick</span></span><br>
+                        <span class="reveal-word"><span class="accent">Adegbesan</span></span>
+                    </h1>
+                    <p class="hero-tagline">Full-stack developer — I build web products that ship.</p>
+                    <p class="hero-sub">
+                        From AI-powered apps to business systems, I help startups and clients
+                        turn ideas into fast, production-ready software.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="work.html" class="btn-primary">
+                            <i class="fas fa-briefcase"></i> See My Work
+                        </a>
+                        <a href="contact.html" class="btn-outline">
+                            Let's Talk
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <span class="hero-stat-num" data-count="10" data-suffix="+">10+</span>
+                            <span class="hero-stat-label">Projects</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-num">AI</span>
+                            <span class="hero-stat-label">Integrated</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-num">Full</span>
+                            <span class="hero-stat-label">Stack</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-photo-wrap">
+                        <img src="img/1.png" alt="Patrick Adegbesan" class="hero-photo">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== MARQUEE STRIP ===== -->
+        <div class="marquee-strip" aria-hidden="true">
+            <div class="marquee-track">
+                <span class="marquee-item">Available for Work</span>
+                <span class="marquee-sep">·</span>
+                <span class="marquee-item">Full-Stack Developer</span>
+                <span class="marquee-sep">·</span>
+                <span class="marquee-item">AI Integration</span>
+                <span class="marquee-sep">·</span>
+                <span class="marquee-item">Lagos, Nigeria</span>
+                <span class="marquee-sep">·</span>
+                <span class="marquee-item">React &amp; Node.js</span>
+                <span class="marquee-sep">·</span>
+                <span class="marquee-item">Open to Freelance</span>
+                <span class="marquee-sep">·</span>
+                <span class="marquee-item">Python &amp; OpenAI</span>
+                <span class="marquee-sep">·</span>
+                <span class="marquee-item">Let's Build Together</span>
+                <span class="marquee-sep">·</span>
+                <!-- Duplicate for seamless loop -->
+                <span class="marquee-item">Available for Work</span>
+                <span class="marquee-sep">·</span>
+                <span class="marquee-item">Full-Stack Developer</span>
+                <span class="marquee-sep">·</span>
+                <span class="marquee-item">AI Integration</span>
+                <span class="marquee-sep">·</span>
+                <span class="marquee-item">Lagos, Nigeria</span>
+                <span class="marquee-sep">·</span>
+                <span class="marquee-item">React &amp; Node.js</span>
+                <span class="marquee-sep">·</span>
+                <span class="marquee-item">Open to Freelance</span>
+                <span class="marquee-sep">·</span>
+                <span class="marquee-item">Python &amp; OpenAI</span>
+                <span class="marquee-sep">·</span>
+                <span class="marquee-item">Let's Build Together</span>
+                <span class="marquee-sep">·</span>
             </div>
         </div>
-    </section>
-    <!-- Resume Download Section -->
-    <section id="resume">
-        <div class="container">
-            <h2>View My Resume</h2>
-            <p>Want a quick overview of my experience and skills? Click below to view my professional CV.</p>
-            <a href="resume.html" class="btn-primary">
-                <i class="fas fa-file-alt"></i> View Resume
-            </a>
+
+        <!-- ===== FEATURED WORK ===== -->
+        <section class="featured-work">
+            <div class="container">
+                <div class="featured-work-header">
+                    <div>
+                        <span class="section-label">Selected Work</span>
+                        <h2 class="section-title">Things I've built</h2>
+                    </div>
+                    <a href="work.html" class="btn-outline">View All &rarr;</a>
+                </div>
+                <div class="featured-grid">
+
+                    <div class="project-card-static">
+                        <div class="project-thumb project-thumb-1 card-video-bg" role="button" tabindex="0">
+                            <video class="card-bg-video" autoplay muted loop playsinline>
+                                <source src="img/fand%20f.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="project-content">
+                            <h3>F&amp;F Inventory Management System</h3>
+                            <p>Electron desktop app with React + Node.js for inventory tracking, POS, and receipt printing — built for a real tiling company.</p>
+                            <div class="project-links">
+                                <a href="https://www.fortuneetfeveur.com/" class="btn-primary" target="_blank" rel="noopener">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/patrickAdegbesan/fortunetiles-system" class="btn-secondary" target="_blank" rel="noopener">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card-static">
+                        <div class="project-thumb project-thumb-2 card-video-bg" role="button" tabindex="0">
+                            <video class="card-bg-video" autoplay muted loop playsinline>
+                                <source src="img/Recording%202026-01-13%20084215.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="project-content">
+                            <h3>301ATech Corporate Website</h3>
+                            <p>Modern, responsive corporate site for a software company — clear service positioning and production-ready deployment.</p>
+                            <div class="project-links">
+                                <a href="https://www.301atech.com/" class="btn-primary" target="_blank" rel="noopener">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/patrickAdegbesan" class="btn-secondary" target="_blank" rel="noopener">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card-static">
+                        <div class="project-thumb project-thumb-3 card-video-bg" role="button" tabindex="0">
+                            <video class="card-bg-video" autoplay muted loop playsinline>
+                                <source src="img/prfreader.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="project-content">
+                            <h3>AI PDF Reader Bot</h3>
+                            <p>Streamlit chatbot that lets you have conversations with multiple PDFs — powered by LangChain, OpenAI, and FAISS vector search.</p>
+                            <div class="project-links">
+                                <a href="work.html" class="btn-primary">
+                                    <i class="fas fa-play"></i> Watch Demo
+                                </a>
+                                <a href="https://github.com/patrickAdegbesan/PDF_READER" class="btn-secondary" target="_blank" rel="noopener">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SERVICES ===== -->
+        <section>
+            <div class="container">
+                <span class="section-label">Services</span>
+                <h2 class="section-title">What I build</h2>
+                <p class="section-subtitle">
+                    End-to-end software for the web — from first line of code to deployed, live product.
+                </p>
+                <div class="services-grid">
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>Full-Stack Web Apps</h3>
+                        <p>React frontends with Node.js or Python backends. Responsive, fast, and built to scale — from MVP to production.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>AI Integration</h3>
+                        <p>Embedding OpenAI, LangChain, and vector search into real products — chatbots, document analysis, and intelligent automation.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3>Business Systems</h3>
+                        <p>Custom desktop and web tools — POS systems, inventory management, dashboards, and booking platforms.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="video-modal" aria-hidden="true">
+        <div class="video-modal__overlay" data-video-modal-close></div>
+        <div class="video-modal__content" role="dialog" aria-modal="true" aria-labelledby="video-modal-title">
+            <button type="button" class="video-modal__close" data-video-modal-close aria-label="Close video">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3 class="video-modal__title" id="video-modal-title"></h3>
+            <div class="video-modal__player" id="video-modal-player" aria-label="Video preview"></div>
+            <p class="video-modal__message" id="video-modal-message"></p>
         </div>
-    </section>
+    </div>
+
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-links">
-                    <a href="mailto:adegbesanpatrick14@gmail.com" aria-label="Email Patrick Adegbesan">
+                    <a href="mailto:adegbesanpatrick14@gmail.com" aria-label="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
-                    <a href="https://wa.me/2349054448465" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Patrick Adegbesan">
+                    <a href="https://wa.me/2349054448465" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/patrick-adegbesan-708631346/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Patrick Adegbesan">
+                    <a href="https://www.linkedin.com/in/patrick-adegbesan-708631346/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://github.com/patrickAdegbesan" target="_blank" rel="noopener noreferrer" aria-label="GitHub Patrick Adegbesan">
+                    <a href="https://github.com/patrickAdegbesan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
                 </div>
-                <p>&copy; 2024 Patrick Adegbesan. All rights reserved. | Built with passion and lots of coffee ☕</p>
+                <p>&copy; 2026 Mr-Path &mdash; Built with clean code and good taste.</p>
             </div>
         </div>
     </footer>
-    
-    <!-- Mobile Navigation Script -->
+
     <script src="navigation.js"></script>
+    <script src="scroll-animations.js"></script>
 </body>
 </html>

@@ -3,38 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work - Patrick Adegbesan | Full-Stack Developer Portfolio</title>
+    <title>Work — Patrick Adegbesan</title>
+    <script>(function(){var t=localStorage.getItem('theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');})();</script>
     <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome for professional icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 </head>
 <body>
-    <!-- Background Video -->
-    <video id="bg-video" autoplay muted loop playsinline poster="img/demo-thumb.jpg">
-      <source src="img/demo-video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
 
-    <header class="order-header">
-        <h1>My Work</h1>
-        <p>Showcasing projects that turn ideas into reality</p>
-    </header>
-    
     <nav>
         <div class="nav-header">
             <div class="nav-left">
-                <div class="logo">Patrick Adegbesan</div>
-                <img src="img/profile_pic.jpg" alt="Patrick Adegbesan" class="nav-profile-pic">
+                <a href="index.html" class="logo">Mr-Path<span class="accent">.</span></a>
             </div>
             <div class="nav-center">
                 <div class="nav-menu">
                     <a href="index.html">Home</a>
                     <a href="about.html">About</a>
-                    <a href="work.html">Work</a>
+                    <a href="work.html" class="active">Work</a>
                     <a href="contact.html">Contact</a>
                 </div>
             </div>
             <div class="nav-right">
+                <a href="contact.html" class="nav-cta">Hire Me</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+                    <i class="fas fa-sun  icon-sun"></i>
+                    <i class="fas fa-moon icon-moon"></i>
+                </button>
                 <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
                     <span></span>
                     <span></span>
@@ -43,175 +39,190 @@
             </div>
         </div>
     </nav>
-    
-    <section id="projects">
-        <div class="container">
-            <h2>My Projects</h2>
-            <div class="projects">
-                <div class="project-card">
-                                        <div class="project-image card-video-bg" role="button" tabindex="0">
-                                                <video class="card-bg-video" autoplay muted loop playsinline poster="img/demo-thumb.jpg">
-                                                    <source src="img/prfreader.mp4" type="video/mp4">
-                                                    Your browser does not support the video tag.
-                                                </video>
-                                        </div>
-                    <div class="project-content">
-                        <h3>AI PDF Reader Bot</h3>
-                        <p>A Streamlit-based chatbot that enables interactive conversations with multiple PDF documents. It extracts text with PyPDF2, chunks and embeds content, and uses LangChain + OpenAI with FAISS-powered retrieval to answer questions about document content.</p> 
-                        <div class="project-links">
-                            <a href="#" class="btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="https://github.com/patrickAdegbesan/PDF_READER" class="btn-secondary"><i class="fab fa-github"></i> Code</a>
+
+    <main>
+
+        <!-- Page header -->
+        <section class="page-hero">
+            <div class="container">
+                <span class="section-label">Work</span>
+                <h1 class="section-title">Products I've built</h1>
+                <p class="section-subtitle">Click any card to watch a demo video.</p>
+            </div>
+        </section>
+
+        <!-- Projects grid -->
+        <section>
+            <div class="container">
+                <div class="projects">
+
+                    <div class="project-card">
+                        <div class="project-image card-video-bg" role="button" tabindex="0">
+                            <video class="card-bg-video" autoplay muted loop playsinline>
+                                <source src="img/prfreader.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="project-content">
+                            <h3>AI PDF Reader Bot</h3>
+                            <p>Streamlit chatbot for interactive conversations with multiple PDFs. Extracts text with PyPDF2, embeds content, and uses LangChain + OpenAI with FAISS-powered retrieval.</p>
+                            <div class="project-links">
+                                <a href="#" class="btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="https://github.com/patrickAdegbesan/PDF_READER" class="btn-secondary"><i class="fab fa-github"></i> Code</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="project-card">
-                                        <div class="project-image card-video-bg" role="button" tabindex="0">
-                                                <video class="card-bg-video" autoplay muted loop playsinline poster="img/demo-thumb.jpg">
-                                                    <source src="img/trading_agent.mp4" type="video/mp4">
-                                                    Your browser does not support the video tag.
-                                                </video>
-                                        </div>
-                    <div class="project-content">
-                        <h3>Autonomous Crypto Trading Agent</h3>
-                        <p>The Autonomous Crypto Trading Agent is a self-improving algorithmic trading system designed for the cryptocurrency market. This project utilizes advanced machine learning techniques and real-time market data to execute trades autonomously, adapting to changing market conditions.</p> 
-                        <div class="project-links">
-                            <a href="#" class="btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="https://github.com/patrickAdegbesan/trading-agent" class="btn-secondary"><i class="fab fa-github"></i> Code</a>
+
+                    <div class="project-card">
+                        <div class="project-image card-video-bg" role="button" tabindex="0">
+                            <video class="card-bg-video" autoplay muted loop playsinline>
+                                <source src="img/trading_agent.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="project-content">
+                            <h3>Autonomous Crypto Trading Agent</h3>
+                            <p>Self-improving algorithmic trading system for the crypto market. Uses ML and real-time data to execute trades autonomously, adapting to changing market conditions.</p>
+                            <div class="project-links">
+                                <a href="#" class="btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="https://github.com/patrickAdegbesan/trading-agent" class="btn-secondary"><i class="fab fa-github"></i> Code</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="project-card">
-                                        <div class="project-image card-video-bg" role="button" tabindex="0">
-                                                <video class="card-bg-video" autoplay muted loop playsinline poster="img/demo-thumb.jpg">
-                                                    <source src="img/fand%20f.mp4" type="video/mp4">
-                                                    Your browser does not support the video tag.
-                                                </video>
-                                        </div>
-                    <div class="project-content">
-                        <h3>F&amp;F Inventory Management System</h3>
-                        <p>Inventory &amp; POS solution built for Fortune et Feveur (tiling company). Developed as a cross-platform Electron desktop app with a React frontend and Node.js backend, supporting inventory tracking, sales processing, reporting, and receipt printing.</p>
-                        <div class="project-links">
-                            <a href="https://www.fortuneetfeveur.com/" class="btn-primary" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="https://github.com/patrickAdegbesan/fortunetiles-system" class="btn-secondary"><i class="fab fa-github"></i> Code</a>
+
+                    <div class="project-card">
+                        <div class="project-image card-video-bg" role="button" tabindex="0">
+                            <video class="card-bg-video" autoplay muted loop playsinline>
+                                <source src="img/fand%20f.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="project-content">
+                            <h3>F&amp;F Inventory Management System</h3>
+                            <p>Inventory &amp; POS solution for Fortune et Feveur (tiling company). Cross-platform Electron app with React frontend and Node.js backend — inventory tracking, sales, reporting, and receipt printing.</p>
+                            <div class="project-links">
+                                <a href="https://www.fortuneetfeveur.com/" class="btn-primary" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="https://github.com/patrickAdegbesan/fortunetiles-system" class="btn-secondary"><i class="fab fa-github"></i> Code</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="project-card">
-                                        <div class="project-image card-video-bg" role="button" tabindex="0">
-                                                <video class="card-bg-video" autoplay muted loop playsinline poster="img/demo-thumb.jpg">
-                                                    <source src="img/nova_store_video.mp4" type="video/mp4">
-                                                    Your browser does not support the video tag.
-                                                </video>
-                                        </div>
-                    <div class="project-content">
-                        <h3>Modern E-Commerce Platform</h3>
-                        <p>A fully responsive e-commerce website built with HTML, CSS, and JavaScript. Features include product catalog, shopping cart functionality, user authentication, and mobile-first design. Integrated with payment gateways for seamless transactions.</p>
-                        <div class="project-links">
-                            <a href="#" class="btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#" class="btn-secondary"><i class="fab fa-github"></i> Code</a>
+
+                    <div class="project-card">
+                        <div class="project-image card-video-bg" role="button" tabindex="0">
+                            <video class="card-bg-video" autoplay muted loop playsinline>
+                                <source src="img/nova_store_video.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="project-content">
+                            <h3>Modern E-Commerce Platform</h3>
+                            <p>Fully responsive e-commerce site with product catalog, shopping cart, user authentication, and mobile-first design. Integrated with payment gateways for seamless transactions.</p>
+                            <div class="project-links">
+                                <a href="#" class="btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="#" class="btn-secondary"><i class="fab fa-github"></i> Code</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="project-card">
-                                        <div class="project-image card-video-bg" role="button" tabindex="0">
-                                                <video class="card-bg-video" autoplay muted loop playsinline poster="img/demo-thumb.jpg">
-                                                    <source src="img/pw.mp4" type="video/mp4">
-                                                    Your browser does not support the video tag.
-                                                </video>
-                                        </div>
-                    <div class="project-content">
-                        <h3>Event Management &amp; Service Booking Platform — Palmwine Merchants</h3>
-                        <p>Freelance-built online booking platform for Palmwine Merchants where customers can discover events, purchase tickets, and engage with the brand’s offerings. Supports event promotion and ticket sales workflows to help the business organize and run events.</p> 
-                        <div class="project-links">
-                            <a href="#" class="btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="https://github.com/patrickAdegbesan/Palmwine-Merchants" class="btn-secondary"><i class="fab fa-github"></i> Code</a>
+
+                    <div class="project-card">
+                        <div class="project-image card-video-bg" role="button" tabindex="0">
+                            <video class="card-bg-video" autoplay muted loop playsinline>
+                                <source src="img/pw.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="project-content">
+                            <h3>Event Management &amp; Booking Platform — Palmwine Merchants</h3>
+                            <p>Freelance-built booking platform for event discovery, ticket purchasing, and brand engagement. Supports event promotion and ticket sales workflows.</p>
+                            <div class="project-links">
+                                <a href="#" class="btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="https://github.com/patrickAdegbesan/Palmwine-Merchants" class="btn-secondary"><i class="fab fa-github"></i> Code</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="project-card">
-                                        <div class="project-image card-video-bg" role="button" tabindex="0">
-                                                <video class="card-bg-video" autoplay muted loop playsinline poster="img/demo-thumb.jpg">
-                                                    <source src="img/Recording%202026-01-13%20084215.mp4" type="video/mp4">
-                                                    Your browser does not support the video tag.
-                                                </video>
-                                        </div>
-                    <div class="project-content">
-                        <h3>301ATech Corporate Website</h3>
-                        <p>Corporate website built for 301ATech (software company). Designed and developed a modern, responsive site with clear service positioning, structured company pages, and production-ready deployment for a strong professional web presence.</p>
-                        <div class="project-links">
-                            <a href="https://www.301atech.com/" class="btn-primary" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="https://github.com/patrickAdegbesan" class="btn-secondary"><i class="fab fa-github"></i> Code</a>
+
+                    <div class="project-card">
+                        <div class="project-image card-video-bg" role="button" tabindex="0">
+                            <video class="card-bg-video" autoplay muted loop playsinline>
+                                <source src="img/Recording%202026-01-13%20084215.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="project-content">
+                            <h3>301ATech Corporate Website</h3>
+                            <p>Corporate website for 301ATech (software company). Modern, responsive site with clear service positioning and production-ready deployment for a strong web presence.</p>
+                            <div class="project-links">
+                                <a href="https://www.301atech.com/" class="btn-primary" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="https://github.com/patrickAdegbesan" class="btn-secondary"><i class="fab fa-github"></i> Code</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="project-card">
-                                        <div class="project-image card-video-bg" role="button" tabindex="0">
-                                                <video class="card-bg-video" autoplay muted loop playsinline poster="img/demo-thumb.jpg">
-                                                    <source src="img/tm_video.mp4" type="video/mp4">
-                                                    Your browser does not support the video tag.
-                                                </video>
-                                        </div>
-                    <div class="project-content">
-                        <h3>Task Management Web App</h3>
-                        <p>Interactive task management application with drag-and-drop functionality, local storage, and real-time updates. Built using vanilla JavaScript with modern ES6+ features and a clean, intuitive user interface.</p>
-                        <div class="project-links">
-                            <a href="https://patrickadegbesan.github.io/task-management/" class="btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="https://github.com/patrickAdegbesan/task-management" class="btn-secondary"><i class="fab fa-github"></i> Code</a>
+
+                    <div class="project-card">
+                        <div class="project-image card-video-bg" role="button" tabindex="0">
+                            <video class="card-bg-video" autoplay muted loop playsinline>
+                                <source src="img/tm_video.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="project-content">
+                            <h3>Task Management Web App</h3>
+                            <p>Interactive task manager with drag-and-drop, local storage, and real-time updates. Built with vanilla JavaScript ES6+ and a clean, intuitive UI.</p>
+                            <div class="project-links">
+                                <a href="https://patrickadegbesan.github.io/task-management/" class="btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="https://github.com/patrickAdegbesan/task-management" class="btn-secondary"><i class="fab fa-github"></i> Code</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="project-card">
-                                        <div class="project-image card-video-bg" role="button" tabindex="0">
-                                                <video class="card-bg-video" autoplay muted loop playsinline poster="img/demo-thumb.jpg">
-                                                    <source src="img/pp.mp4" type="video/mp4">
-                                                    Your browser does not support the video tag.
-                                                </video>
-                                        </div>
-                    <div class="project-content">
-                        <h3>Creative Portfolio Website</h3>
-                        <p>A stunning portfolio website for a creative professional featuring smooth animations, parallax scrolling, and dynamic content loading. Optimized for performance with lazy loading and efficient CSS animations.</p>
-                        <div class="project-links">
-                            <a href="https://patrickadegbesan.github.io/portfolio-site/" class="btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="https://github.com/patrickAdegbesan/portfolio-site" class="btn-secondary"><i class="fab fa-github"></i> Code</a>
+
+                    <div class="project-card">
+                        <div class="project-image card-video-bg" role="button" tabindex="0">
+                            <video class="card-bg-video" autoplay muted loop playsinline>
+                                <source src="img/pp.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="project-content">
+                            <h3>Creative Portfolio Website</h3>
+                            <p>Portfolio site for a creative professional with smooth animations, parallax scrolling, and dynamic content loading. Optimized with lazy loading and efficient CSS animations.</p>
+                            <div class="project-links">
+                                <a href="https://patrickadegbesan.github.io/portfolio-site/" class="btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="https://github.com/patrickAdegbesan/portfolio-site" class="btn-secondary"><i class="fab fa-github"></i> Code</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="project-card">
-                                        <div class="project-image card-video-bg" role="button" tabindex="0">
-                                                <video class="card-bg-video" autoplay muted loop playsinline poster="img/demo-thumb.jpg">
-                                                    <source src="img/plp.mp4" type="video/mp4">
-                                                    Your browser does not support the video tag.
-                                                </video>
-                                        </div>
-                    <div class="project-content">
-                        <h3>Product Landing Page</h3>
-                        <p>High-converting landing page for a tech startup with engaging animations, testimonials, and clear call-to-action buttons. Features advanced CSS techniques and JavaScript interactions for maximum user engagement.</p>
-                        <div class="project-links">
-                            <a href="https://patrickadegbesan.github.io/product-landing-page/" class="btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="https://github.com/patrickAdegbesan/product-landing-page" class="btn-secondary"><i class="fab fa-github"></i> Code</a>
+
+                    <div class="project-card">
+                        <div class="project-image card-video-bg" role="button" tabindex="0">
+                            <video class="card-bg-video" autoplay muted loop playsinline>
+                                <source src="img/plp.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="project-content">
+                            <h3>Product Landing Page</h3>
+                            <p>High-converting landing page for a tech startup — engaging animations, testimonials, and clear CTAs. Advanced CSS and JS interactions for maximum engagement.</p>
+                            <div class="project-links">
+                                <a href="https://patrickadegbesan.github.io/product-landing-page/" class="btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="https://github.com/patrickAdegbesan/product-landing-page" class="btn-secondary"><i class="fab fa-github"></i> Code</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="project-card">
-                                        <div class="project-image card-video-bg" role="button" tabindex="0">
-                                                <video class="card-bg-video" autoplay muted loop playsinline poster="img/demo-thumb.jpg">
-                                                    <source src="img/tcc_video.mp4" type="video/mp4">
-                                                    Your browser does not support the video tag.
-                                                </video>
-                                        </div>
-                    <div class="project-content">
-                        <h3>THE CODE CENTER</h3>
-                        <p> websites where anyone anywhere can learn how to code</p>
-                        <div class="project-links">
-                            <a href="https://tccproject.onrender.com/" class="btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="https://github.com/patrickAdegbesan/tccproject" class="btn-secondary"><i class="fab fa-github"></i> Code</a>
+
+                    <div class="project-card">
+                        <div class="project-image card-video-bg" role="button" tabindex="0">
+                            <video class="card-bg-video" autoplay muted loop playsinline>
+                                <source src="img/tcc_video.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="project-content">
+                            <h3>The Code Center</h3>
+                            <p>A platform where anyone, anywhere can learn how to code — structured courses and hands-on content for aspiring developers.</p>
+                            <div class="project-links">
+                                <a href="https://tccproject.onrender.com/" class="btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="https://github.com/patrickAdegbesan/tccproject" class="btn-secondary"><i class="fab fa-github"></i> Code</a>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+    </main>
+
+    <!-- Video Modal -->
     <div class="video-modal" id="video-modal" aria-hidden="true">
         <div class="video-modal__overlay" data-video-modal-close></div>
         <div class="video-modal__content" role="dialog" aria-modal="true" aria-labelledby="video-modal-title">
@@ -223,75 +234,30 @@
             <p class="video-modal__message" id="video-modal-message"></p>
         </div>
     </div>
-    
+
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-links">
-                    <a href="mailto:adegbesanpatrick14@gmail.com" aria-label="Email Patrick Adegbesan">
+                    <a href="mailto:adegbesanpatrick14@gmail.com" aria-label="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
-                    <a href="https://wa.me/2349054448465" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Patrick Adegbesan">
+                    <a href="https://wa.me/2349054448465" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/patrick-adegbesan-708631346/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Patrick Adegbesan">
+                    <a href="https://www.linkedin.com/in/patrick-adegbesan-708631346/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://github.com/patrickAdegbesan" target="_blank" rel="noopener noreferrer" aria-label="GitHub Patrick Adegbesan">
+                    <a href="https://github.com/patrickAdegbesan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
                 </div>
-                <p>&copy; 2024 Patrick Adegbesan. All rights reserved. | Built with passion and lots of coffee ☕</p>
+                <p>&copy; 2026 Mr-Path &mdash; Built with clean code and good taste.</p>
             </div>
         </div>
     </footer>
-    
-    <!-- Mobile Navigation Script -->
+
     <script src="navigation.js"></script>
-    <style>
-    video { border-radius: 4px; }
-    .card-video-bg {
-        position: relative;
-        width: 100%;
-        height: 190px;
-        overflow: hidden;
-        border-radius: 16px 16px 0 0;
-    }
-    .card-bg-video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 1;
-        border-radius: 16px 16px 0 0;
-        background: #000;
-        pointer-events: none;
-    }
-    .project-content {
-        position: relative;
-        z-index: 2;
-        background: none;
-        border-radius: 0 0 16px 16px;
-        margin-top: -30px;
-        padding-top: 30px;
-        color: #222;
-        text-shadow: 0 1px 6px rgba(255,255,255,0.7);
-    }
-    #bg-video {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
-        opacity: 1;
-    }
-    body {
-        background: none !important;
-    }
-    </style>
+    <script src="scroll-animations.js"></script>
 </body>
 </html>

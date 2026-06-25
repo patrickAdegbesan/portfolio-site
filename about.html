@@ -3,22 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Patrick Adegbesan | Full-Stack Developer</title>
+    <title>About — Patrick Adegbesan</title>
+    <script>(function(){var t=localStorage.getItem('theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');})();</script>
     <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome for professional icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 </head>
 <body>
-    <header class="order-header">
-        <h1>About Patrick Adegbesan</h1>
-        <p>Get to know the developer behind the code</p>
-    </header>
-    
+
     <nav>
         <div class="nav-header">
             <div class="nav-left">
-                <div class="logo">Patrick Adegbesan</div>
-                <img src="img/profile_pic.jpg" alt="Patrick Adegbesan" class="nav-profile-pic">
+                <a href="index.html" class="logo">Mr-Path<span class="accent">.</span></a>
             </div>
             <div class="nav-center">
                 <div class="nav-menu">
@@ -29,6 +26,11 @@
                 </div>
             </div>
             <div class="nav-right">
+                <a href="contact.html" class="nav-cta">Hire Me</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+                    <i class="fas fa-sun  icon-sun"></i>
+                    <i class="fas fa-moon icon-moon"></i>
+                </button>
                 <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
                     <span></span>
                     <span></span>
@@ -37,198 +39,197 @@
             </div>
         </div>
     </nav>
-    
-<section id="about">
-    <section class="two-column-section">
-        <div class="section-image">
-            <img src="img/about.jpg" alt="Patrick Adegbesan" class="profile-pic">
-        </div>
-        <div class="section-text">
-            <h2>About Me</h2>
-            <p>
-                I'm Patrick Adegbesan, a passionate full-stack developer and digital creator based in Nigeria.
-                I thrive at the intersection of creativity and technology, transforming complex ideas into elegant,
-                user-centric digital solutions that make a real impact.
-            </p>
-            <p>
-                My journey spans from responsive frontend interfaces to robust backend systems, with expertise across
-                modern web technologies including React, Node.js, and Python frameworks. I'm particularly fascinated by
-                AI integration and have hands-on experience implementing vector embeddings and working with OpenAI APIs
-                to create intelligent applications.
-            </p>
-            <p>
-                What drives me is solving meaningful problems through clean, efficient code. Whether it's building
-                algorithmic trading systems, creating seamless user experiences, or developing scalable full-stack
-                applications, I approach each challenge with curiosity and a commitment to excellence.
-            </p>
-            <p>
-                When I'm not coding, you'll find me exploring emerging technologies, contributing to open-source projects,
-                or mentoring the next generation of developers. I'm always excited to collaborate on innovative projects
-                that push the boundaries of what's possible with technology.
-            </p>
-        </div>
-    </section>
-    <div class="container">
-        <div class="skills-section">
-            <h3>My Skills</h3>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <i class="fab fa-python"></i>
-                    <h4>Python</h4>
-                    <p>Automation, backend scripting, API integrations, and data analysis workflows (cleaning, EDA, and reporting)</p>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-js-square"></i>
-                    <h4>JavaScript</h4>
-                    <p>Interactive frontend development with modern ES6+ features, event handling, and API integration</p>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-java"></i>
-                    <h4>Java</h4>
-                    <p>Object-oriented programming, enterprise application development, and scalable system architecture</p>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-node-js"></i>
-                    <h4>Node.js</h4>
-                    <p>Server-side JavaScript runtime for building scalable, high-performance backend applications and APIs</p>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-react"></i>
-                    <h4>React</h4>
-                    <p>Modern component-based UI development with hooks, state management, and reusable components</p>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-bolt"></i>
-                    <h4>Vite</h4>
-                    <p>Fast build tool and development server for modern web projects with optimal performance</p>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-html5"></i>
-                    <h4>HTML5</h4>
-                    <p>Semantic, accessible markup for clean and maintainable web structures</p>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-css3-alt"></i>
-                    <h4>CSS3</h4>
-                    <p>Responsive design using Flexbox, Grid, animations, and modern UI styling techniques</p>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-wind"></i>
-                    <h4>Tailwind CSS</h4>
-                    <p>Utility-first CSS framework for rapid UI development and consistent design systems</p>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-database"></i>
-                    <h4>PostgreSQL</h4>
-                    <p>Relational database management with advanced querying, transactions, and data integrity</p>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-database"></i>
-                    <h4>MongoDB</h4>
-                    <p>NoSQL document database for flexible, scalable data storage and retrieval</p>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-chart-bar"></i>
-                    <h4>Data Analytics</h4>
-                    <p>Data cleaning, EDA, and visualization using SQL and spreadsheets (Excel/Google Sheets)</p>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-robot"></i>
-                    <h4>Vector Embeddings</h4>
-                    <p>AI-powered semantic search and similarity analysis for intelligent data processing</p>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-brain"></i>
-                    <h4>OpenAI</h4>
-                    <p>AI integration, natural language processing, and intelligent application development</p>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-github"></i>
-                    <h4>Git & GitHub</h4>
-                    <p>Version control, collaboration, and open-source contributions using Git and GitHub workflows</p>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-chart-line"></i>
-                    <h4>Algorithmic Trading</h4>
-                    <p>Expert Advisor development using MQL5 and Python integration for automated Forex trading</p>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-plug"></i>
-                    <h4>API Integration</h4>
-                    <p>Working with REST APIs for data fetching, integration, and dynamic web interactions</p>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-cloud-upload-alt"></i>
-                    <h4>Deployment & Hosting</h4>
-                    <p>Deploying web applications using platforms like Netlify, GitHub Pages, and Vercel</p>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-bug"></i>
-                    <h4>Problem Solving</h4>
-                    <p>Strong debugging, logical thinking, and algorithmic problem-solving skills</p>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-users"></i>
-                    <h4>Client Communication</h4>
-                    <p>Effective client communication, remote collaboration, and project management</p>
+
+    <main>
+
+        <!-- Page header -->
+        <section class="page-hero">
+            <div class="container">
+                <span class="section-label">About</span>
+                <h1 class="section-title">The developer<br>behind the code</h1>
+            </div>
+        </section>
+
+        <!-- Bio section -->
+        <section>
+            <div class="container">
+                <div class="about-intro">
+                    <div class="about-intro-image">
+                        <img src="img/1.png" alt="Patrick Adegbesan">
+                    </div>
+                    <div class="about-intro-text">
+                        <h2>Hi, I'm Patrick.</h2>
+                        <p>
+                            I'm a passionate full-stack developer and digital creator based in Lagos, Nigeria.
+                            I thrive at the intersection of creativity and technology — transforming complex ideas
+                            into elegant, user-centric digital solutions that make a real impact.
+                        </p>
+                        <p>
+                            My work spans responsive frontend interfaces to robust backend systems, with expertise
+                            in React, Node.js, and Python. I'm particularly drawn to AI integration and have
+                            hands-on experience with vector embeddings and OpenAI APIs to build intelligent applications.
+                        </p>
+                        <p>
+                            What drives me is solving meaningful problems through clean, efficient code. Whether it's
+                            an algorithmic trading system, a seamless user experience, or a scalable full-stack app —
+                            I approach every challenge with curiosity and a commitment to excellence.
+                        </p>
+                        <p>
+                            When I'm not coding, I'm exploring emerging technologies, contributing to open-source,
+                            or mentoring the next generation of developers.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-    <!-- Resume Download Section -->
-    <section id="resume">
-        <div class="container">
-            <h2>View My Resume</h2>
-            <p>Want a quick overview of my experience and skills? Click below to view my professional CV.</p>
+        </section>
+
+        <!-- Skills section -->
+        <section class="skills-section">
+            <div class="container">
+                <span class="section-label">Skills</span>
+                <h2 class="section-title">What I work with</h2>
+                <div class="skills-grid">
+
+                    <div class="skill-item">
+                        <i class="fab fa-python"></i>
+                        <h4>Python</h4>
+                        <p>Automation, backend scripting, API integrations, and data analysis</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-js-square"></i>
+                        <h4>JavaScript</h4>
+                        <p>Interactive frontend with modern ES6+ features and API integration</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-java"></i>
+                        <h4>Java</h4>
+                        <p>OOP, enterprise application development, and scalable system architecture</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-node-js"></i>
+                        <h4>Node.js</h4>
+                        <p>Scalable backend applications, REST APIs, and server-side logic</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-react"></i>
+                        <h4>React</h4>
+                        <p>Component-based UIs with hooks, state management, and reusable components</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-bolt"></i>
+                        <h4>Vite</h4>
+                        <p>Fast build tool and dev server for modern, high-performance web projects</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-html5"></i>
+                        <h4>HTML5</h4>
+                        <p>Semantic, accessible markup for clean and maintainable web structures</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-css3-alt"></i>
+                        <h4>CSS3</h4>
+                        <p>Responsive design with Flexbox, Grid, animations, and modern UI techniques</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-wind"></i>
+                        <h4>Tailwind CSS</h4>
+                        <p>Utility-first CSS for rapid UI development and consistent design systems</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database"></i>
+                        <h4>PostgreSQL</h4>
+                        <p>Relational DB management with advanced querying and data integrity</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database"></i>
+                        <h4>MongoDB</h4>
+                        <p>NoSQL document database for flexible, scalable data storage</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-chart-bar"></i>
+                        <h4>Data Analytics</h4>
+                        <p>Data cleaning, EDA, and visualization using SQL and spreadsheets</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-robot"></i>
+                        <h4>Vector Embeddings</h4>
+                        <p>AI-powered semantic search and similarity analysis</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-brain"></i>
+                        <h4>OpenAI</h4>
+                        <p>AI integration, NLP, and intelligent application development</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-github"></i>
+                        <h4>Git &amp; GitHub</h4>
+                        <p>Version control, collaboration, and open-source contribution workflows</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Algo Trading</h4>
+                        <p>Expert Advisor development with MQL5 and Python for automated Forex trading</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-plug"></i>
+                        <h4>API Integration</h4>
+                        <p>REST APIs for data fetching, third-party integration, and dynamic web interactions</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h4>Deployment</h4>
+                        <p>Deploying to Netlify, Vercel, GitHub Pages, Render, and beyond</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-bug"></i>
+                        <h4>Problem Solving</h4>
+                        <p>Strong debugging, logical thinking, and algorithmic problem-solving</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-users"></i>
+                        <h4>Client Communication</h4>
+                        <p>Effective communication, remote collaboration, and project management</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume CTA -->
+        <div class="resume-cta">
+            <span class="section-label">Resume</span>
+            <h2 class="section-title">Want the full picture?</h2>
+            <p>View my CV for a complete overview of my experience, education, and skills.</p>
             <a href="resume.html" class="btn-primary">
                 <i class="fas fa-file-alt"></i> View Resume
             </a>
         </div>
-    </section>
-    
 
-    
+    </main>
+
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-links">
-                    <a href="mailto:adegbesanpatrick14@gmail.com" aria-label="Email Patrick Adegbesan">
+                    <a href="mailto:adegbesanpatrick14@gmail.com" aria-label="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
-                    <a href="https://wa.me/2349054448465" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Patrick Adegbesan">
+                    <a href="https://wa.me/2349054448465" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/patrick-adegbesan-708631346/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Patrick Adegbesan">
+                    <a href="https://www.linkedin.com/in/patrick-adegbesan-708631346/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://github.com/patrickAdegbesan" target="_blank" rel="noopener noreferrer" aria-label="GitHub Patrick Adegbesan">
+                    <a href="https://github.com/patrickAdegbesan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
                 </div>
-                <p>&copy; 2024 Patrick Adegbesan. All rights reserved. | Built with passion and lots of coffee ☕</p>
+                <p>&copy; 2026 Mr-Path &mdash; Built with clean code and good taste.</p>
             </div>
         </div>
     </footer>
-    
-    <!-- Mobile Navigation Script -->
+
     <script src="navigation.js"></script>
+    <script src="scroll-animations.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
