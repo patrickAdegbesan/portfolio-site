@@ -1564,3 +1564,124 @@ body, nav, footer,
     .skills-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
+
+/* ===== COVER TILES (projects without a demo video) ===== */
+.project-cover {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.project-cover i {
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.92);
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.35));
+}
+
+/* Fine grid texture so flat tiles match the site's grid motif */
+.project-cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+    background-size: 28px 28px;
+    z-index: 1;
+}
+
+.cover-ghost    { background: linear-gradient(135deg, #7f1d1d 0%, #b91c1c 55%, #f97316 100%); }
+.cover-swarm    { background: linear-gradient(135deg, #4c1d95 0%, #6d28d9 55%, #a855f7 100%); }
+.cover-quant    { background: linear-gradient(135deg, #064e3b 0%, #047857 55%, #10b981 100%); }
+.cover-campus   { background: linear-gradient(135deg, #0c4a6e 0%, #0284c7 55%, #22d3ee 100%); }
+.cover-market   { background: linear-gradient(135deg, #1e1b4b 0%, #4338ca 55%, #6366f1 100%); }
+.cover-suite    { background: linear-gradient(135deg, #164e63 0%, #0e7490 55%, #06b6d4 100%); }
+.cover-fintech  { background: linear-gradient(135deg, #713f12 0%, #a16207 55%, #facc15 100%); }
+.cover-health   { background: linear-gradient(135deg, #831843 0%, #be185d 55%, #f472b6 100%); }
+.cover-research { background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 55%, #00D4FF 100%); }
+
+/* ===== TECH TAG PILLS ===== */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0 0 1.1rem;
+}
+
+.tech-tag {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding: 0.22rem 0.6rem;
+    border-radius: 999px;
+    background: rgba(37, 99, 235, 0.12);
+    border: 1px solid rgba(37, 99, 235, 0.28);
+    color: var(--cyan);
+    white-space: nowrap;
+}
+
+[data-theme="light"] .tech-tag {
+    background: rgba(37, 99, 235, 0.08);
+    border-color: rgba(37, 99, 235, 0.25);
+    color: var(--blue-dark);
+}
+
+/* ===== CARD RIBBON ===== */
+.card-ribbon {
+    position: absolute;
+    top: 0.85rem;
+    right: 0.85rem;
+    z-index: 3;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.28rem 0.6rem;
+    border-radius: 999px;
+    background: rgba(10, 10, 10, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    color: #fff;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+/* ===== WORK PAGE GROUP HEADINGS ===== */
+.work-group {
+    margin-top: 4rem;
+}
+
+.work-group:first-of-type {
+    margin-top: 2rem;
+}
+
+.work-group-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    padding-bottom: 0.9rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.work-group-head h2 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.work-group-head span {
+    font-size: 0.85rem;
+    color: var(--text-faint);
+}
+
+.work-group .projects {
+    margin-top: 1.75rem;
+}

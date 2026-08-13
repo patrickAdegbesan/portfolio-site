@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="referrer" content="no-referrer">
+<title>Patrick Adegbesan — AI-Powered Executive Assistant</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --ink:        #0F172A;
+        --ink-soft:   #334155;
+        --muted:      #64748B;
+        --faint:      #94A3B8;
+        --line:       #E2E8F0;
+        --line-soft:  #F1F5F9;
+        --blue:       #1D4ED8;
+        --blue-light: #EFF6FF;
+        --cyan:       #0891B2;
+        --paper:      #FFFFFF;
+        --bg:         #F1F5F9;
+        --font:       'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+        font-family: var(--font);
+        background: var(--bg);
+        color: var(--ink);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        padding: 2.5rem 1.25rem 4rem;
+    }
+
+    .sheet {
+        max-width: 880px;
+        margin: 0 auto;
+        background: var(--paper);
+        border-radius: 18px;
+        box-shadow: 0 10px 45px rgba(15, 23, 42, 0.09);
+        overflow: hidden;
+    }
+
+    /* ---------- Private notice ---------- */
+    .private-bar {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        background: #0F172A;
+        color: #CBD5E1;
+        font-size: 0.76rem;
+        letter-spacing: 0.02em;
+        padding: 0.7rem 1.5rem;
+    }
+    .private-bar i { color: #38BDF8; }
+    .private-bar strong { color: #F8FAFC; font-weight: 600; }
+
+    /* ---------- Header ---------- */
+    header {
+        padding: 2.5rem 2.75rem 2rem;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .target-role {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--blue);
+        background: var(--blue-light);
+        border: 1px solid #BFDBFE;
+        padding: 0.3rem 0.7rem;
+        border-radius: 999px;
+        margin-bottom: 1rem;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+        margin-bottom: 0.4rem;
+    }
+
+    .tagline {
+        font-size: 1.02rem;
+        font-weight: 500;
+        color: var(--ink-soft);
+        margin-bottom: 1.25rem;
+    }
+
+    .contact-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.4rem;
+        font-size: 0.86rem;
+        color: var(--muted);
+    }
+    .contact-row a { color: var(--blue); text-decoration: none; }
+    .contact-row a:hover { text-decoration: underline; }
+    .contact-row i { width: 15px; color: var(--faint); margin-right: 0.3rem; }
+
+    /* ---------- Sections ---------- */
+    section { padding: 2rem 2.75rem; border-bottom: 1px solid var(--line-soft); }
+    section:last-of-type { border-bottom: none; }
+
+    h2 {
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--blue);
+        margin-bottom: 1.1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+    }
+    h2 i { font-size: 0.85rem; }
+
+    h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--ink);
+        margin-bottom: 0.3rem;
+    }
+
+    p { color: var(--ink-soft); font-size: 0.92rem; }
+    p + p { margin-top: 0.7rem; }
+
+    .lede {
+        font-size: 1.02rem;
+        line-height: 1.7;
+        color: var(--ink-soft);
+    }
+    .lede strong { color: var(--ink); font-weight: 600; }
+
+    ul { list-style: none; }
+    li { font-size: 0.9rem; color: var(--ink-soft); }
+
+    .bullets li {
+        position: relative;
+        padding-left: 1.15rem;
+        margin-bottom: 0.55rem;
+        line-height: 1.62;
+    }
+    .bullets li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.62em;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--cyan);
+    }
+    .bullets strong { color: var(--ink); font-weight: 600; }
+
+    /* ---------- Claude cards ---------- */
+    .claude-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 0.9rem;
+    }
+
+    .claude-card {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 1.1rem 1.15rem;
+        background: #FCFDFF;
+    }
+    .claude-card .ct {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: var(--ink);
+        margin-bottom: 0.45rem;
+    }
+    .claude-card .ct i { color: var(--blue); font-size: 0.9rem; }
+    .claude-card p { font-size: 0.82rem; line-height: 1.58; color: var(--muted); }
+
+    /* ---------- Proof table ---------- */
+    .proof { width: 100%; border-collapse: collapse; }
+    .proof th {
+        text-align: left;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--faint);
+        padding: 0 0 0.6rem;
+        border-bottom: 1px solid var(--line);
+    }
+    .proof th:first-child { width: 38%; padding-right: 1.2rem; }
+    .proof td {
+        vertical-align: top;
+        padding: 0.85rem 0;
+        border-bottom: 1px solid var(--line-soft);
+        font-size: 0.87rem;
+        line-height: 1.58;
+    }
+    .proof td:first-child {
+        padding-right: 1.2rem;
+        color: var(--ink);
+        font-weight: 600;
+    }
+    .proof td:last-child { color: var(--ink-soft); }
+    .proof tr:last-child td { border-bottom: none; }
+    .proof .req { display: block; font-weight: 500; color: var(--muted); font-size: 0.8rem; font-style: italic; margin-top: 0.2rem; }
+
+    /* ---------- Work entries ---------- */
+    .entry { margin-bottom: 1.6rem; }
+    .entry:last-child { margin-bottom: 0; }
+
+    .entry-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-bottom: 0.15rem;
+    }
+    .entry-head .when {
+        font-size: 0.76rem;
+        color: var(--faint);
+        white-space: nowrap;
+        font-variant-numeric: tabular-nums;
+    }
+    .entry-org {
+        font-size: 0.82rem;
+        color: var(--cyan);
+        font-weight: 600;
+        margin-bottom: 0.55rem;
+    }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.6rem; }
+    .tag {
+        font-size: 0.68rem;
+        font-weight: 500;
+        padding: 0.2rem 0.55rem;
+        border-radius: 999px;
+        background: var(--line-soft);
+        border: 1px solid var(--line);
+        color: var(--muted);
+        white-space: nowrap;
+    }
+
+    /* ---------- Callout ---------- */
+    .callout {
+        background: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 100%);
+        border: 1px solid #DBEAFE;
+        border-left: 3px solid var(--blue);
+        border-radius: 10px;
+        padding: 1.15rem 1.35rem;
+    }
+    .callout p { font-size: 0.9rem; color: var(--ink-soft); }
+    .callout strong { color: var(--ink); }
+
+    /* ---------- Two column ---------- */
+    .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.75rem;
+    }
+
+    .stack-label {
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--faint);
+        margin-bottom: 0.4rem;
+    }
+    .stack-body { font-size: 0.86rem; color: var(--ink-soft); line-height: 1.6; margin-bottom: 0.95rem; }
+
+    /* ---------- Links row ---------- */
+    .link-row { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    .link-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        font-size: 0.83rem;
+        font-weight: 500;
+        text-decoration: none;
+        color: var(--ink);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 0.5rem 0.9rem;
+        background: #fff;
+        transition: all 0.18s ease;
+    }
+    .link-btn:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-1px); }
+    .link-btn i { color: var(--faint); }
+    .link-btn:hover i { color: var(--blue); }
+
+    footer {
+        padding: 1.5rem 2.75rem 2rem;
+        border-top: 1px solid var(--line);
+        font-size: 0.78rem;
+        color: var(--faint);
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .print-btn {
+        position: fixed;
+        bottom: 1.75rem;
+        right: 1.75rem;
+        z-index: 50;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--blue);
+        color: #fff;
+        border: none;
+        font-family: var(--font);
+        font-size: 0.86rem;
+        font-weight: 600;
+        padding: 0.75rem 1.3rem;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: 0 6px 20px rgba(29, 78, 216, 0.32);
+    }
+    .print-btn:hover { background: #1E40AF; }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 720px) {
+        body { padding: 1rem 0.75rem 3rem; }
+        .sheet { border-radius: 12px; }
+        header { padding: 1.75rem 1.35rem 1.5rem; }
+        header h1 { font-size: 1.8rem; }
+        section { padding: 1.5rem 1.35rem; }
+        footer { padding: 1.25rem 1.35rem 1.5rem; }
+        .private-bar { padding: 0.65rem 1.35rem; font-size: 0.72rem; align-items: flex-start; }
+        .two-col { grid-template-columns: 1fr; gap: 1.25rem; }
+        .proof thead { display: none; }
+        .proof tr { display: block; padding: 0.85rem 0; border-bottom: 1px solid var(--line-soft); }
+        .proof td { display: block; border: none; padding: 0; }
+        .proof td:first-child { padding-right: 0; margin-bottom: 0.35rem; }
+        .print-btn { right: 1rem; bottom: 1rem; padding: 0.65rem 1rem; }
+    }
+
+    /* ---------- Print ---------- */
+    @media print {
+        body { background: #fff; padding: 0; font-size: 10.5pt; }
+        .sheet { box-shadow: none; border-radius: 0; max-width: 100%; }
+        .private-bar, .print-btn { display: none !important; }
+        section { padding: 1rem 0; break-inside: avoid; }
+        header { padding: 0 0 1rem; }
+        footer { padding: 1rem 0 0; }
+        .entry, .claude-card, .callout, .proof tr { break-inside: avoid; }
+        a { color: var(--ink) !important; text-decoration: none; }
+    }
+</style>
+</head>
+<body>
+
+<div class="sheet">
+
+    <div class="private-bar">
+        <i class="fas fa-lock"></i>
+        <span><strong>Private link.</strong> Prepared for the Executive Assistant (Claude AI) role at Hire Overseas. Not indexed and not linked from my public site.</span>
+    </div>
+
+    <header>
+        <span class="target-role">Executive Assistant &middot; Claude AI &middot; Remote</span>
+        <h1>Patrick Adegbesan</h1>
+        <p class="tagline">AI-fluent operator who builds the tools, not just uses them.</p>
+        <div class="contact-row">
+            <span><i class="fas fa-location-dot"></i>Lagos, Nigeria (WAT, UTC+1)</span>
+            <span><i class="fas fa-envelope"></i><a href="mailto:adegbesanpatrick14@gmail.com">adegbesanpatrick14@gmail.com</a></span>
+            <span><i class="fab fa-whatsapp"></i><a href="https://wa.me/2349054448465" target="_blank" rel="noopener">+234 905 444 8465</a></span>
+            <span><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/patrick-adegbesan-708631346/" target="_blank" rel="noopener">LinkedIn</a></span>
+            <span><i class="fab fa-github"></i><a href="https://github.com/patrickAdegbesan" target="_blank" rel="noopener">github.com/patrickAdegbesan</a></span>
+        </div>
+    </header>
+
+    <!-- ================= POSITIONING ================= -->
+    <section>
+        <h2><i class="fas fa-bullseye"></i>Why me for this role</h2>
+        <p class="lede">
+            You are looking for someone who uses Claude AI, Claude Code and Claude Cowork as core daily tools,
+            takes ownership of outcomes rather than tasks, and builds lightweight automations that remove manual
+            overhead. That is already how I work &mdash; <strong>the portfolio you are reading this on is maintained
+            through Claude Code sessions against a live repository.</strong>
+        </p>
+        <p class="lede" style="margin-top:0.85rem;">
+            The difference I bring is depth. Most AI-fluent assistants can prompt well. I have spent the last two
+            years <strong>building the systems this job describes</strong> &mdash; an AI task manager that scores priorities
+            and recommends what to do next, an automated resume screener that parses CVs and ranks candidates, a
+            complaint desk that triages and routes tickets, an alerting layer engineered to surface only what matters
+            and suppress the noise. When you ask me to build a workflow that reduces overhead, I am not learning
+            on the job. I have shipped that exact category of tool, documented it, and run it in production.
+        </p>
+    </section>
+
+    <!-- ================= CLAUDE ================= -->
+    <section>
+        <h2><i class="fas fa-wand-magic-sparkles"></i>How I use Claude every day</h2>
+        <div class="claude-grid">
+
+            <div class="claude-card">
+                <div class="ct"><i class="fas fa-terminal"></i>Claude Code</div>
+                <p>My primary build tool. I use it to ship features, refactor, automate repetitive work, and turn
+                one-off requests into reusable scripts. This site &mdash; content, structure and this very page &mdash;
+                is maintained through Claude Code working directly against the repository.</p>
+            </div>
+
+            <div class="claude-card">
+                <div class="ct"><i class="fas fa-magnifying-glass-chart"></i>Research &amp; synthesis</div>
+                <p>Deep research on tools, competitors and approaches, compressed into short briefs that lead with
+                the recommendation and keep the reasoning underneath, so a decision can be made in a minute
+                rather than a meeting.</p>
+            </div>
+
+            <div class="claude-card">
+                <div class="ct"><i class="fas fa-pen-nib"></i>Drafting &amp; communication</div>
+                <p>Client-facing emails, technical documentation, project briefs and status updates. I draft with
+                Claude, then edit for accuracy and tone &mdash; the judgement about what is true and what should be
+                said stays mine.</p>
+            </div>
+
+            <div class="claude-card">
+                <div class="ct"><i class="fas fa-people-group"></i>Claude Cowork</div>
+                <p>Organising project knowledge, keeping written context current across long-running work, and
+                moving multi-step tasks forward without losing the thread between sessions.</p>
+            </div>
+
+            <div class="claude-card">
+                <div class="ct"><i class="fas fa-diagram-project"></i>Building with LLMs</div>
+                <p>Beyond using the tools: I build multi-agent systems, RAG pipelines over vector stores, and
+                provider-agnostic backends that fall back gracefully &mdash; then measure them against a baseline
+                instead of trusting impressions.</p>
+            </div>
+
+            <div class="claude-card">
+                <div class="ct"><i class="fas fa-robot"></i>Automation reflex</div>
+                <p>When a task repeats, it stops being a task and becomes a script, a CLI or a scheduled job. Every
+                system I have built ships with its own tooling for exactly this reason.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= PROOF ================= -->
+    <section>
+        <h2><i class="fas fa-circle-check"></i>What you asked for, and the proof</h2>
+        <table class="proof">
+            <thead>
+                <tr><th>Your requirement</th><th>Where I have already done it</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Own projects end to end
+                        <span class="req">&ldquo;from brief through delivery without needing step-by-step direction&rdquo;</span></td>
+                    <td>Carried <strong>Project Cognition</strong> from an architecture document to a deployable, self-operating
+                        service across seven milestones &mdash; alone, with no one assigning the next step. Each milestone
+                        was scoped, built, documented and closed before the next began.</td>
+                </tr>
+                <tr>
+                    <td>Flag risks early with a proposed solution
+                        <span class="req">&ldquo;not just a flag&rdquo;</span></td>
+                    <td>I build the remedy into the system rather than reporting the problem. That project ships a risk
+                        engine every action must clear, a circuit breaker that halts operations at a loss threshold, a
+                        governor that shrinks exposure during drawdown, and config validators that <em>refuse to load</em>
+                        settings looser than the agreed limits.</td>
+                </tr>
+                <tr>
+                    <td>Keep leadership informed without being asked
+                        <span class="req">&ldquo;surface what matters without noise&rdquo;</span></td>
+                    <td>I designed an alerting layer around precisely that problem: per-category throttling, repeated
+                        alerts collapsed into summaries, and critical events allowed to bypass the throttle. Plus a
+                        watchdog that reports when a feed goes silent &mdash; because no news is not the same as good news.</td>
+                </tr>
+                <tr>
+                    <td>Build lightweight tools and automations
+                        <span class="req">&ldquo;that reduce manual overhead&rdquo;</span></td>
+                    <td>Built <strong>nine self-contained systems</strong>, each shipping a terminal client with full parity to
+                        its web interface &mdash; same code, same database &mdash; so work can be done whichever way is faster.
+                        Plus nightly scheduled jobs that retrain and redeploy without a human present.</td>
+                </tr>
+                <tr>
+                    <td>Systems for task management, documentation and knowledge organisation</td>
+                    <td>I have <em>built</em> these: <strong>TaskMind</strong>, an AI task manager taking plain-English entry and
+                        producing priority scores and next-action recommendations; a study planner handling schedules,
+                        progress logs and analytics; and a written operations runbook covering deployment, monitoring,
+                        failure playbooks and rollback.</td>
+                </tr>
+                <tr>
+                    <td>Deep research synthesised into actionable summaries</td>
+                    <td>Built an evaluation harness measuring model output on five metrics so decisions rested on
+                        evidence rather than impressions, and wrote up a reinforcement-learning study &mdash; ~1,122 training
+                        episodes tested across seven altered-physics scenarios &mdash; as a full academic paper.</td>
+                </tr>
+                <tr>
+                    <td>Coordinate with teams, vendors and external partners</td>
+                    <td>Ran freelance engagements for three businesses end to end &mdash; requirements, direct client
+                        communication, delivery, deployment and maintenance &mdash; with two sites live in production today.
+                        Currently building a four-surface product with a team, coordinating across separate repositories.</td>
+                </tr>
+                <tr>
+                    <td>Comfortable with ambiguity, prioritising when everything is urgent</td>
+                    <td>Two hackathons delivered in 2026 under hard deadlines: a working AI fraud-detection product with
+                        a judged demo, and a fourteen-agent LLM system. Both shipped complete, with documentation, in days.</td>
+                </tr>
+                <tr>
+                    <td>Attention to detail and follow-through without reminders</td>
+                    <td>Every project listed here has a written README covering setup, usage and API reference. The
+                        habit is the evidence &mdash; documentation is where follow-through either exists or does not.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- ================= SELECTED WORK ================= -->
+    <section>
+        <h2><i class="fas fa-layer-group"></i>Selected work</h2>
+
+        <div class="entry">
+            <div class="entry-head">
+                <h3>CampusDash &mdash; Four-Surface Product Platform</h3>
+                <span class="when">2026 &ndash; Present</span>
+            </div>
+            <div class="entry-org">3O1Atech</div>
+            <ul class="bullets">
+                <li>Building a platform spanning four coordinated surfaces &mdash; customer web app, cross-platform mobile app, backend API and internal admin dashboard &mdash; each maintained as its own repository against a shared contract.</li>
+                <li>The operational challenge is cross-repository coordination: keeping four moving codebases consistent while the product changes underneath them.</li>
+            </ul>
+            <div class="tags"><span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Mobile</span><span class="tag">Node.js</span><span class="tag">Team delivery</span></div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-head">
+                <h3>GhostGuard &mdash; AI Payroll Integrity System</h3>
+                <span class="when">May 2026</span>
+            </div>
+            <div class="entry-org">3O1Atech &middot; Squad Hackathon 3.0</div>
+            <ul class="bullets">
+                <li>Built a continuous verification layer that re-confirms a worker's identity every payroll cycle before any funds are released &mdash; addressing a problem costing Nigeria an estimated &#8358;4 trillion a year in ghost-worker fraud.</li>
+                <li>Four-stage gate combining liveness detection, face matching against a bank-verified reference, deepfake analysis, and behavioural anomaly scoring over transaction history.</li>
+                <li>Wrote the judged three-minute demo script and the pitch's supporting figures &mdash; <strong>preparing an executive audience to make a decision quickly is part of the deliverable, not an afterthought.</strong></li>
+                <li>Every check writes to a tamper-evident audit log built to serve as a prosecution-ready evidence package.</li>
+            </ul>
+            <div class="tags"><span class="tag">Node.js</span><span class="tag">FastAPI</span><span class="tag">Computer vision</span><span class="tag">Payments API</span><span class="tag">Audit logging</span></div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-head">
+                <h3>Fourteen-Agent LLM System</h3>
+                <span class="when">May 2026</span>
+            </div>
+            <div class="entry-org">3O1Atech &middot; DSN &times; BCT Hackathon 3.0</div>
+            <ul class="bullets">
+                <li>Designed two coordinated agent pipelines &mdash; a six-agent chain for persona-calibrated content generation and an eight-agent cross-domain recommender &mdash; each agent with a single defined responsibility passing state down the chain.</li>
+                <li>Built provider-agnostic LLM routing across four backends with graceful fallback, so no single vendor outage stops the system.</li>
+                <li>Wrote the evaluation harness measuring five separate quality metrics, so changes were judged against a baseline instead of by eye.</li>
+            </ul>
+            <div class="tags"><span class="tag">Multi-agent</span><span class="tag">Python</span><span class="tag">ChromaDB</span><span class="tag">RAG</span><span class="tag">LLM evaluation</span></div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-head">
+                <h3>Project Cognition &mdash; Self-Operating System</h3>
+                <span class="when">2026</span>
+            </div>
+            <div class="entry-org">Independent</div>
+            <ul class="bullets">
+                <li>Seven milestones taken from architecture document to a service that runs unattended around the clock &mdash; scoped, built, documented and closed one at a time, with no external direction.</li>
+                <li>Ships the full operational layer: containerised deployment with health checks, scheduled nightly retraining behind a gate that refuses to promote a worse model, throttled alerting, a live monitoring dashboard, and a written runbook covering deployment, monitoring, failure playbooks and rollback.</li>
+                <li><strong>The governing principle is that automation must never act silently.</strong> Every decision carries an audit trail, and no model is promoted without passing an explicit check.</li>
+            </ul>
+            <div class="tags"><span class="tag">Python</span><span class="tag">Docker</span><span class="tag">systemd</span><span class="tag">Runbooks</span><span class="tag">Monitoring</span><span class="tag">Alerting</span></div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-head">
+                <h3>Nine-System Software Archive</h3>
+                <span class="when">2026</span>
+            </div>
+            <div class="entry-org">Independent</div>
+            <ul class="bullets">
+                <li>Nine independent systems, each fully self-contained, individually documented, and each shipping a terminal client with complete parity to its web interface.</li>
+                <li>Directly relevant to operations work: an <strong>automated resume screener</strong> (CV parsing, skill matching, proximity ranking, spreadsheet export), <strong>TaskMind</strong> (plain-English task capture with priority scoring and next-action recommendations), and <strong>ComplaintDesk</strong> (submission, triage, response and reporting).</li>
+                <li>Also includes two machine-learning fraud and phishing detection systems, a scheduling and analytics planner, a discrete-event network simulator, and a records-management system.</li>
+            </ul>
+            <div class="tags"><span class="tag">Python</span><span class="tag">Flask / FastAPI</span><span class="tag">scikit-learn</span><span class="tag">spaCy</span><span class="tag">CLI tooling</span></div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-head">
+                <h3>Client Delivery &mdash; Freelance</h3>
+                <span class="when">2025 &ndash; Present</span>
+            </div>
+            <div class="entry-org">Fortune et Feveur &middot; Palmwine Merchants &middot; SLO</div>
+            <ul class="bullets">
+                <li>Delivered an inventory and point-of-sale system for a tiling company covering stock tracking, sales, reporting and receipt printing &mdash; roughly 92 commits of sustained work &mdash; plus their public website, <a href="https://www.fortuneetfeveur.com/" target="_blank" rel="noopener">live today</a>.</li>
+                <li>Built an event booking and ticketing platform, and translated a design-system handoff into a working brand site.</li>
+                <li>Each engagement run end to end: requirements, direct client communication, delivery, deployment, maintenance. <strong>No project manager in between &mdash; the client talked to me.</strong></li>
+            </ul>
+            <div class="tags"><span class="tag">Client comms</span><span class="tag">Requirements</span><span class="tag">Delivery</span><span class="tag">Maintenance</span></div>
+        </div>
+    </section>
+
+    <!-- ================= OPERATING TOOLKIT ================= -->
+    <section>
+        <h2><i class="fas fa-toolbox"></i>Operating toolkit</h2>
+        <div class="two-col">
+            <div>
+                <div class="stack-label">AI &amp; automation</div>
+                <p class="stack-body">Claude Code, Claude AI, Claude Cowork, Claude API. Multi-agent orchestration, RAG and vector search, prompt and context engineering, LLM evaluation. Also OpenAI, Gemini and Kimi backends.</p>
+
+                <div class="stack-label">Operations &amp; process</div>
+                <p class="stack-body">Runbook and documentation authoring, monitoring and alert design, scheduled job automation, audit logging, incident playbooks, risk controls, reporting pipelines.</p>
+
+                <div class="stack-label">Coordination</div>
+                <p class="stack-body">Git and GitHub (issues, projects, pull requests, multi-repository workflows), written status reporting, client and vendor communication, remote-first collaboration.</p>
+            </div>
+            <div>
+                <div class="stack-label">Build</div>
+                <p class="stack-body">Python, TypeScript, JavaScript, SQL. React, Next.js, React Native, Node.js, FastAPI, Flask, Django. PostgreSQL, MongoDB, SQLite, Prisma.</p>
+
+                <div class="stack-label">Infrastructure</div>
+                <p class="stack-body">Docker and Docker Compose, systemd services and timers, AWS S3, Stripe Connect, Vercel, Render, Netlify, CI/CD.</p>
+
+                <div class="stack-label">Data &amp; reporting</div>
+                <p class="stack-body">Data cleaning, exploratory analysis, visualisation, Excel and Google Sheets, spreadsheet export pipelines, dashboard design.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= WORKING STYLE ================= -->
+    <section>
+        <h2><i class="fas fa-compass"></i>How I operate</h2>
+        <div class="callout">
+            <p><strong>Bias toward finishing.</strong> I would rather deliver the whole thing under a stated assumption
+            than hold it up waiting for a perfect answer &mdash; and I say clearly which assumption I made, so it can be
+            corrected in seconds rather than discovered later.</p>
+            <p style="margin-top:0.7rem;"><strong>Problems arrive with an answer attached.</strong> Flagging a blocker
+            without a proposed path is half a job. If I raise something, I have already worked out what I think we
+            should do about it.</p>
+            <p style="margin-top:0.7rem;"><strong>Written by default.</strong> Remote work runs on writing. Every system
+            I build is documented as I build it, because the documentation is what makes the work transferable rather
+            than trapped in my head.</p>
+            <p style="margin-top:0.7rem;"><strong>Repetition is a bug.</strong> The second time I do something manually,
+            I start asking why it is not a script yet.</p>
+        </div>
+    </section>
+
+    <!-- ================= CREDENTIALS ================= -->
+    <section>
+        <h2><i class="fas fa-graduation-cap"></i>Education &amp; certifications</h2>
+        <div class="two-col">
+            <div>
+                <h3 style="font-size:0.92rem;">Caleb University</h3>
+                <p style="font-size:0.85rem;color:var(--muted);">B.Sc. Computer Science &mdash; final year, expected 2026</p>
+                <h3 style="font-size:0.92rem;margin-top:0.9rem;">King&rsquo;s College, Lagos</h3>
+                <p style="font-size:0.85rem;color:var(--muted);">Secondary education</p>
+            </div>
+            <div>
+                <h3 style="font-size:0.92rem;">Cisco Networking Academy</h3>
+                <p style="font-size:0.85rem;color:var(--muted);">Data Analytics Essentials &mdash; May 2025</p>
+                <h3 style="font-size:0.92rem;margin-top:0.9rem;">The Code Center</h3>
+                <p style="font-size:0.85rem;color:var(--muted);">AI &amp; Software Development &mdash; November 2025</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= LINKS ================= -->
+    <section>
+        <h2><i class="fas fa-link"></i>See the work</h2>
+        <div class="link-row">
+            <a class="link-btn" href="work.html" target="_blank"><i class="fas fa-briefcase"></i>Full project portfolio</a>
+            <a class="link-btn" href="https://github.com/patrickAdegbesan" target="_blank" rel="noopener"><i class="fab fa-github"></i>GitHub &mdash; personal</a>
+            <a class="link-btn" href="https://github.com/3O1Atech" target="_blank" rel="noopener"><i class="fas fa-building"></i>GitHub &mdash; 3O1Atech</a>
+            <a class="link-btn" href="resume.html" target="_blank"><i class="fas fa-file-lines"></i>Full technical resume</a>
+            <a class="link-btn" href="mailto:adegbesanpatrick14@gmail.com"><i class="fas fa-envelope"></i>Email me</a>
+        </div>
+    </section>
+
+    <footer>
+        <span>Patrick Adegbesan &mdash; prepared for Hire Overseas, Executive Assistant (Claude AI)</span>
+        <span>Lagos, Nigeria &middot; Available full-time, remote</span>
+    </footer>
+
+</div>
+
+<button class="print-btn" type="button" onclick="window.print()">
+    <i class="fas fa-file-arrow-down"></i> Save as PDF
+</button>
+
+</body>
+</html>

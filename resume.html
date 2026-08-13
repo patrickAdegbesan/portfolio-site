@@ -197,7 +197,7 @@
         
         <div class="resume-header">
             <h1>Patrick Adegbesan</h1>
-            <p style="margin:0.25rem 0 0.75rem 0;font-size:1.05rem;font-weight:600;color:#222;">Full-Stack Developer | React | Node.js/Express | Python | SQL | AI Integration</p>
+            <p style="margin:0.25rem 0 0.75rem 0;font-size:1.05rem;font-weight:600;color:#222;">Full-Stack &amp; AI Engineer | Python | TypeScript/React | Node.js | LLM &amp; Multi-Agent Systems</p>
             <div class="resume-links">
                 <span>📍 Lagos, Nigeria</span>
                 <span>✉️ <a href="mailto:adegbesanpatrick14@gmail.com">adegbesanpatrick14@gmail.com</a></span>
@@ -208,66 +208,68 @@
         </div>
         <div class="resume-section">
             <h2>Professional Summary</h2>
-            <p>Full-stack developer focused on building responsive web applications and production-ready APIs using React, Node.js/Express, and Python. Experienced delivering freelance client solutions end-to-end—from requirements and UX to deployment—plus AI-powered features using OpenAI, LangChain, and vector search (FAISS). Strong foundation in SQL/databases, API integration, and clean, maintainable code.</p>
+            <p>Full-stack and AI engineer who takes systems from architecture through to deployment and operation. Builds multi-agent LLM pipelines, reinforcement-learning systems, and production web platforms in Python, TypeScript/React and Node.js &mdash; together with the operational layer that keeps them running: Docker and systemd deployment, scheduled retraining, alerting, monitoring dashboards, and written runbooks. Delivers client work end to end, from requirements and UX through to a live, maintained product, and works AI-native day to day with Claude Code, Claude AI and Claude Cowork as primary tools.</p>
         </div>
         <div class="resume-section">
             <h2>Technical Skills</h2>
             <ul>
-                <li><strong>Languages:</strong> Python, JavaScript, TypeScript, Java, HTML5, CSS3, SQL, C#</li>
-                <li><strong>Frontend:</strong> React, Next.js, Vue.js, Redux, Tailwind CSS, Vite, Responsive Design</li>
-                <li><strong>Backend:</strong> Node.js, Express, Django, RESTful APIs, Authentication (JWT, OAuth)</li>
-                <li><strong>Databases:</strong> PostgreSQL, MongoDB, MySQL, SQLite, Redis, Vector Embeddings</li>
-                <li><strong>Data Analytics:</strong> Data Cleaning, Exploratory Data Analysis (EDA), Data Visualization, Spreadsheets (Excel/Google Sheets), SQL</li>
-                <li><strong>AI & ML:</strong> OpenAI API, Vector Embeddings, LangChain, FAISS, PyPDF2, AI Integration, Natural Language Processing</li>
-                <li><strong>Tools & DevOps:</strong> Git/GitHub, CI/CD, Docker, Agile/Scrum, Vercel, Heroku, Netlify</li>
-                <li><strong>Specializations:</strong> Algorithmic Trading, MQL5, Financial APIs, Technical Analysis</li>
+                <li><strong>Languages:</strong> Python, TypeScript, JavaScript, SQL, PHP, Java, HTML5, CSS3</li>
+                <li><strong>AI &amp; LLM:</strong> Claude (Code, Cowork, API), OpenAI, Gemini, Kimi/Moonshot, LangChain, multi-agent orchestration, RAG, prompt &amp; context engineering, LLM evaluation (ROUGE-L, BERTScore, NDCG)</li>
+                <li><strong>Machine Learning:</strong> PyTorch, scikit-learn, deep reinforcement learning (DQN, Double/Duelling, Prioritised Experience Replay), spaCy, MediaPipe, DeepFace, feature engineering, backtesting</li>
+                <li><strong>Vector &amp; Search:</strong> ChromaDB, FAISS, embeddings, semantic retrieval</li>
+                <li><strong>Frontend:</strong> React, Next.js 14, React Native/Expo, Vue, Tailwind CSS, Radix UI, Material-UI, Vite, responsive &amp; accessible UI (WCAG, ARIA)</li>
+                <li><strong>Backend:</strong> Node.js/Express, FastAPI, Flask, Django + DRF, REST API design, JWT/OAuth, NextAuth, webhooks, WebSockets</li>
+                <li><strong>Databases:</strong> PostgreSQL, MySQL, MongoDB, SQLite, Prisma ORM, schema design, row-level security</li>
+                <li><strong>Infrastructure &amp; DevOps:</strong> Docker &amp; Docker Compose, systemd services and timers, AWS S3, Stripe/Stripe Connect, Vercel, Render, Netlify, GitHub Pages, Git/GitHub, CI/CD</li>
+                <li><strong>Operations:</strong> Runbook authoring, monitoring &amp; alerting (Telegram bots, watchdogs), scheduled retraining with promotion gates, audit logging, incident playbooks, risk controls &amp; circuit breakers</li>
+                <li><strong>Data &amp; Analytics:</strong> Data cleaning, EDA, visualisation (Chart.js, matplotlib), Excel/Google Sheets, reporting pipelines</li>
             </ul>
         </div>
         <div class="resume-section">
-            <h2>Technical Experience</h2>
+            <h2>Experience</h2>
             <ul>
-                <li><strong>AI PDF Reader Bot (2024 – Present):</strong>
+                <li><strong>Software Engineer &mdash; 3O1Atech (2026 &ndash; Present):</strong>
                     <ul>
-                        <li>Engineered a Streamlit chatbot using LangChain and OpenAI GPT to process and analyze multiple PDF documents</li>
-                        <li>Implemented vector embeddings with FAISS for efficient semantic search and document retrieval</li>
-                        <li>Designed text chunking strategies and conversation memory for contextual Q&A about document content</li>
-                        <li>Integrated PyPDF2 for text extraction and created a responsive UI for seamless document interactions</li>
+                        <li>Build and maintain <strong>CampusDash</strong>, a four-surface campus platform spanning a customer web app, a cross-platform mobile app, a backend API service and an internal admin dashboard &mdash; each its own repository with a shared contract between them</li>
+                        <li>Delivered <strong>GhostGuard</strong> at Squad Hackathon 3.0: a continuous AI payroll-integrity layer that re-verifies worker identity every cycle before funds are released, gating on liveness detection (MediaPipe FaceMesh), face matching (DeepFace Facenet512) against a BVN reference, multi-signal deepfake analysis, and behavioural anomaly scoring over transaction history</li>
+                        <li>Integrated the Squad payments API end to end &mdash; BVN-validated virtual accounts as identity anchors, gated transfers, account lookup, and HMAC-validated webhooks into a tamper-evident audit log built as a prosecution-ready evidence package</li>
+                        <li>Built a <strong>14-agent LLM system</strong> for the DSN &times; BCT Hackathon 3.0: a six-agent chain for persona-calibrated review generation and an eight-agent cross-domain recommender, behind a pluggable LLM backend (Kimi, Gemini, OpenAI, local HF) with a ChromaDB vector store</li>
+                        <li>Wrote the evaluation harness for it &mdash; RMSE, ROUGE-L, BERTScore, NDCG and Hit Rate &mdash; so model changes were measured against a baseline rather than judged by eye</li>
+                        <li>Shipped the company website at <a href="https://www.301atech.com/" target="_blank" rel="noopener">301atech.com</a></li>
                     </ul>
                 </li>
-                <li><strong>Autonomous Crypto Trading Agent (2024 – Present):</strong>
+                <li><strong>Independent AI &amp; Systems Engineering (2025 &ndash; Present):</strong>
                     <ul>
-                        <li>Developed a self-improving crypto trading agent using reinforcement learning and real-time market data</li>
-                        <li>Integrated multiple cryptocurrency exchanges via APIs for live trading and portfolio management</li>
-                        <li>Implemented technical indicators and machine learning models for market prediction and risk management</li>
-                        <li>Built backtesting framework to validate trading strategies against historical market data</li>
+                        <li><strong>Project Cognition</strong> &mdash; ensemble reinforcement-learning trading system carried from architecture document to deployable service across seven milestones: five DQN agents voting through independent feature lenses, with a per-regime meta-learner that reweights them after every closed trade</li>
+                        <li>Designed a standalone risk engine that every order must clear before execution and that agents cannot override &mdash; 1% equity cap per trade with fractional-Kelly sizing, a &minus;5% daily circuit breaker, a drawdown governor, overtrading guards, and config validators that refuse any value looser than the hard limits at load time</li>
+                        <li>Built the operational layer for unattended 24/7 running: Docker Compose with health checks, systemd units and timers, nightly retraining behind a promotion gate that refuses to activate a worse model, Telegram alerting with throttling, a feed watchdog, a self-contained HTML dashboard, and a written runbook covering deployment, monitoring, failure playbooks and rollback</li>
+                        <li>Built a <strong>nine-system software archive</strong> &mdash; each system self-contained, offline-first with vendored assets, individually documented, and shipping a terminal client with full parity to its web UI, driving the same code and database</li>
+                        <li>That archive includes PhishGuard AI (32-feature ML phishing detection), SentinelIQ (credit-card fraud scoring with a live analytics dashboard), an automated resume screener doing PDF/DOCX parsing, skill matching, geospatial proximity ranking and Excel export, and TaskMind (plain-English task capture with priority scoring and next-action recommendations)</li>
+                        <li><strong>Academia Hub</strong> &mdash; two-sided academic marketplace on Next.js 14 with Stripe Connect seller onboarding and split payments at a 15% platform commission, webhook-tracked payment state, AWS S3 storage behind signed URLs, buyer&ndash;seller messaging, and role-based access across buyer, seller and admin</li>
+                        <li><strong>CardExpress</strong> &mdash; ATM card request and delivery system for Nigerian banks covering the full request-to-delivery lifecycle, with public reference-code tracking that needs no login and an accessibility-first build (keyboard navigation, ARIA live regions, persistent high-contrast mode) in service of its financial-inclusion goal</li>
+                        <li><strong>Hospital EHR System</strong> &mdash; Django + DRF and React records platform enforcing strict row-level security, where only doctors on a patient's authorised list can reach their data and access is shared explicitly by doctor ID or email</li>
+                        <li><strong>Adaptive RL research</strong> &mdash; enhanced DQN with Double Q-learning, duelling architecture and Prioritised Experience Replay, trained over ~1,122 episodes and evaluated zero-shot across seven altered-physics environments, written up as an academic paper</li>
+                        <li><strong>AI PDF Reader Bot</strong> &mdash; Streamlit chatbot over multiple PDFs using LangChain, OpenAI and FAISS retrieval, with text chunking strategies and conversation memory for contextual Q&amp;A</li>
                     </ul>
                 </li>
-                <li><strong>F&amp;F Inventory Management System — Fortune et Feveur (Inventory &amp; POS) (2024 – Present):</strong>
+                <li><strong>Freelance Developer &mdash; Client Delivery (2025 &ndash; Present):</strong>
                     <ul>
-                        <li>Built the F&amp;F Inventory Management System for Fortune et Feveur (tiling company), delivering both the company website and an internal inventory &amp; POS solution</li>
-                        <li>Developed a cross-platform desktop application using Electron with a React frontend and Node.js backend</li>
-                        <li>Implemented inventory tracking, sales processing, and reporting to support day-to-day operations</li>
-                        <li>Designed a relational database schema for products, customers, sales, and inventory management</li>
-                        <li>Created responsive UI components and integrated receipt printing for POS workflows</li>
-                        <li>Delivered and deployed the public-facing company website: <a href="https://www.fortuneetfeveur.com/" target="_blank" rel="noopener">www.fortuneetfeveur.com</a></li>
+                        <li><strong>Fortune et Feveur</strong> (tiling company) &mdash; built the F&amp;F Inventory Management System, a cross-platform Electron desktop app with a React frontend and Node.js backend handling inventory tracking, sales processing, reporting and receipt printing, over ~92 commits; also delivered and deployed the public site at <a href="https://www.fortuneetfeveur.com/" target="_blank" rel="noopener">fortuneetfeveur.com</a></li>
+                        <li><strong>Palmwine Merchants</strong> &mdash; event booking and ticketing platform for event discovery, online ticket purchase and brand engagement, supporting recurring event operations</li>
+                        <li><strong>SLO</strong> &mdash; translated a Figma design system into a working React + TypeScript brand site</li>
+                        <li>Ran each engagement end to end: requirements gathering, direct client communication, delivery, deployment and ongoing maintenance</li>
                     </ul>
                 </li>
-                <li><strong>Event Management &amp; Service Booking Platform — Palmwine Merchants (2024 – Present):</strong>
-                    <ul>
-                        <li>Built an online booking platform for Palmwine Merchants to advertise products and promote events</li>
-                        <li>Implemented customer-facing flows for discovering events and purchasing tickets online</li>
-                        <li>Enabled event organization and ticket sales workflows to support recurring event operations</li>
-                        <li>Delivered a responsive, mobile-friendly UI aligned with brand presentation and conversion goals</li>
-                    </ul>
-                </li>
-                <li><strong>Corporate Business Website — 301ATech (2024 – Present):</strong>
-                    <ul>
-                        <li>Designed and developed the corporate website for 301ATech (software company) as a freelance engagement</li>
-                        <li>Implemented a responsive, modern layout with clear service positioning, navigation, and strong UX</li>
-                        <li>Delivered production-ready pages and content structure for company overview, services, and contact</li>
-                        <li>Published and maintained the live site: <a href="https://www.301atech.com/" target="_blank" rel="noopener">www.301atech.com</a></li>
-                    </ul>
-                </li>
+            </ul>
+        </div>
+        <div class="resume-section">
+            <h2>How I Work with AI</h2>
+            <ul>
+                <li><strong>Claude Code as a daily driver</strong> &mdash; primary tool for building, refactoring and shipping. This portfolio, including its content and structure, is maintained through Claude Code sessions against the live repository.</li>
+                <li><strong>Claude AI for research and decision support</strong> &mdash; deep research on tools and approaches, synthesis into short actionable summaries, and drafting technical documentation and client-facing communication.</li>
+                <li><strong>Claude Cowork for documentation and execution</strong> &mdash; organising project knowledge, keeping written context current, and moving multi-step work forward.</li>
+                <li><strong>Building with LLMs, not just using them</strong> &mdash; multi-agent orchestration, RAG over vector stores, provider-agnostic backends with graceful fallback, and measured evaluation rather than vibes.</li>
+                <li><strong>Automation bias</strong> &mdash; when a task repeats, it becomes a script, a CLI or a scheduled job. Every system above ships with its own tooling for exactly this reason.</li>
             </ul>
         </div>
         <p class="portfolio-reference"><em>Detailed project portfolio with live demonstrations available at:
@@ -288,8 +290,8 @@
         <div class="resume-section resume-education">
             <h2>Education</h2>
             <ul>
-                <li>King’s College, Lagos — Secondary Education (Sep 2016 – Jun 2026, Expected)</li>
-                <li>Kileb University — Undergraduate (2022 – Present, Expected Graduation: 2026)</li>
+                <li><strong>Caleb University</strong> &mdash; B.Sc. Computer Science (2022 &ndash; 2026, final year)</li>
+                <li><strong>King&rsquo;s College, Lagos</strong> &mdash; Secondary Education</li>
             </ul>
         </div>
     </div>
