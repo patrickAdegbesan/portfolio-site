@@ -1,532 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-NG">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work — Patrick Adegbesan</title>
-    <script>(function(){var t=localStorage.getItem('theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');})();</script>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work, Patrick Adegbesan</title>
+<meta name="description" content="Case studies and projects by Patrick Adegbesan: CampusDash, ZeDI, F&amp;F Tiles POS, SkillGraph, hackathon entries and earlier projects, each with his role and status.">
+<link rel="canonical" href="https://mr-path.site/work.html">
+<meta name="theme-color" content="#23272A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Work, Patrick Adegbesan">
+<meta property="og:description" content="Case studies and projects, each with my role and where it stands.">
+<meta property="og:url" content="https://mr-path.site/work.html">
+<meta property="og:image" content="https://mr-path.site/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
-
-    <nav>
-        <div class="nav-header">
-            <div class="nav-left">
-                <a href="index.html" class="logo">Mr-Path<span class="accent">.</span></a>
-            </div>
-            <div class="nav-center">
-                <div class="nav-menu">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="work.html" class="active">Work</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-            </div>
-            <div class="nav-right">
-                <a href="contact.html" class="nav-cta">Hire Me</a>
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
-                    <i class="fas fa-sun  icon-sun"></i>
-                    <i class="fas fa-moon icon-moon"></i>
-                </button>
-                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Patrick Adegbesan</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul><li><a href="/work.html" aria-current="page">Work</a></li><li><a href="/services.html">Services</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul>
     </nav>
+  </div>
+</header>
 
-    <main>
+<main id="main">
+  <div class="wrap">
+    <header class="page-head">
+      <h1>Work</h1>
+      <p class="lede">Case studies first, then everything else. Each entry says what I did and how far it got. Private repositories are described but not linked.</p>
+    </header>
 
-        <!-- Page header -->
-        <section class="page-hero">
-            <div class="container">
-                <span class="section-label">Work</span>
-                <h1 class="section-title">Products I've built</h1>
-                <p class="section-subtitle">AI systems, fintech infrastructure, and production platforms &mdash; solo and with my team at 3O1Atech. Cards with a demo reel open on click.</p>
-            </div>
-        </section>
+    <section class="section" aria-labelledby="cs-title">
+      <h2 id="cs-title">Case studies</h2>
+      <div class="table-wrap" role="region" aria-label="Case studies table" tabindex="0">
+        <table class="archive">
+          <thead><tr><th scope="col">Project</th><th scope="col">What it is</th><th scope="col">My part</th><th scope="col">Status</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><a href="/work/campusdash.html">CampusDash</a></th><td data-label="What it is">Campus food delivery across an app, WhatsApp and card terminals</td><td data-label="My part">API and payments (shared); terminal and desktop POS</td><td data-label="Status">Website live; Android in testing</td></tr>
+            <tr><th scope="row"><a href="/work/zedi.html">ZeDI</a></th><td data-label="What it is">Money app with a double-entry ledger and PIN-confirmed payments</td><td data-label="My part">Most of the code across API, web, mobile and admin</td><td data-label="Status">Early access</td></tr>
+            <tr><th scope="row"><a href="/work/fandf-pos.html">F&amp;F Tiles POS</a></th><td data-label="What it is">Offline-first stock and sales for a tiling company, desktop and card terminal</td><td data-label="My part">Sole developer, freelance for Fortune et Feveur</td><td data-label="Status">Delivered</td></tr>
+            <tr><th scope="row"><a href="/work/skillgraph.html">SkillGraph</a></th><td data-label="What it is">Career-path explorer on a graph database</td><td data-label="My part">Solo, 48-hour take-home</td><td data-label="Status">Submitted</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-        <!-- Projects grid -->
-        <section>
-            <div class="container">
+    <section class="section" aria-labelledby="more-title">
+      <h2 id="more-title">Other product and client work</h2>
+      <div class="table-wrap" role="region" aria-label="Other product and client work table" tabindex="0">
+        <table class="archive">
+          <thead><tr><th scope="col">Project</th><th scope="col">What it is</th><th scope="col">My part</th><th scope="col">Status</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">ShelfFlow</th><td data-label="What it is">Offline-first point of sale for small shops: web app with local storage, Android build, VAT at checkout and tax estimates</td><td data-label="My part">One of a team of five</td><td data-label="Status">1st place, NACOS Innovation League 2026</td></tr>
+            <tr><th scope="row"><a href="https://www.301atech.com/">3O1Atech website</a></th><td data-label="What it is">Company website for a software studio: services, about and contact</td><td data-label="My part">Designer and developer, freelance</td><td data-label="Status">Live</td></tr>
+            <tr><th scope="row"><a href="https://palmwinemerchants.com/">Palmwine Merchants</a></th><td data-label="What it is">Website for a palm-wine brand to show its products and promote events</td><td data-label="My part">Developer, freelance</td><td data-label="Status">Live</td></tr>
+            <tr><th scope="row">Fortune et Feveur website</th><td data-label="What it is">Company website for the tiling company behind F&amp;F POS</td><td data-label="My part">Developer, freelance</td><td data-label="Status">Delivered; no longer online</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-                <!-- ===== GROUP 1: AI & APPLIED ML ===== -->
-                <div class="work-group">
-                    <div class="work-group-head">
-                        <h2>AI &amp; Applied Machine Learning</h2>
-                        <span>Multi-agent systems, reinforcement learning, fraud detection</span>
-                    </div>
-                    <div class="projects">
+    <section class="section" aria-labelledby="hack-title">
+      <h2 id="hack-title">Hackathons</h2>
+      <div class="table-wrap" role="region" aria-label="Hackathons table" tabindex="0">
+        <table class="archive">
+          <thead><tr><th scope="col">Entry</th><th scope="col">What we built</th><th scope="col">Team</th><th scope="col">Outcome</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><a href="https://github.com/3O1Atech/squad-hackathon-3-plan-b">GhostGuard</a></th><td data-label="What we built">Squad Hackathon 3.0, May 2026: a prototype that re-checks a worker's identity with a liveness check and face match before payroll is paid</td><td data-label="Team">Three people</td><td data-label="Outcome">Participated</td></tr>
+            <tr><th scope="row"><a href="https://github.com/3O1Atech/dsn-bct-llm-agent">Recommendation agents</a></th><td data-label="What we built">DSN × Bluechip Hackathon 3.0, May 2026: a multi-agent service for cross-domain recommendations and review generation</td><td data-label="Team">Four people</td><td data-label="Outcome">Participated</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-                        <div class="project-card">
-                            <div class="project-cover cover-ghost">
-                                <span class="card-ribbon">Hackathon</span>
-                                <i class="fas fa-shield-halved"></i>
-                            </div>
-                            <div class="project-content">
-                                <h3>GhostGuard &mdash; AI Payroll Integrity System</h3>
-                                <p>Continuous AI verification layer that re-confirms every worker's identity each payroll cycle before funds are released. Four-stage gate: MediaPipe liveness (blink + head motion), DeepFace Facenet512 matching against a BVN reference, multi-signal deepfake analysis (temporal, FFT, compression artifacts), and behavioural anomaly scoring on transaction history. Built against Nigeria's &#8358;4tn/year ghost-worker problem.</p>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">Node.js</span>
-                                    <span class="tech-tag">FastAPI</span>
-                                    <span class="tech-tag">MediaPipe</span>
-                                    <span class="tech-tag">DeepFace</span>
-                                    <span class="tech-tag">Squad API</span>
-                                    <span class="tech-tag">SQLite</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://github.com/3O1Atech/squad-hackathon-3-plan-b" class="btn-secondary" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
-                                </div>
-                            </div>
-                        </div>
+    <section class="section" aria-labelledby="early-title">
+      <h2 id="early-title">Study and earlier projects</h2>
+      <p class="muted prose">Projects from university and self-study. Smaller in scope, kept here for the record.</p>
+      <div class="table-wrap" role="region" aria-label="Study and earlier projects table" tabindex="0">
+        <table class="archive">
+          <thead><tr><th scope="col">Project</th><th scope="col">What it is</th><th scope="col">Built with</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">AttendX</th><td data-label="What it is">Final-year project: class attendance with QR codes and face recognition</td><td data-label="Built with">Flask, React</td></tr>
+            <tr><th scope="row"><a href="https://github.com/patrickAdegbesan/Academia-hub">Academia Hub</a></th><td data-label="What it is">Marketplace for academic resources with Stripe Connect payouts and S3 file storage</td><td data-label="Built with">Next.js, Prisma, PostgreSQL</td></tr>
+            <tr><th scope="row"><a href="https://github.com/patrickAdegbesan/ghot-walker-">CardExpress</a></th><td data-label="What it is">ATM card request and delivery tracking for banks</td><td data-label="Built with">Flask, PostgreSQL</td></tr>
+            <tr><th scope="row"><a href="https://github.com/patrickAdegbesan/Hospital-EHR-System">Hospital EHR</a></th><td data-label="What it is">Patient records where only authorised doctors can see a patient's data</td><td data-label="Built with">Django, React</td></tr>
+            <tr><th scope="row"><a href="https://github.com/patrickAdegbesan/slo">SLO brand site</a></th><td data-label="What it is">A Figma design turned into a responsive React site</td><td data-label="Built with">React, TypeScript</td></tr>
+            <tr><th scope="row"><a href="https://github.com/patrickAdegbesan/adaptive-rl-cartpole">CartPole agent</a></th><td data-label="What it is">Reinforcement-learning study: a DQN agent tested against altered physics</td><td data-label="Built with">PyTorch</td></tr>
+            <tr><th scope="row"><a href="https://github.com/patrickAdegbesan/PDF_READER">PDF chat</a></th><td data-label="What it is">Ask questions about uploaded PDFs</td><td data-label="Built with">LangChain, Streamlit</td></tr>
+            <tr><th scope="row"><a href="https://github.com/patrickAdegbesan/task-management">Task manager</a></th><td data-label="What it is">Drag-and-drop task list</td><td data-label="Built with">JavaScript</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</main>
 
-                        <div class="project-card">
-                            <div class="project-cover cover-swarm">
-                                <span class="card-ribbon">Hackathon</span>
-                                <i class="fas fa-diagram-project"></i>
-                            </div>
-                            <div class="project-content">
-                                <h3>Nigerian Multi-Agent LLM Swarm</h3>
-                                <p>Fourteen coordinated LLM agents across two pipelines for the DSN &times; BCT Hackathon 3.0 &mdash; a six-agent chain for persona-calibrated review generation and an eight-agent recommender doing cross-domain taste projection. Pluggable LLM backend (Kimi, Gemini, OpenAI, local HF), ChromaDB vector store, and a real evaluation harness measuring RMSE, ROUGE-L, BERTScore, NDCG and Hit Rate.</p>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">FastAPI</span>
-                                    <span class="tech-tag">ChromaDB</span>
-                                    <span class="tech-tag">Multi-Agent</span>
-                                    <span class="tech-tag">Docker</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://github.com/3O1Atech/dsn-bct-llm-agent" class="btn-secondary" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project-card">
-                            <div class="project-cover cover-quant">
-                                <span class="card-ribbon">7 Milestones</span>
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <div class="project-content">
-                                <h3>Project Cognition &mdash; Self-Learning Trading System</h3>
-                                <p>Ensemble reinforcement-learning scalping system taken from architecture doc to deployable service across seven milestones. Five DQN agents each vote through their own feature lens; a per-regime meta-learner reweights them after every closed trade. A standalone risk engine gates every order &mdash; 1% equity cap, &minus;5% daily circuit breaker, drawdown governor &mdash; and agents cannot override it. Ships Docker + systemd deploy, nightly retraining behind a promotion gate, Telegram alerting, and a full operations runbook.</p>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">PyTorch</span>
-                                    <span class="tech-tag">Docker</span>
-                                    <span class="tech-tag">WebSockets</span>
-                                    <span class="tech-tag">SQLite</span>
-                                    <span class="tech-tag">systemd</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://github.com/patrickAdegbesan/mmtrader" class="btn-secondary" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project-card">
-                            <div class="project-cover cover-research">
-                                <span class="card-ribbon">Research</span>
-                                <i class="fas fa-robot"></i>
-                            </div>
-                            <div class="project-content">
-                                <h3>Adaptive RL Agent &mdash; CartPole</h3>
-                                <p>Enhanced Deep Q-Network combining Double Q-learning, a duelling architecture, and Prioritised Experience Replay, trained over ~1,122 episodes and then tested zero-shot against seven altered-physics worlds (Moon, Mars, Jupiter gravity, long pole, heavy cart, fast physics). Shipped with a Streamlit dashboard and a written academic paper.</p>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">PyTorch</span>
-                                    <span class="tech-tag">Gymnasium</span>
-                                    <span class="tech-tag">Streamlit</span>
-                                    <span class="tech-tag">DQN + PER</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://github.com/patrickAdegbesan/adaptive-rl-cartpole" class="btn-secondary" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project-card">
-                            <div class="project-image card-video-bg" role="button" tabindex="0">
-                                <video class="card-bg-video" autoplay muted loop playsinline>
-                                    <source src="img/prfreader.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="project-content">
-                                <h3>AI PDF Reader Bot</h3>
-                                <p>Streamlit chatbot for interactive conversations with multiple PDFs. Extracts text with PyPDF2, embeds content, and uses LangChain + OpenAI with FAISS-powered retrieval and conversation memory for contextual Q&amp;A.</p>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">LangChain</span>
-                                    <span class="tech-tag">OpenAI</span>
-                                    <span class="tech-tag">FAISS</span>
-                                    <span class="tech-tag">Streamlit</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://github.com/patrickAdegbesan/PDF_READER" class="btn-secondary" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project-card">
-                            <div class="project-image card-video-bg" role="button" tabindex="0">
-                                <video class="card-bg-video" autoplay muted loop playsinline>
-                                    <source src="img/trading_agent.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="project-content">
-                                <h3>Autonomous Crypto Trading Agent</h3>
-                                <p>Self-improving algorithmic trading system for the crypto market. Uses ML and real-time market data to execute trades autonomously, adapting to changing conditions. The precursor to Project Cognition.</p>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">TypeScript</span>
-                                    <span class="tech-tag">Exchange APIs</span>
-                                    <span class="tech-tag">Backtesting</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://github.com/patrickAdegbesan/trading-agent" class="btn-secondary" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- ===== GROUP 2: PLATFORMS & PRODUCT ENGINEERING ===== -->
-                <div class="work-group">
-                    <div class="work-group-head">
-                        <h2>Platforms &amp; Product Engineering</h2>
-                        <span>Multi-surface products, marketplaces, business systems</span>
-                    </div>
-                    <div class="projects">
-
-                        <div class="project-card">
-                            <div class="project-cover cover-campus">
-                                <span class="card-ribbon">3O1Atech</span>
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <div class="project-content">
-                                <h3>CampusDash &mdash; Multi-Surface Campus Platform</h3>
-                                <p>A four-surface product built with the team at 3O1Atech: a customer web app, a cross-platform mobile app, a backend API service, and an internal admin dashboard &mdash; each maintained as its own repository with a shared contract between them. Currently in active development.</p>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">TypeScript</span>
-                                    <span class="tech-tag">React</span>
-                                    <span class="tech-tag">Mobile</span>
-                                    <span class="tech-tag">Node.js</span>
-                                    <span class="tech-tag">Admin Portal</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://github.com/3O1Atech" class="btn-secondary" target="_blank" rel="noopener"><i class="fab fa-github"></i> Organisation</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project-card">
-                            <div class="project-cover cover-market">
-                                <i class="fas fa-store"></i>
-                            </div>
-                            <div class="project-content">
-                                <h3>Academia Hub &mdash; Academic Marketplace</h3>
-                                <p>Two-sided marketplace for academic projects and research resources. Stripe Connect powers seller onboarding and split payments with a 15% platform commission, webhooks track payment state, and AWS S3 holds files behind signed URLs with a local-disk fallback in development. Includes buyer&ndash;seller messaging, role-based access for buyer/seller/admin, and a seller earnings dashboard.</p>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">Next.js 14</span>
-                                    <span class="tech-tag">TypeScript</span>
-                                    <span class="tech-tag">Prisma</span>
-                                    <span class="tech-tag">PostgreSQL</span>
-                                    <span class="tech-tag">Stripe Connect</span>
-                                    <span class="tech-tag">AWS S3</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://github.com/patrickAdegbesan/Academia-hub" class="btn-secondary" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project-card">
-                            <div class="project-cover cover-suite">
-                                <span class="card-ribbon">9 Systems</span>
-                                <i class="fas fa-layer-group"></i>
-                            </div>
-                            <div class="project-content">
-                                <h3>Nine-System Software Archive</h3>
-                                <p>Nine independent, self-contained systems &mdash; each fully offline-first with vendored assets, each documented, and each shipping a terminal client with full parity to its web UI. Includes PhishGuard AI (32-feature ML phishing detection), SentinelIQ (credit-card fraud scoring with a live dashboard), an automated resume screener with geospatial proximity ranking and Excel export, TaskMind (NLP task capture with priority scoring), ComplaintDesk, a study planner, a discrete-event network simulator, and a student records system.</p>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">Flask</span>
-                                    <span class="tech-tag">FastAPI</span>
-                                    <span class="tech-tag">scikit-learn</span>
-                                    <span class="tech-tag">spaCy</span>
-                                    <span class="tech-tag">React Native</span>
-                                    <span class="tech-tag">PHP + MySQL</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://github.com/patrickAdegbesan/project" class="btn-secondary" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project-card">
-                            <div class="project-cover cover-fintech">
-                                <i class="fas fa-credit-card"></i>
-                            </div>
-                            <div class="project-content">
-                                <h3>CardExpress &mdash; ATM Card Request &amp; Delivery</h3>
-                                <p>Web-based ATM card request and delivery system for Nigerian banks, covering the full lifecycle from request through approval, production, dispatch and delivery &mdash; with public reference-code tracking that needs no login, agent assignment for dispatch, and a notification at every state change. Built accessibility-first for its financial-inclusion goal: keyboard navigation, ARIA live regions, and a persistent high-contrast mode.</p>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">Flask</span>
-                                    <span class="tech-tag">SQLite</span>
-                                    <span class="tech-tag">PostgreSQL</span>
-                                    <span class="tech-tag">pytest</span>
-                                    <span class="tech-tag">WCAG</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://github.com/patrickAdegbesan/ghot-walker-" class="btn-secondary" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="project-card">
-                            <div class="project-cover cover-health">
-                                <i class="fas fa-notes-medical"></i>
-                            </div>
-                            <div class="project-content">
-                                <h3>Hospital EHR System</h3>
-                                <p>Electronic Health Record platform where doctors manage patients, medical records and appointments under strict row-level security &mdash; only doctors on a patient's authorised list can reach their data, and access is shared explicitly by doctor ID or email. Token-based auth via dj-rest-auth with a React + Material-UI frontend.</p>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">Django 5</span>
-                                    <span class="tech-tag">DRF</span>
-                                    <span class="tech-tag">React</span>
-                                    <span class="tech-tag">Material-UI</span>
-                                    <span class="tech-tag">RLS</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://github.com/patrickAdegbesan/Hospital-EHR-System" class="btn-secondary" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- ===== GROUP 3: CLIENT & FREELANCE DELIVERY ===== -->
-                <div class="work-group">
-                    <div class="work-group-head">
-                        <h2>Client &amp; Freelance Delivery</h2>
-                        <span>Shipped for real businesses, live in production</span>
-                    </div>
-                    <div class="projects">
-
-                    <div class="project-card">
-                        <div class="project-image card-video-bg" role="button" tabindex="0">
-                            <video class="card-bg-video" autoplay muted loop playsinline>
-                                <source src="img/fand%20f.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="project-content">
-                            <h3>F&amp;F Inventory Management System</h3>
-                            <p>Inventory &amp; POS solution for Fortune et Feveur (tiling company). Cross-platform Electron app with React frontend and Node.js backend — inventory tracking, sales, reporting, and receipt printing.</p>
-                            <div class="project-links">
-                                <a href="https://www.fortuneetfeveur.com/" class="btn-primary" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                                <a href="https://github.com/patrickAdegbesan/fortunetiles-system" class="btn-secondary" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image card-video-bg" role="button" tabindex="0">
-                            <video class="card-bg-video" autoplay muted loop playsinline>
-                                <source src="img/nova_store_video.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="project-content">
-                            <h3>Modern E-Commerce Platform</h3>
-                            <p>Fully responsive e-commerce platform with product catalog, shopping cart, user authentication, and mobile-first design, wired to a payment gateway for checkout.</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">Payments</span>
-                                <span class="tech-tag">Responsive</span>
-                                <span class="tech-tag">Private repo</span>
-                            </div>
-                            <div class="project-links">
-                                <span class="btn-secondary" style="cursor:default;opacity:0.75;"><i class="fas fa-play"></i> Demo reel above</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image card-video-bg" role="button" tabindex="0">
-                            <video class="card-bg-video" autoplay muted loop playsinline>
-                                <source src="img/pw.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="project-content">
-                            <h3>Event Management &amp; Booking Platform — Palmwine Merchants</h3>
-                            <p>Freelance-built booking platform for event discovery, ticket purchasing, and brand engagement, supporting recurring event promotion and ticket-sales workflows.</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">Ticketing</span>
-                                <span class="tech-tag">Client work</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/patrickAdegbesan/Palmwine-Merchants" class="btn-secondary" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image card-video-bg" role="button" tabindex="0">
-                            <video class="card-bg-video" autoplay muted loop playsinline>
-                                <source src="img/Recording%202026-01-13%20084215.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="project-content">
-                            <h3>301ATech Corporate Website</h3>
-                            <p>Corporate website for 301ATech (software company). Modern, responsive site with clear service positioning and production-ready deployment for a strong web presence.</p>
-                            <div class="project-links">
-                                <a href="https://www.301atech.com/" class="btn-primary" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Site</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-cover cover-market">
-                            <i class="fas fa-pen-ruler"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>SLO Brand Website</h3>
-                            <p>Brand website built from a Figma design system into a working React + TypeScript front end, translating the handoff faithfully into responsive components.</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">TypeScript</span>
-                                <span class="tech-tag">Figma&nbsp;&rarr;&nbsp;Code</span>
-                                <span class="tech-tag">Vite</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/patrickAdegbesan/slo" class="btn-secondary" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    </div>
-                </div>
-
-                <!-- ===== GROUP 4: FOUNDATIONS ===== -->
-                <div class="work-group">
-                    <div class="work-group-head">
-                        <h2>Foundations</h2>
-                        <span>Earlier builds &mdash; front-end craft and fundamentals</span>
-                    </div>
-                    <div class="projects">
-
-                    <div class="project-card">
-                        <div class="project-image card-video-bg" role="button" tabindex="0">
-                            <video class="card-bg-video" autoplay muted loop playsinline>
-                                <source src="img/tm_video.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="project-content">
-                            <h3>Task Management Web App</h3>
-                            <p>Interactive task manager with drag-and-drop, local storage, and real-time updates. Built with vanilla JavaScript ES6+ and a clean, intuitive UI.</p>
-                            <div class="project-links">
-                                <a href="https://patrickadegbesan.github.io/task-management/" class="btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                                <a href="https://github.com/patrickAdegbesan/task-management" class="btn-secondary" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image card-video-bg" role="button" tabindex="0">
-                            <video class="card-bg-video" autoplay muted loop playsinline>
-                                <source src="img/pp.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="project-content">
-                            <h3>Creative Portfolio Website</h3>
-                            <p>Portfolio site for a creative professional with smooth animations, parallax scrolling, and dynamic content loading. Optimized with lazy loading and efficient CSS animations.</p>
-                            <div class="project-links">
-                                <a href="https://patrickadegbesan.github.io/portfolio-site/" class="btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                                <a href="https://github.com/patrickAdegbesan/portfolio-site" class="btn-secondary" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image card-video-bg" role="button" tabindex="0">
-                            <video class="card-bg-video" autoplay muted loop playsinline>
-                                <source src="img/plp.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="project-content">
-                            <h3>Product Landing Page</h3>
-                            <p>High-converting landing page for a tech startup — engaging animations, testimonials, and clear CTAs. Advanced CSS and JS interactions for maximum engagement.</p>
-                            <div class="project-links">
-                                <a href="https://patrickadegbesan.github.io/product-landing-page/" class="btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                                <a href="https://github.com/patrickAdegbesan/product-landing-page" class="btn-secondary" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image card-video-bg" role="button" tabindex="0">
-                            <video class="card-bg-video" autoplay muted loop playsinline>
-                                <source src="img/tcc_video.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="project-content">
-                            <h3>The Code Center</h3>
-                            <p>A platform where anyone, anywhere can learn how to code — structured courses and hands-on content for aspiring developers.</p>
-                            <div class="project-links">
-                                <a href="https://tccproject.onrender.com/" class="btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                                <a href="https://github.com/patrickAdegbesan/tccproject" class="btn-secondary" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Video Modal -->
-    <div class="video-modal" id="video-modal" aria-hidden="true">
-        <div class="video-modal__overlay" data-video-modal-close></div>
-        <div class="video-modal__content" role="dialog" aria-modal="true" aria-labelledby="video-modal-title">
-            <button type="button" class="video-modal__close" data-video-modal-close aria-label="Close video">
-                <i class="fas fa-times"></i>
-            </button>
-            <h3 class="video-modal__title" id="video-modal-title"></h3>
-            <div class="video-modal__player" id="video-modal-player" aria-label="Video preview"></div>
-            <p class="video-modal__message" id="video-modal-message"></p>
-        </div>
-    </div>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="mailto:adegbesanpatrick14@gmail.com" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://wa.me/2349054448465" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/patrick-adegbesan-708631346/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/patrickAdegbesan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-                <p>&copy; 2026 Mr-Path &mdash; Built with clean code and good taste.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="navigation.js"></script>
-    <script src="scroll-animations.js"></script>
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="cta">Tell me what you need built.</p>
+    <ul class="contact-list">
+      <li><a href="mailto:adegbesanpatrick14@gmail.com">Email</a></li>
+      <li><a href="https://wa.me/2349054448465">WhatsApp</a></li>
+      <li><a href="https://www.linkedin.com/in/patrick-adegbesan-708631346/">LinkedIn</a></li>
+      <li><a href="https://github.com/patrickAdegbesan">GitHub</a></li>
+    </ul>
+    <p class="fine">© 2026 Patrick Adegbesan. <a href="/contact.html">All contact details</a></p>
+  </div>
+</footer>
 </body>
 </html>

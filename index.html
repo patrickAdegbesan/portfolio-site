@@ -1,272 +1,190 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-NG">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patrick Adegbesan | Full-Stack Developer</title>
-    <script>(function(){var t=localStorage.getItem('theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');})();</script>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Patrick Adegbesan, full-stack developer (web and mobile)</title>
+<meta name="description" content="Patrick Adegbesan is a full-stack developer in Lagos building web and mobile products: customer apps, APIs, naira payments and offline point-of-sale software.">
+<link rel="canonical" href="https://mr-path.site/">
+<meta name="theme-color" content="#23272A">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Patrick Adegbesan">
+<meta property="og:title" content="Patrick Adegbesan, full-stack developer">
+<meta property="og:description" content="Software built for the conditions it runs in: customer apps, APIs, naira payments and offline point-of-sale.">
+<meta property="og:url" content="https://mr-path.site/">
+<meta property="og:image" content="https://mr-path.site/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Patrick Adegbesan, full-stack developer. Software built for the conditions it runs in.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Patrick Adegbesan","url":"https://mr-path.site/","jobTitle":"Full-stack developer","address":{"@type":"PostalAddress","addressLocality":"Lagos","addressCountry":"NG"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Caleb University"},"sameAs":["https://github.com/patrickAdegbesan","https://www.linkedin.com/in/patrick-adegbesan-708631346/"]}
+</script>
 </head>
 <body>
-
-    <nav>
-        <div class="nav-header">
-            <div class="nav-left">
-                <a href="index.html" class="logo">Mr-Path<span class="accent">.</span></a>
-            </div>
-            <div class="nav-center">
-                <div class="nav-menu">
-                    <a href="index.html" class="active">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="work.html">Work</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-            </div>
-            <div class="nav-right">
-                <a href="contact.html" class="nav-cta">Hire Me</a>
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
-                    <i class="fas fa-sun  icon-sun"></i>
-                    <i class="fas fa-moon icon-moon"></i>
-                </button>
-                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Patrick Adegbesan</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul><li><a href="/work.html">Work</a></li><li><a href="/services.html">Services</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul>
     </nav>
+  </div>
+</header>
 
-    <main>
+<main id="main">
+  <div class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 class="display" id="hero-title">Software built for the conditions it runs in.</h1>
+      <p class="lede">I'm Patrick Adegbesan, a full-stack developer in Lagos. I build web and mobile products end to end: customer apps, the APIs and naira payments behind them, and point-of-sale software that keeps working when the network doesn't.</p>
+      <dl class="meta">
+        <dt>Now</dt><dd class="avail">Available for full-stack roles and freelance projects</dd>
+        <dt>Studied</dt><dd>B.Sc. Computer Science, Caleb University, 2026</dd>
+        <dt>Builds with</dt><dd>TypeScript, React, React Native (Expo), Node.js, Python</dd>
+      </dl>
+      <div class="actions">
+        <a class="btn sun" href="#work">See selected work</a>
+        <a class="btn" href="/contact.html">Get in touch</a>
+      </div>
+    </section>
+  </div>
 
-        <!-- ===== HERO ===== -->
-        <section class="hero-section">
-            <div class="hero">
-                <div class="hero-content">
-                    <span class="hero-badge">Available for work</span>
-                    <h1 class="hero-name">
-                        <span class="reveal-word"><span>Patrick</span></span><br>
-                        <span class="reveal-word"><span class="accent">Adegbesan</span></span>
-                    </h1>
-                    <p class="hero-tagline">Full-stack &amp; AI engineer — I build systems that run themselves.</p>
-                    <p class="hero-sub">
-                        Multi-agent LLM systems, reinforcement learning, and production platforms —
-                        built end to end, deployed, monitored, and documented.
-                    </p>
-                    <div class="hero-cta">
-                        <a href="work.html" class="btn-primary">
-                            <i class="fas fa-briefcase"></i> See My Work
-                        </a>
-                        <a href="contact.html" class="btn-outline">
-                            Let's Talk
-                        </a>
-                    </div>
-                    <div class="hero-stats">
-                        <div class="hero-stat">
-                            <span class="hero-stat-num" data-count="30" data-suffix="+">30+</span>
-                            <span class="hero-stat-label">Repositories</span>
-                        </div>
-                        <div class="hero-stat">
-                            <span class="hero-stat-num" data-count="14" data-suffix="">14</span>
-                            <span class="hero-stat-label">Agent System</span>
-                        </div>
-                        <div class="hero-stat">
-                            <span class="hero-stat-num">Prod</span>
-                            <span class="hero-stat-label">Deployed</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="hero-photo-wrap">
-                        <img src="img/profile.jpg" alt="Patrick Adegbesan" class="hero-photo">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== MARQUEE STRIP ===== -->
-        <div class="marquee-strip" aria-hidden="true">
-            <div class="marquee-track">
-                <span class="marquee-item">Available for Work</span>
-                <span class="marquee-sep">·</span>
-                <span class="marquee-item">Full-Stack Developer</span>
-                <span class="marquee-sep">·</span>
-                <span class="marquee-item">AI Integration</span>
-                <span class="marquee-sep">·</span>
-                <span class="marquee-item">Lagos, Nigeria</span>
-                <span class="marquee-sep">·</span>
-                <span class="marquee-item">Claude Code Daily</span>
-                <span class="marquee-sep">·</span>
-                <span class="marquee-item">Open to Freelance</span>
-                <span class="marquee-sep">·</span>
-                <span class="marquee-item">Multi-Agent Systems</span>
-                <span class="marquee-sep">·</span>
-                <span class="marquee-item">Let's Build Together</span>
-                <span class="marquee-sep">·</span>
-                <!-- Duplicate for seamless loop -->
-                <span class="marquee-item">Available for Work</span>
-                <span class="marquee-sep">·</span>
-                <span class="marquee-item">Full-Stack Developer</span>
-                <span class="marquee-sep">·</span>
-                <span class="marquee-item">AI Integration</span>
-                <span class="marquee-sep">·</span>
-                <span class="marquee-item">Lagos, Nigeria</span>
-                <span class="marquee-sep">·</span>
-                <span class="marquee-item">Claude Code Daily</span>
-                <span class="marquee-sep">·</span>
-                <span class="marquee-item">Open to Freelance</span>
-                <span class="marquee-sep">·</span>
-                <span class="marquee-item">Multi-Agent Systems</span>
-                <span class="marquee-sep">·</span>
-                <span class="marquee-item">Let's Build Together</span>
-                <span class="marquee-sep">·</span>
-            </div>
-        </div>
-
-        <!-- ===== FEATURED WORK ===== -->
-        <section class="featured-work">
-            <div class="container">
-                <div class="featured-work-header">
-                    <div>
-                        <span class="section-label">Selected Work</span>
-                        <h2 class="section-title">Things I've built</h2>
-                    </div>
-                    <a href="work.html" class="btn-outline">View All &rarr;</a>
-                </div>
-                <div class="featured-grid">
-
-                    <div class="project-card-static">
-                        <div class="project-cover cover-ghost">
-                            <span class="card-ribbon">Hackathon</span>
-                            <i class="fas fa-shield-halved"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>GhostGuard — AI Payroll Integrity</h3>
-                            <p>Continuous identity verification gating payroll release — liveness, face matching, deepfake analysis, and behavioural anomaly scoring. Built against a ₦4tn/year fraud problem.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/3O1Atech/squad-hackathon-3-plan-b" class="btn-secondary" target="_blank" rel="noopener">
-                                    <i class="fab fa-github"></i> Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card-static">
-                        <div class="project-cover cover-swarm">
-                            <span class="card-ribbon">14 Agents</span>
-                            <i class="fas fa-diagram-project"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>Multi-Agent LLM Swarm</h3>
-                            <p>Fourteen coordinated agents across two pipelines, a pluggable four-provider LLM backend, ChromaDB retrieval, and a real evaluation harness measuring five quality metrics.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/3O1Atech/dsn-bct-llm-agent" class="btn-secondary" target="_blank" rel="noopener">
-                                    <i class="fab fa-github"></i> Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card-static">
-                        <div class="project-cover cover-quant">
-                            <span class="card-ribbon">7 Milestones</span>
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>Project Cognition</h3>
-                            <p>Ensemble RL system taken from architecture doc to unattended 24/7 service — five voting agents, a hard risk engine they can't override, nightly retraining behind a promotion gate.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/patrickAdegbesan/mmtrader" class="btn-secondary" target="_blank" rel="noopener">
-                                    <i class="fab fa-github"></i> Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== SERVICES ===== -->
-        <section>
-            <div class="container">
-                <span class="section-label">Services</span>
-                <h2 class="section-title">What I build</h2>
-                <p class="section-subtitle">
-                    End-to-end software for the web — from first line of code to deployed, live product.
-                </p>
-                <div class="services-grid">
-
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-layer-group"></i>
-                        </div>
-                        <h3>Full-Stack Platforms</h3>
-                        <p>React and Next.js frontends over Node.js, FastAPI, or Django backends — marketplaces, dashboards, and multi-surface products built to scale.</p>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h3>AI &amp; Agent Systems</h3>
-                        <p>Multi-agent orchestration, RAG over vector stores, and provider-agnostic LLM backends — measured against real evaluation metrics, not impressions.</p>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-desktop"></i>
-                        </div>
-                        <h3>Systems That Run Themselves</h3>
-                        <p>Docker and systemd deployment, scheduled jobs, monitoring dashboards, throttled alerting, and written runbooks — so it keeps working when nobody's watching.</p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Video Modal -->
-    <div class="video-modal" id="video-modal" aria-hidden="true">
-        <div class="video-modal__overlay" data-video-modal-close></div>
-        <div class="video-modal__content" role="dialog" aria-modal="true" aria-labelledby="video-modal-title">
-            <button type="button" class="video-modal__close" data-video-modal-close aria-label="Close video">
-                <i class="fas fa-times"></i>
-            </button>
-            <h3 class="video-modal__title" id="video-modal-title"></h3>
-            <div class="video-modal__player" id="video-modal-player" aria-label="Video preview"></div>
-            <p class="video-modal__message" id="video-modal-message"></p>
-        </div>
+  <figure class="screens">
+    <div class="tiles" role="region" aria-label="Product screenshots" tabindex="0">
+      <img src="/assets/img/cd-app-menu-600.webp" srcset="/assets/img/cd-app-menu-300.webp 300w, /assets/img/cd-app-menu-600.webp 600w" sizes="(max-width:860px) 62vw, 300px" width="600" height="1298" fetchpriority="high" alt="CampusDash student app showing a campus vendor's menu with food photos and prices">
+      <img src="/assets/img/cd-checkout-640.webp" srcset="/assets/img/cd-checkout-360.webp 360w, /assets/img/cd-checkout-640.webp 640w" sizes="(max-width:860px) 62vw, 300px" width="640" height="800" alt="CampusDash checkout with tap-to-pay, cash, transfer and card options">
+      <img src="/assets/img/cd-receipt-640.webp" srcset="/assets/img/cd-receipt-360.webp 360w, /assets/img/cd-receipt-640.webp 640w" sizes="(max-width:860px) 62vw, 300px" width="640" height="800" alt="Printed CampusDash receipt for a card payment">
+      <img src="/assets/img/ff-cart-480.webp" srcset="/assets/img/ff-cart-240.webp 240w, /assets/img/ff-cart-480.webp 480w" sizes="(max-width:860px) 62vw, 300px" width="480" height="800" alt="F&amp;F POS cart pricing a tile by square metres or cartons">
     </div>
+    <figcaption>CampusDash: the student app (real campus menu, sample orders) and the counter app on a Moniepoint terminal. F&amp;F POS cart with test data.</figcaption>
+  </figure>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="mailto:adegbesanpatrick14@gmail.com" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://wa.me/2349054448465" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/patrick-adegbesan-708631346/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/patrickAdegbesan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-                <p>&copy; 2026 Mr-Path &mdash; Built with clean code and good taste.</p>
-            </div>
+  <section class="shade" id="work" aria-labelledby="work-title">
+    <div class="wrap">
+      <h2 id="work-title">Selected work</h2>
+      <p class="sub">Each project lists the condition it had to survive, what I built myself, and where it stands today.</p>
+
+      <article class="proj" aria-labelledby="p-cd">
+        <div class="txt">
+          <h3 id="p-cd">CampusDash</h3>
+          <p class="what">Campus food delivery. Students order in the app or on WhatsApp, pay by card or transfer, and a student runner brings the food over.</p>
+          <p class="cond"><b>Condition:</b> vendors sell at a counter on card terminals, and students order over WhatsApp as often as in the app.</p>
+          <dl class="credits">
+            <dt>Engagement</dt><dd>3O1Atech product, built with one other developer</dd>
+            <dt>My part</dt><dd>API and payments (shared), the card-terminal and desktop POS apps, and shared work on the mobile app and admin</dd>
+            <dt>Status</dt><dd>Website live; Android app in testing; iOS not yet approved</dd>
+          </dl>
+          <a class="more" href="/work/campusdash.html">Read the CampusDash case study</a>
         </div>
-    </footer>
+        <figure class="pics">
+          <img src="/assets/img/cd-app-menu-300.webp" srcset="/assets/img/cd-app-menu-300.webp 300w, /assets/img/cd-app-menu-600.webp 600w" sizes="(max-width:860px) 30vw, 200px" width="300" height="649" loading="lazy" alt="CampusDash student app: a vendor's menu with food photos">
+          <img src="/assets/img/cd-app-runner-300.webp" srcset="/assets/img/cd-app-runner-300.webp 300w, /assets/img/cd-app-runner-600.webp 600w" sizes="(max-width:860px) 30vw, 200px" width="300" height="628" loading="lazy" alt="CampusDash runner view listing available orders">
+          <img src="/assets/img/cd-checkout-360.webp" width="360" height="450" loading="lazy" alt="CampusDash point-of-sale checkout on a card terminal">
+          <figcaption>Student app, runner app and counter terminal. The case study also shows the admin dashboard.</figcaption>
+        </figure>
+      </article>
 
-    <script src="navigation.js"></script>
-    <script src="scroll-animations.js"></script>
+      <article class="proj" aria-labelledby="p-zedi">
+        <div class="txt">
+          <h3 id="p-zedi">ZeDI</h3>
+          <p class="what">A money app that asks you to give each naira a job before you spend it.</p>
+          <p class="cond"><b>Condition:</b> money has to be exact. Every kobo is recorded on both sides of a ledger, and every payment is confirmed once, with a PIN.</p>
+          <dl class="credits">
+            <dt>Engagement</dt><dd>3O1Atech product</dd>
+            <dt>My part</dt><dd>Wrote most of the code across the API, web app, Expo mobile app and admin console</dd>
+            <dt>Status</dt><dd>Early access with invited testers</dd>
+          </dl>
+          <a class="more" href="/work/zedi.html">Read the ZeDI case study</a>
+        </div>
+        <figure class="pics">
+          <img src="/assets/img/zedi-app-home-300.webp" srcset="/assets/img/zedi-app-home-300.webp 300w, /assets/img/zedi-app-home-600.webp 600w" sizes="(max-width:860px) 30vw, 200px" width="300" height="649" loading="lazy" alt="ZeDI dashboard with allocated and unallocated balances">
+          <img src="/assets/img/zedi-app-expense-bills-300.webp" srcset="/assets/img/zedi-app-expense-bills-300.webp 300w, /assets/img/zedi-app-expense-bills-600.webp 600w" sizes="(max-width:860px) 30vw, 200px" width="300" height="649" loading="lazy" alt="A ZeDI expense with its own balance and spend action">
+          <img src="/assets/img/zedi-app-plans-300.webp" srcset="/assets/img/zedi-app-plans-300.webp 300w, /assets/img/zedi-app-plans-600.webp 600w" sizes="(max-width:860px) 30vw, 200px" width="300" height="649" loading="lazy" alt="A ZeDI savings goal at 42 percent">
+          <figcaption>The web app on ZeDI's demo account: dashboard, an expense, a savings plan.</figcaption>
+        </figure>
+      </article>
+
+      <article class="proj" aria-labelledby="p-ff">
+        <div class="txt">
+          <h3 id="p-ff">F&amp;F Tiles POS</h3>
+          <p class="what">Stock, sales and reporting for Fortune et Feveur, a tiling company, on a desktop in the shop and an Android card terminal on the floor.</p>
+          <p class="cond"><b>Condition:</b> the shop keeps selling when the internet drops, and every device agrees on stock once it comes back.</p>
+          <dl class="credits">
+            <dt>Engagement</dt><dd>Freelance client: Fortune et Feveur</dd>
+            <dt>My part</dt><dd>Sole developer</dd>
+            <dt>Status</dt><dd>Delivered to the client, with their company website</dd>
+          </dl>
+          <a class="more" href="/work/fandf-pos.html">Read the F&amp;F POS case study</a>
+        </div>
+        <figure class="pics two">
+          <img src="/assets/img/ff-sell-480.webp" srcset="/assets/img/ff-sell-240.webp 240w, /assets/img/ff-sell-480.webp 480w" sizes="(max-width:860px) 45vw, 240px" width="480" height="800" loading="lazy" alt="F&amp;F POS sell screen with two products added">
+          <img src="/assets/img/ff-reports-480.webp" srcset="/assets/img/ff-reports-240.webp 240w, /assets/img/ff-reports-480.webp 480w" sizes="(max-width:860px) 45vw, 240px" width="480" height="800" loading="lazy" alt="F&amp;F POS daily report with sales, discounts, refunds and stock value">
+          <figcaption>Android terminal build with test data.</figcaption>
+        </figure>
+      </article>
+
+      <section class="also" aria-labelledby="also-title">
+        <h3 id="also-title">Also built</h3>
+        <div class="table-wrap" role="region" aria-label="Also built table" tabindex="0">
+          <table class="archive">
+            <thead><tr><th scope="col">Project</th><th scope="col">What it is</th><th scope="col">Context</th><th scope="col">Outcome</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">ShelfFlow</th><td data-label="What it is">Offline-first point of sale for small shops (web app and Android)</td><td data-label="Context">Team of five</td><td data-label="Outcome">1st place, NACOS Innovation League 2026</td></tr>
+              <tr><th scope="row"><a href="/work/skillgraph.html">SkillGraph</a></th><td data-label="What it is">Career-path explorer on a graph database</td><td data-label="Context">Solo, 48-hour take-home for an internship application</td><td data-label="Outcome">Submitted</td></tr>
+              <tr><th scope="row">AttendX</th><td data-label="What it is">Class attendance with QR codes and face recognition</td><td data-label="Context">Final-year project, Caleb University</td><td data-label="Outcome">Completed</td></tr>
+              <tr><th scope="row">GhostGuard</th><td data-label="What it is">Fraud-detection prototype for Squad Hackathon 3.0</td><td data-label="Context">Team of three</td><td data-label="Outcome">Participated</td></tr>
+              <tr><th scope="row">Recommendation agents</th><td data-label="What it is">Multi-agent API for the DSN × Bluechip Hackathon 3.0</td><td data-label="Context">Team of four</td><td data-label="Outcome">Participated</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><a class="more" href="/work.html">All work, including older projects</a></p>
+      </section>
+    </div>
+  </section>
+
+  <div class="band fins" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <section class="services" aria-labelledby="svc-title">
+      <header>
+        <h2 id="svc-title">What I can build for you</h2>
+        <p><a class="more" href="/services.html">Services in detail</a></p>
+      </header>
+      <ul>
+        <li><h3>Business websites</h3><p>Fast, mobile-first sites and redesigns that load well on any connection.</p></li>
+        <li><h3>MVP web apps</h3><p>Accounts, payments and an admin panel, from the first screen to a deployed product you can show customers.</p></li>
+        <li><h3>Dashboards and POS</h3><p>Internal tools, stock and sales systems, reports, and apps for card terminals.</p></li>
+      </ul>
+    </section>
+
+    <section class="intro" aria-labelledby="about-title">
+      <figure>
+        <img src="/assets/img/portrait-360.webp" srcset="/assets/img/portrait-360.webp 360w, /assets/img/portrait-720.webp 720w" sizes="(max-width:860px) 260px, 25vw" width="360" height="480" loading="lazy" alt="Portrait of Patrick Adegbesan">
+      </figure>
+      <div class="prose">
+        <h2 id="about-title">About</h2>
+        <p>I studied computer science at Caleb University (B.Sc., 2026). I'm a software engineer at 3O1Atech, a small product studio, where I build CampusDash, ZeDI and ShelfFlow, and I take on freelance clients.</p>
+        <p>I use AI coding tools every day. I decide the architecture, review every change, debug what breaks and write the tests. Each case study says which parts were mine and which were shared.</p>
+        <p><a class="more" href="/about.html">More about me</a></p>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="cta">Tell me what you need built.</p>
+    <ul class="contact-list">
+      <li><a href="mailto:adegbesanpatrick14@gmail.com">Email</a></li>
+      <li><a href="https://wa.me/2349054448465">WhatsApp</a></li>
+      <li><a href="https://www.linkedin.com/in/patrick-adegbesan-708631346/">LinkedIn</a></li>
+      <li><a href="https://github.com/patrickAdegbesan">GitHub</a></li>
+    </ul>
+    <p class="fine">© 2026 Patrick Adegbesan. <a href="/contact.html">All contact details</a></p>
+  </div>
+</footer>
 </body>
 </html>

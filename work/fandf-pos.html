@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en-NG">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>F&amp;F Tiles POS case study, Patrick Adegbesan</title>
+<meta name="description" content="How Patrick Adegbesan built an offline-first stock and sales system for a tile retailer: Windows desktop, Android card terminal and two-way cloud sync.">
+<link rel="canonical" href="https://mr-path.site/work/fandf-pos.html">
+<meta name="theme-color" content="#23272A">
+<meta property="og:type" content="article">
+<meta property="og:title" content="F&amp;F Tiles POS case study, Patrick Adegbesan">
+<meta property="og:description" content="A shop that keeps selling when the internet drops, with every device agreeing on stock when it returns.">
+<meta property="og:url" content="https://mr-path.site/work/fandf-pos.html">
+<meta property="og:image" content="https://mr-path.site/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Patrick Adegbesan</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul><li><a href="/work.html" aria-current="true">Work</a></li><li><a href="/services.html">Services</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <header class="cs-head">
+      <p class="crumb"><a href="/work.html">Work</a> / Case study</p>
+      <h1>F&amp;F Tiles POS</h1>
+      <p class="lede">Stock, sales and reporting for Fortune et Feveur, a tiling company: a Windows desktop app in the shop and an Android card terminal on the sales floor.</p>
+      <p class="cond"><b>Condition:</b> the shop keeps selling when the internet drops, and when it comes back, the desktop and the terminal agree on how many cartons are left.</p>
+      <dl class="credits">
+        <dt>Client</dt><dd>Fortune et Feveur (freelance)</dd>
+        <dt>My part</dt><dd>Sole developer: design, build, packaging and testing</dd>
+        <dt>Status</dt><dd>Delivered to the client</dd>
+        <dt>Stack</dt><dd>Electron, React, Express, SQLite, Sequelize, Supabase, Capacitor, Moniepoint SDK</dd>
+        <dt>Code</dt><dd><a href="https://github.com/patrickAdegbesan/fortunetiles-system">github.com/patrickAdegbesan/fortunetiles-system</a></dd>
+      </dl>
+    </header>
+  </div>
+
+  <section class="shot-band" aria-label="Screenshots">
+    <div class="wrap">
+      <div class="gallery">
+        <figure><img src="/assets/img/ff-sell-480.webp" srcset="/assets/img/ff-sell-240.webp 240w, /assets/img/ff-sell-480.webp 480w" sizes="(max-width:860px) 45vw, 240px" width="480" height="800" loading="lazy" alt="Sell screen listing Calacatta gold tiles and grout with stock levels"><figcaption>Sell: stock shown per carton and square metre.</figcaption></figure>
+        <figure><img src="/assets/img/ff-cart-480.webp" srcset="/assets/img/ff-cart-240.webp 240w, /assets/img/ff-cart-480.webp 480w" sizes="(max-width:860px) 45vw, 240px" width="480" height="800" loading="lazy" alt="Cart with a tile quantity entered in square metres, converted to cartons"><figcaption>Cart: sell by square metre or by carton.</figcaption></figure>
+        <figure><img src="/assets/img/ff-tile-480.webp" srcset="/assets/img/ff-tile-240.webp 240w, /assets/img/ff-tile-480.webp 480w" sizes="(max-width:860px) 45vw, 240px" width="480" height="800" loading="lazy" alt="New item form calculating square metres per carton from tile size and tiles per carton"><figcaption>New tile: coverage per carton is calculated.</figcaption></figure>
+        <figure><img src="/assets/img/ff-reports-480.webp" srcset="/assets/img/ff-reports-240.webp 240w, /assets/img/ff-reports-480.webp 480w" sizes="(max-width:860px) 45vw, 240px" width="480" height="800" loading="lazy" alt="Daily report with sales, net revenue, discounts, refunds, best sellers and stock value"><figcaption>Daily report.</figcaption></figure>
+      </div>
+      <p class="small">Android card-terminal build, test data.</p>
+    </div>
+  </section>
+
+  <section class="surfaces" aria-labelledby="desk">
+    <div class="wrap">
+      <h2 id="desk">The desktop app in the shop</h2>
+      <p class="sub">The same system on the shop's Windows computer, running with no internet.</p>
+      <article class="surface" aria-labelledby="d1">
+        <div class="surface-txt">
+          <h3 id="d1">Selling</h3>
+          <p>Staff search the stock, add tiles by carton or square metre, adjust a price when needed, and take cash, card or transfer.</p>
+        </div>
+        <figure class="surface-pics wide">
+          <img src="/assets/img/ff-desk-sales-1600.webp" srcset="/assets/img/ff-desk-sales-800.webp 800w, /assets/img/ff-desk-sales-1600.webp 1600w" sizes="(max-width:860px) 100vw, 760px" width="1600" height="965" loading="lazy" alt="Desktop point of sale with tiles priced per square metre and per carton, and a cart converting square metres to cartons">
+          <figcaption>Point of sale. Product photos are blank because this copy runs on test stock.</figcaption>
+        </figure>
+      </article>
+      <article class="surface" aria-labelledby="d2">
+        <div class="surface-txt">
+          <h3 id="d2">Records and reports</h3>
+          <p>Every sale, discount and return is listed and searchable, and the owner can run reports for any date range and export them to PDF or Excel.</p>
+        </div>
+        <figure class="surface-pics wide">
+          <img src="/assets/img/ff-desk-transactions-1600.webp" srcset="/assets/img/ff-desk-transactions-800.webp 800w, /assets/img/ff-desk-transactions-1600.webp 1600w" sizes="(max-width:860px) 100vw, 760px" width="1600" height="965" loading="lazy" alt="Transactions table listing orders with customer, items, discount, total, payment method and status">
+          <img src="/assets/img/ff-desk-reports-1600.webp" srcset="/assets/img/ff-desk-reports-800.webp 800w, /assets/img/ff-desk-reports-1600.webp 1600w" sizes="(max-width:860px) 100vw, 760px" width="1600" height="965" loading="lazy" alt="Business reports page with revenue, discounts, number of transactions and average order value">
+          <figcaption>Transactions and reports. Customers and amounts are test data.</figcaption>
+        </figure>
+      </article>
+    </div>
+  </section>
+
+  <div class="wrap cs-body">
+    <section class="two-col" aria-labelledby="s1">
+      <div class="side"><h2 id="s1">The problem</h2></div>
+      <div class="main prose">
+        <p>Tiles are priced per square metre but stocked and sold in cartons, and a customer may ask for "20 square metres" of a tile that comes 1.44 m² to a carton. Every sale needs that conversion, and every conversion is a chance for the stock count to drift. The shop's internet also comes and goes, so a system that stops when the connection drops is no use at the counter.</p>
+      </div>
+    </section>
+
+    <section class="two-col" aria-labelledby="s2">
+      <div class="side"><h2 id="s2">What I built</h2></div>
+      <div class="main prose">
+        <ul>
+          <li><strong>A desktop app that needs no internet.</strong> Electron runs a bundled Express server on the computer's loopback address, with a single SQLite file for data. It runs as a portable Windows app, prints receipts over USB, and signs in against the local database.</li>
+          <li><strong>An Android terminal app.</strong> The same React interface, packaged with Capacitor for a Moniepoint terminal, taking card payments and printing on the built-in printer.</li>
+          <li><strong>Tile-aware selling.</strong> Each tile records its size and tiles per carton, so the cart converts square metres to cartons and back. Changing a price at the till needs a PIN set by the owner.</li>
+          <li><strong>Returns and reports.</strong> Returns, refunds, damaged stock, daily and 30-day reports, and stock value.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="two-col" aria-labelledby="s3">
+      <div class="side"><h2 id="s3">The hard part</h2></div>
+      <div class="main prose">
+        <p>Two-way sync between devices that are each allowed to work offline. Every device keeps its own database, and database triggers note each change in a queue that syncs through Supabase every 15 seconds when there's a connection. Three rules stop the devices disagreeing:</p>
+        <ol>
+          <li>Each device creates records in its own range of IDs, so two devices can never create the same ID.</li>
+          <li>Stock is synced as changes (minus two cartons, plus ten) rather than totals, so two devices selling the same tile at once both count.</li>
+          <li>For everything else, such as a product's name or price, the most recent edit wins.</li>
+        </ol>
+        <p>A test harness runs several simulated devices against a stand-in cloud with no network, and the end-to-end and sync suites cover 191 checks.</p>
+      </div>
+    </section>
+
+    <section class="two-col" aria-labelledby="s4">
+      <div class="side"><h2 id="s4">Where it stands</h2></div>
+      <div class="main prose">
+        <p>Delivered to the client, along with their company website, which I also built. That website is no longer online, so I don't link to it.</p>
+      </div>
+    </section>
+
+    <nav class="next" aria-label="More case studies">
+      <a href="/work/zedi.html">Previous: ZeDI</a>
+      <a href="/work/skillgraph.html">Next: SkillGraph</a>
+    </nav>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="cta">Tell me what you need built.</p>
+    <ul class="contact-list">
+      <li><a href="mailto:adegbesanpatrick14@gmail.com">Email</a></li>
+      <li><a href="https://wa.me/2349054448465">WhatsApp</a></li>
+      <li><a href="https://www.linkedin.com/in/patrick-adegbesan-708631346/">LinkedIn</a></li>
+      <li><a href="https://github.com/patrickAdegbesan">GitHub</a></li>
+    </ul>
+    <p class="fine">© 2026 Patrick Adegbesan. <a href="/contact.html">All contact details</a></p>
+  </div>
+</footer>
+</body>
+</html>

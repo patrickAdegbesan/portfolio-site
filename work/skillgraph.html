@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en-NG">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SkillGraph case study, Patrick Adegbesan</title>
+<meta name="description" content="SkillGraph, a 48-hour take-home by Patrick Adegbesan: a career-path explorer on a graph database, and the query bug that only showed up against the real database.">
+<link rel="canonical" href="https://mr-path.site/work/skillgraph.html">
+<meta name="theme-color" content="#23272A">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SkillGraph case study, Patrick Adegbesan">
+<meta property="og:description" content="A 48-hour graph-database take-home, and the bug a local stand-in didn't catch.">
+<meta property="og:url" content="https://mr-path.site/work/skillgraph.html">
+<meta property="og:image" content="https://mr-path.site/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Patrick Adegbesan</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul><li><a href="/work.html" aria-current="true">Work</a></li><li><a href="/services.html">Services</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <header class="cs-head">
+      <p class="crumb"><a href="/work.html">Work</a> / Case study</p>
+      <h1>SkillGraph</h1>
+      <p class="lede">A career-path explorer that shows how a developer's skills and projects connect to roles and companies, built on a graph database in 48 hours.</p>
+      <p class="cond"><b>Condition:</b> 48 hours, an unfamiliar database, and a brief that would be judged on how the data model is reasoned about, not just whether the screens work.</p>
+      <dl class="credits">
+        <dt>Engagement</dt><dd>Take-home assessment for a full-stack internship application (CognoDB, Wexa AI)</dd>
+        <dt>My part</dt><dd>Solo, working with AI coding assistants</dd>
+        <dt>Status</dt><dd>Submitted</dd>
+        <dt>Stack</dt><dd>Next.js, TypeScript, Zod, openCypher on CognoDB</dd>
+        <dt>Code</dt><dd><a href="https://github.com/patrickAdegbesan/skillgraph">github.com/patrickAdegbesan/skillgraph</a></dd>
+      </dl>
+    </header>
+  </div>
+
+  <section class="shot-band" aria-label="Screenshots">
+    <div class="wrap">
+      <div class="gallery wide">
+        <figure><img src="/assets/img/skillgraph-roles-1200.webp" srcset="/assets/img/skillgraph-roles-720.webp 720w, /assets/img/skillgraph-roles-1200.webp 1200w" sizes="(max-width:1320px) 100vw, 1200px" width="1200" height="751" loading="lazy" alt="SkillGraph recommended roles, ranked by how many required skills the demo developer has"><figcaption>Recommended roles for the demo profile. The profile, its skill levels and the match percentages are seed data written for the demo. They are not a description of my skills.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap cs-body">
+    <section class="two-col" aria-labelledby="s1">
+      <div class="side"><h2 id="s1">Why a graph</h2></div>
+      <div class="main prose">
+        <p>The question SkillGraph answers, "how does this person's work connect to a role they could get next?", is about relationships. A developer has skills, builds projects that use skills, roles require skills, companies offer roles, and skills relate to each other. Answering it means walking across several of those links in one query, which is what a graph database is for.</p>
+        <p>One modelling choice mattered most: skills a developer claims are kept separate from skills that only show up in projects they built. Project evidence counts as exposure, never silently promoted to a claimed skill.</p>
+      </div>
+    </section>
+
+    <section class="two-col" aria-labelledby="s2">
+      <div class="side"><h2 id="s2">What I built</h2></div>
+      <div class="main prose">
+        <ul>
+          <li>A strict layering: interface, API route, service, query layer, database. Cypher queries live only in the query layer, and every one is parameterised, so user input never becomes query text.</li>
+          <li>Seven API routes with validated parameters and errors that don't leak database details.</li>
+          <li>An idempotent seed script that uses <code>MERGE</code>, verified by running it twice against the hosted database and checking that the counts didn't change.</li>
+          <li>Role matching, skill-gap analysis and a bounded career-path search across related skills, presented as a possible route rather than a promise.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="two-col" aria-labelledby="s3">
+      <div class="side"><h2 id="s3">The bug</h2></div>
+      <div class="main prose">
+        <p>The role list ranked correctly, but every role's detail page said the developer had 0% of the required skills. The gap query used a pattern-existence check inside a <code>WHERE</code> clause, which is standard openCypher. CognoDB evaluated it as false every time.</p>
+        <p>I rewrote it as an anti-join using <code>OPTIONAL MATCH</code> and <code>IS NULL</code>, the same pattern the working role list already used, and documented the incompatibility in the README. The lesson I kept: test against the real target database, because a local stand-in won't show you its quirks.</p>
+      </div>
+    </section>
+
+    <section class="two-col" aria-labelledby="s4">
+      <div class="side"><h2 id="s4">What I'd change</h2></div>
+      <div class="main prose">
+        <p>There are no automated tests. In 48 hours I verified by hand against the hosted database; given more time, the query layer would get integration tests first. The hosted demo is not currently online, so I link to the code instead.</p>
+      </div>
+    </section>
+
+    <nav class="next" aria-label="More case studies">
+      <a href="/work/fandf-pos.html">Previous: F&amp;F Tiles POS</a>
+      <a href="/work.html">All work</a>
+    </nav>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="cta">Tell me what you need built.</p>
+    <ul class="contact-list">
+      <li><a href="mailto:adegbesanpatrick14@gmail.com">Email</a></li>
+      <li><a href="https://wa.me/2349054448465">WhatsApp</a></li>
+      <li><a href="https://www.linkedin.com/in/patrick-adegbesan-708631346/">LinkedIn</a></li>
+      <li><a href="https://github.com/patrickAdegbesan">GitHub</a></li>
+    </ul>
+    <p class="fine">© 2026 Patrick Adegbesan. <a href="/contact.html">All contact details</a></p>
+  </div>
+</footer>
+</body>
+</html>

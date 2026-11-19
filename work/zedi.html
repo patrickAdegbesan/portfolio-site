@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en-NG">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZeDI case study, Patrick Adegbesan</title>
+<meta name="description" content="How Patrick Adegbesan built ZeDI, a Nigerian money app with a double-entry ledger, PIN-confirmed payments and verified Paystack webhooks, across API, web, mobile and admin.">
+<link rel="canonical" href="https://mr-path.site/work/zedi.html">
+<meta name="theme-color" content="#23272A">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ZeDI case study, Patrick Adegbesan">
+<meta property="og:description" content="A money app where every kobo is accounted for twice and every payment is confirmed once.">
+<meta property="og:url" content="https://mr-path.site/work/zedi.html">
+<meta property="og:image" content="https://mr-path.site/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Patrick Adegbesan</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul><li><a href="/work.html" aria-current="true">Work</a></li><li><a href="/services.html">Services</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <header class="cs-head">
+      <p class="crumb"><a href="/work.html">Work</a> / Case study</p>
+      <h1>ZeDI</h1>
+      <p class="lede">A Nigerian money app built on one rule: money goes from your wallet into a named expense before you can spend it. You allocate first, then spend.</p>
+      <p class="cond"><b>Condition:</b> money has to be exact. Every kobo is recorded on both sides of a ledger, every payment is confirmed once with a PIN, and a payment provider's callback is never trusted on its own.</p>
+      <dl class="credits">
+        <dt>Engagement</dt><dd>3O1Atech product</dd>
+        <dt>My part</dt><dd>Wrote most of the code across the API, web app, Expo mobile app and admin console</dd>
+        <dt>Status</dt><dd>Early access with invited testers</dd>
+        <dt>Stack</dt><dd>TypeScript, NestJS, PostgreSQL, Prisma, BullMQ, React, Expo, Next.js</dd>
+        <dt>Links</dt><dd><a href="https://zedisite.301atech.com/">zedisite.301atech.com</a> (code is private)</dd>
+      </dl>
+    </header>
+  </div>
+
+  <section class="shot-band" aria-label="Screenshots">
+    <div class="wrap">
+      <div class="phones">
+        <figure><img src="/assets/img/zedi-app-home-600.webp" srcset="/assets/img/zedi-app-home-300.webp 300w, /assets/img/zedi-app-home-600.webp 600w" sizes="(max-width:860px) 46vw, 300px" width="600" height="1298" alt="ZeDI dashboard: available balance split into allocated and unallocated money, recent activity and quick actions"><figcaption>Dashboard: allocated vs unallocated money.</figcaption></figure>
+        <figure><img src="/assets/img/zedi-app-expense-bills-600.webp" srcset="/assets/img/zedi-app-expense-bills-300.webp 300w, /assets/img/zedi-app-expense-bills-600.webp 600w" sizes="(max-width:860px) 46vw, 300px" width="600" height="1298" alt="Bills and Utilities expense with its own balance and Spend and Allocate actions"><figcaption>An expense: you spend only from here.</figcaption></figure>
+        <figure><img src="/assets/img/zedi-app-plans-600.webp" srcset="/assets/img/zedi-app-plans-300.webp 300w, /assets/img/zedi-app-plans-600.webp 600w" sizes="(max-width:860px) 46vw, 300px" width="600" height="1298" alt="Savings goal at 42 percent with an automatic weekly contribution"><figcaption>Savings plans.</figcaption></figure>
+        <figure><img src="/assets/img/zedi-app-analytics-600.webp" srcset="/assets/img/zedi-app-analytics-300.webp 300w, /assets/img/zedi-app-analytics-600.webp 600w" sizes="(max-width:860px) 46vw, 300px" width="600" height="1298" alt="Spending over time chart by week"><figcaption>Spending analytics.</figcaption></figure>
+      </div>
+      <p class="small">The ZeDI web app running locally on ZeDI's own demo account. The name, account number and balances are demo data, not a real customer.</p>
+    </div>
+  </section>
+
+  <div class="wrap cs-body">
+    <section class="two-col" aria-labelledby="s1">
+      <div class="side"><h2 id="s1">The idea</h2></div>
+      <div class="main prose">
+        <p>Most budgeting apps report what you already spent. ZeDI moves the decision to before the spend: money lands in your wallet, you allocate it to expenses such as rent, bills or a "Tree" for family members, and you can only spend from an expense. There is deliberately no way to pay straight out of the wallet.</p>
+        <p>That rule is simple to say and strict to build, because it has to hold in every surface: the API, the React web app, the Expo mobile app and the admin console staff use for support and reconciliation.</p>
+      </div>
+    </section>
+
+    <section class="two-col" aria-labelledby="s2">
+      <div class="side"><h2 id="s2">What I built</h2></div>
+      <div class="main prose">
+        <ul>
+          <li><strong>A double-entry ledger.</strong> Every movement of money is written as balanced debit and credit entries, in kobo, as integers. Balances can be rebuilt from the ledger, and the admin console compares stored balances against it.</li>
+          <li><strong>Payments that can't be replayed.</strong> Paystack webhooks are verified by signature, every money-moving request carries an idempotency key, and spending requires the user's PIN. A background job reconciles payments that never received a callback.</li>
+          <li><strong>Integrations.</strong> Paystack for funding, Payscribe for bills and airtime, Dojah for identity checks, Termii for SMS.</li>
+          <li><strong>Four front ends.</strong> React web app, Expo mobile app, Next.js admin console and the marketing site, sharing types with the API.</li>
+          <li><strong>Tests and CI.</strong> About 590 backend test cases, run in CI on every pull request and every push to main.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="two-col" aria-labelledby="s3">
+      <div class="side"><h2 id="s3">The hard part</h2></div>
+      <div class="main prose">
+        <p>Repairs. Early versions recorded some family "Tree" allocations without a matching ledger entry. Crediting those from the stored amount would have created money that never moved. Instead, the admin reconciliation page shows each mismatch next to its ledger balance, and a super admin can repair a balance only when the ledger proves it. The repair runs inside a serializable transaction, re-checks the exact figures that were reviewed and writes an audit record. Records the ledger can't prove stay visible in history but are never credited.</p>
+      </div>
+    </section>
+
+    <section class="two-col" aria-labelledby="s4">
+      <div class="side"><h2 id="s4">How I worked</h2></div>
+      <div class="main prose">
+        <p>I wrote ZeDI with AI coding assistants, and the commit history says so. I set the architecture and the money rules, recorded the big decisions in architecture decision records, and reviewed every change. The tests exist because a money app can't rely on the assistant being right.</p>
+      </div>
+    </section>
+
+    <section class="two-col" aria-labelledby="s5">
+      <div class="side"><h2 id="s5">Where it stands</h2></div>
+      <div class="main prose">
+        <p>ZeDI is in early access with invited testers on iOS and Android test builds. It is not in the public app stores yet, and I'm not quoting user numbers.</p>
+      </div>
+    </section>
+
+    <nav class="next" aria-label="More case studies">
+      <a href="/work/campusdash.html">Previous: CampusDash</a>
+      <a href="/work/fandf-pos.html">Next: F&amp;F Tiles POS</a>
+    </nav>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="cta">Tell me what you need built.</p>
+    <ul class="contact-list">
+      <li><a href="mailto:adegbesanpatrick14@gmail.com">Email</a></li>
+      <li><a href="https://wa.me/2349054448465">WhatsApp</a></li>
+      <li><a href="https://www.linkedin.com/in/patrick-adegbesan-708631346/">LinkedIn</a></li>
+      <li><a href="https://github.com/patrickAdegbesan">GitHub</a></li>
+    </ul>
+    <p class="fine">© 2026 Patrick Adegbesan. <a href="/contact.html">All contact details</a></p>
+  </div>
+</footer>
+</body>
+</html>

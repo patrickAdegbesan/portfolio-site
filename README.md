@@ -1,153 +1,67 @@
-# Patrick Adegbesan - Portfolio Website
+# mr-path.site
 
-A modern, responsive portfolio website showcasing my skills and projects as a full-stack developer specializing in web development, AI integration, and algorithmic trading systems.
+Portfolio of Patrick Adegbesan. Plain HTML and one CSS file: no build step, no JavaScript, no
+framework. Hosted on GitHub Pages from `main`, with the custom domain in `CNAME`.
 
-## 🌐 Live Demo
+The design system (colours, type, layout, motion, honesty rules) is in [DESIGN.md](DESIGN.md).
+Read it before changing how anything looks.
 
-Visit the live portfolio at: [patrickadegbesan.github.io/portfolio-site](https://patrickadegbesan.github.io/portfolio-site/)
-
-## 📋 Overview
-
-This portfolio website serves as a comprehensive showcase of my technical expertise, featuring:
-- Professional about section with skills and experience
-- Detailed resume with technical background
-- Project showcase with live demonstrations
-- Contact information and professional links
-- Responsive design optimized for all devices
-
-## ✨ Features
-
-- **Responsive Design**: Fully responsive layout that works seamlessly across desktop, tablet, and mobile devices
-- **Modern UI/UX**: Clean, professional design with smooth animations and intuitive navigation
-- **Multi-Page Structure**: Organized content across dedicated pages (Home, About, Work, Resume, Contact)
-- **Interactive Elements**: Hover effects, smooth scrolling, and mobile-friendly navigation
-- **SEO Optimized**: Proper meta tags and semantic HTML structure
-- **Fast Loading**: Optimized assets and efficient code structure
-
-## 🛠️ Technologies Used
-
-### Frontend
-- **HTML5**: Semantic markup and accessibility
-- **CSS3**: Modern styling with Flexbox, Grid, and animations
-- **JavaScript (ES6+)**: Interactive functionality and DOM manipulation
-- **Font Awesome**: Professional icons and visual elements
-
-### Development Tools
-- **Git/GitHub**: Version control and deployment
-- **GitHub Pages**: Hosting and deployment platform
-- **VS Code**: Development environment
-
-## 📁 Project Structure
+## Files
 
 ```
-portfolio-site/
-├── index.html          # Homepage with hero section and overview
-├── about.html          # About me, skills, and professional background
-├── work.html           # Project showcase and demonstrations
-├── resume.html         # Detailed resume and technical experience
-├── contact.html        # Contact information and professional links
-├── styles.css          # Main stylesheet with responsive design
-├── navigation.js       # Mobile navigation and interactive elements
-├── asset/              # Static assets (PDF resume)
-├── img/                # Images, videos, and media files
-└── README.md           # Project documentation
+index.html            Home: hero, selected work, services, short about
+work.html             All work: case studies, other work, hackathons, earlier projects
+work/*.html           One case study per project
+services.html         Freelance services with scope and limits
+about.html            Background, skills with evidence, how I work, certificates
+contact.html          Contact details (no form)
+404.html              GitHub Pages serves this for missing pages
+resume.html           Redirects old links to about.html
+assets/css/site.css   All styles
+assets/fonts/         Archivo variable font (self-hosted, SIL OFL)
+assets/img/           WebP screenshots, portrait, og.png (social preview, 1200×630)
+asset/                Certificate PDFs and an old resume PDF (not linked)
+sitemap.xml, robots.txt
+ea-claude-9f4c2a1b.html  Unlisted application page (noindex); left as it was
 ```
 
-## 🚀 Getting Started
+`img/` holds the old site's images and videos (about 450 MB). Nothing links to them any more,
+so they can be deleted in a separate commit.
 
-### Prerequisites
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-- Internet connection for external resources (Font Awesome)
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/patrickAdegbesan/portfolio-site.git
-   cd portfolio-site
-   ```
-
-2. **Open in browser**
-   - Open `index.html` in your preferred web browser
-   - Or use a local server for better development experience
-
-### Local Development
-
-For local development with live reloading, you can use any static server:
+## Preview locally
 
 ```bash
-# Using Python (if installed)
-python -m http.server 8000
-
-# Using Node.js (if installed)
-npx serve .
-
-# Then visit http://localhost:8000
+python3 -m http.server 8000
+# open http://127.0.0.1:8000/
 ```
 
-## 📱 Pages Overview
+Links are root-relative (`/work.html`), so open the site through a server, not by double-clicking files.
 
-### Home (index.html)
-- Hero section with professional introduction
-- Quick navigation to main sections
-- Call-to-action buttons
+## Deploy
 
-### About (about.html)
-- Professional background and passion for development
-- Comprehensive skills grid (Python, JavaScript, React, Node.js, etc.)
-- AI integration and full-stack expertise
+1. Check every placeholder has been confirmed: `grep -rn data-confirm --include=*.html .`
+   The attribute can stay in the HTML (it does nothing visible), but the text it marks must be true.
+2. Commit and push to `main`. GitHub Pages publishes in a minute or two.
+3. Check https://mr-path.site/, a case study, and an unknown URL (should show the 404 page).
+4. Paste https://mr-path.site/ into the LinkedIn Post Inspector to refresh the link preview.
 
-### Work (work.html)
-- Featured projects with descriptions
-- Live demonstrations and video previews
-- Technology stacks used
+## Add a project
 
-### Resume (resume.html)
-- Professional summary and technical skills
-- Detailed experience sections
-- Key projects and education
+**To the archive only:** add a row to the right table in `work.html`. Give every `<td>` a
+`data-label` (it becomes the label on phones).
 
-### Contact (contact.html)
-- Contact form and professional links
-- Social media and communication channels
-- Location and availability information
+**As a case study:**
 
-## 🎨 Design Philosophy
-
-- **Minimalist**: Clean, uncluttered design that focuses on content
-- **Professional**: Corporate-ready aesthetic suitable for client presentations
-- **Accessible**: WCAG compliant with proper contrast and navigation
-- **Performance**: Optimized for fast loading and smooth interactions
-
-## 🤝 Contributing
-
-While this is a personal portfolio, suggestions for improvements are welcome:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📞 Contact
-
-**Patrick Adegbesan**
-- Email: adegbesanpatrick14@gmail.com
-- LinkedIn: [linkedin.com/in/patrick-adegbesan-708631346](https://www.linkedin.com/in/patrick-adegbesan-708631346/)
-- GitHub: [github.com/patrickAdegbesan](https://github.com/patrickAdegbesan)
-- Portfolio: [patrickadegbesan.github.io/portfolio-site](https://patrickadegbesan.github.io/portfolio-site/)
-- WhatsApp: [+234 905 444 8465](https://wa.me/2349054448465)
-
-## 🙏 Acknowledgments
-
-- Font Awesome for the icon library
-- GitHub Pages for reliable hosting
-- Open source community for inspiration and tools
-
----
-
-*Built with passion and lots of coffee ☕*
+1. Copy `work/skillgraph.html` to `work/<name>.html`.
+2. Update `<title>`, `meta description`, `canonical` and `og:` tags.
+3. Fill in the head block: one-line description, **Condition** (the constraint the project had to
+   survive), and the credits list: Engagement, My part, Status, Stack, Links.
+   Be exact about your part and the status.
+4. Screenshots: export PNGs, then
+   `magick shot.png -resize 1200x -strip -quality 80 assets/img/<name>-1200.webp` (plus a 720 or
+   360 version for `srcset`). Always set `width` and `height`, and write alt text and a caption
+   that says if the data is test or demo data. Never show real customer data, bank details or keys.
+5. Body sections: The problem, What I built, The hard part, Where it stands.
+6. Link it from `work.html`, and from the home page if it replaces a selected project.
+   Update the previous/next links at the bottom of the neighbouring case studies.
+7. Add the URL to `sitemap.xml`.

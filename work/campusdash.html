@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en-NG">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CampusDash case study, Patrick Adegbesan</title>
+<meta name="description" content="How Patrick Adegbesan helped build CampusDash, a campus food-delivery product with WhatsApp ordering, card-terminal point of sale and runner payouts.">
+<link rel="canonical" href="https://mr-path.site/work/campusdash.html">
+<meta name="theme-color" content="#23272A">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CampusDash case study, Patrick Adegbesan">
+<meta property="og:description" content="Campus food delivery that works at the counter, in the app and on WhatsApp.">
+<meta property="og:url" content="https://mr-path.site/work/campusdash.html">
+<meta property="og:image" content="https://mr-path.site/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Patrick Adegbesan</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul><li><a href="/work.html" aria-current="true">Work</a></li><li><a href="/services.html">Services</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <header class="cs-head">
+      <p class="crumb"><a href="/work.html">Work</a> / Case study</p>
+      <h1>CampusDash</h1>
+      <p class="lede">Campus food delivery run by students. Customers order in the app or on WhatsApp, vendors sell at the counter on card terminals, and student runners deliver.</p>
+      <p class="cond"><b>Condition:</b> the same order can start in an app, a WhatsApp chat or at a counter terminal, and every naira has to land with the right vendor and runner.</p>
+      <dl class="credits">
+        <dt>Engagement</dt><dd>3O1Atech product</dd>
+        <dt>Team</dt><dd>Two developers</dd>
+        <dt>My part</dt><dd>API and payments (shared), terminal and desktop POS apps (mine), mobile app and admin (shared)</dd>
+        <dt>Status</dt><dd>Website live; Android app in testing; iOS not yet approved</dd>
+        <dt>Stack</dt><dd>Node.js, Express, MongoDB, Expo, React, Next.js, Electron, Kotlin</dd>
+        <dt>Links</dt><dd><a href="https://www.campusdash.301atech.com/">campusdash.301atech.com</a> (code is private)</dd>
+      </dl>
+    </header>
+  </div>
+
+  <section class="shot-band" aria-label="Screenshots">
+    <div class="wrap">
+      <div class="phones">
+        <figure><img src="/assets/img/cd-app-home-600.webp" srcset="/assets/img/cd-app-home-300.webp 300w, /assets/img/cd-app-home-600.webp 600w" sizes="(max-width:860px) 46vw, 300px" width="600" height="1298" alt="CampusDash app home: vendors delivering to Caleb University, with wallet balance"><figcaption>Vendors on campus.</figcaption></figure>
+        <figure><img src="/assets/img/cd-app-menu-600.webp" srcset="/assets/img/cd-app-menu-300.webp 300w, /assets/img/cd-app-menu-600.webp 600w" sizes="(max-width:860px) 46vw, 300px" width="600" height="1298" alt="Vendor menu with afang soup, amala and asun fried rice, each with a photo and price"><figcaption>A vendor's menu.</figcaption></figure>
+        <figure><img src="/assets/img/cd-app-cart-600.webp" srcset="/assets/img/cd-app-cart-300.webp 300w, /assets/img/cd-app-cart-600.webp 600w" sizes="(max-width:860px) 46vw, 300px" width="600" height="1298" alt="Order summary with two portions of asun fried rice"><figcaption>Cart.</figcaption></figure>
+        <figure><img src="/assets/img/cd-app-checkout-600.webp" srcset="/assets/img/cd-app-checkout-300.webp 300w, /assets/img/cd-app-checkout-600.webp 600w" sizes="(max-width:860px) 46vw, 300px" width="600" height="1298" alt="Checkout asking whether to have the order delivered or pick it up from the vendor"><figcaption>Delivery or pickup.</figcaption></figure>
+      </div>
+      <p class="small">The student app, captured on a local copy of CampusDash loaded with Caleb University's real public menu. Customers, orders and balances are sample data.</p>
+    </div>
+  </section>
+
+  <div class="wrap cs-body">
+    <section class="two-col" aria-labelledby="s1">
+      <div class="side"><h2 id="s1">The problem</h2></div>
+      <div class="main prose">
+        <p>Students want food delivered to a hostel or lecture hall. Campus vendors already take payment at a counter, often on a bank's card terminal, and plenty of students would rather send a WhatsApp message than install another app. A delivery product that only worked in its own app would miss most of the orders.</p>
+        <p>So CampusDash has several front doors: an Expo app with customer, runner and vendor roles, a WhatsApp ordering bot, a website that takes guest and bulk orders, and point-of-sale apps for the counter. They all write to one API.</p>
+      </div>
+    </section>
+
+    <section class="two-col" aria-labelledby="s2">
+      <div class="side"><h2 id="s2">What I built</h2></div>
+      <div class="main prose">
+        <ul>
+          <li><strong>Payments in the API.</strong> Paystack and Payaza webhooks are checked against their HMAC signatures before an order is marked paid, so a forged callback can't settle an order.</li>
+          <li><strong>Runner payouts tied to handover.</strong> The customer gives the runner a six-digit code at the door. Only the correct code completes the delivery, and only then are the runner's earnings recorded in their wallet.</li>
+          <li><strong>Counter apps.</strong> Kotlin apps for Moniepoint and NEXGO card terminals (with a small SDK wrapper for the NEXGO hardware) and an Electron desktop POS, all selling from the same vendor catalogue as the app.</li>
+          <li><strong>Tests.</strong> The API has more than 650 Jest test cases running against an in-memory MongoDB. My co-developer and I both wrote them.</li>
+        </ul>
+        <p>The mobile app, admin dashboard and website were shared work. Commit history splits roughly evenly between the two of us on the API and admin, and my co-developer did more of the mobile app.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <section class="surfaces" aria-labelledby="sx">
+    <div class="wrap">
+      <h2 id="sx">Five ways in, one API</h2>
+      <p class="sub">Every surface below reads and writes the same orders, menus and wallets.</p>
+
+      <article class="surface" aria-labelledby="sx1">
+        <div class="surface-txt">
+          <h3 id="sx1">Student app</h3>
+          <p>Browse campus vendors, order, pay from a wallet, card or transfer, and track the order. Built with Expo for Android and iOS, plus a web version.</p>
+          <p class="muted small">My part: shared with my co-developer.</p>
+        </div>
+        <figure class="surface-pics phones-1">
+          <img src="/assets/img/cd-app-orders-300.webp" srcset="/assets/img/cd-app-orders-300.webp 300w, /assets/img/cd-app-orders-600.webp 600w" sizes="(max-width:860px) 46vw, 260px" width="300" height="649" loading="lazy" alt="My orders list with delivered and confirmed statuses">
+          <figcaption>Order history with live status. The ordering flow is in the strip at the top of the page.</figcaption>
+        </figure>
+      </article>
+
+      <article class="surface" aria-labelledby="sx2">
+        <div class="surface-txt">
+          <h3 id="sx2">Runner app</h3>
+          <p>Students who deliver see open orders on their campus, accept a job, and are paid into their wallet once the customer's code confirms the handover. It's the same app with a different role.</p>
+          <p class="muted small">My part: payout rules and the delivery-code check in the API.</p>
+        </div>
+        <figure class="surface-pics phones-1">
+          <img src="/assets/img/cd-app-runner-300.webp" srcset="/assets/img/cd-app-runner-300.webp 300w, /assets/img/cd-app-runner-600.webp 600w" sizes="(max-width:860px) 46vw, 260px" width="300" height="628" loading="lazy" alt="Runner view listing available orders with the delivery fee for each">
+          <figcaption>Available orders for a runner.</figcaption>
+        </figure>
+      </article>
+
+      <article class="surface" aria-labelledby="sx3">
+        <div class="surface-txt">
+          <h3 id="sx3">Admin dashboard</h3>
+          <p>Staff watch every order live, filter by status, print receipts, and manage each vendor's menu, prices and packaging. Built with React.</p>
+          <p class="muted small">My part: shared with my co-developer.</p>
+        </div>
+        <figure class="surface-pics wide">
+          <img src="/assets/img/cd-admin-orders-1600.webp" srcset="/assets/img/cd-admin-orders-800.webp 800w, /assets/img/cd-admin-orders-1600.webp 1600w" sizes="(max-width:860px) 100vw, 760px" width="1600" height="1000" loading="lazy" alt="Admin orders board with order cards showing customer, vendor, items, total and a print receipt button">
+          <img src="/assets/img/cd-admin-menu-1600.webp" srcset="/assets/img/cd-admin-menu-800.webp 800w, /assets/img/cd-admin-menu-1600.webp 1600w" sizes="(max-width:860px) 100vw, 760px" width="1600" height="1000" loading="lazy" alt="Admin menu manager for a vendor, with categories and an item editor">
+          <figcaption>Orders board and a vendor's menu manager. Customer names are sample data.</figcaption>
+        </figure>
+      </article>
+
+      <article class="surface" aria-labelledby="sx4">
+        <div class="surface-txt">
+          <h3 id="sx4">Counter point of sale</h3>
+          <p>Vendors sell over the counter on Moniepoint and NEXGO card terminals or a desktop app, from the same menu, with printed receipts. The Moniepoint app keeps selling when the network drops.</p>
+          <p class="muted small">My part: built these.</p>
+        </div>
+        <figure class="surface-pics phones-3">
+          <img src="/assets/img/cd-catalog-360.webp" srcset="/assets/img/cd-catalog-360.webp 360w, /assets/img/cd-catalog-640.webp 640w" sizes="(max-width:860px) 30vw, 220px" width="360" height="450" loading="lazy" alt="CampusDash POS catalogue on a Moniepoint card terminal">
+          <img src="/assets/img/cd-checkout-360.webp" srcset="/assets/img/cd-checkout-360.webp 360w, /assets/img/cd-checkout-640.webp 640w" sizes="(max-width:860px) 30vw, 220px" width="360" height="450" loading="lazy" alt="Terminal checkout with tap to pay, cash, transfer, card and pay code">
+          <img src="/assets/img/cd-receipt-360.webp" srcset="/assets/img/cd-receipt-360.webp 360w, /assets/img/cd-receipt-640.webp 640w" sizes="(max-width:860px) 30vw, 220px" width="360" height="450" loading="lazy" alt="Printed CampusDash receipt for jollof rice, fried rice, moi-moi, salad and meat">
+          <figcaption>Frames from a demo video of the developer build on a Moniepoint terminal.</figcaption>
+        </figure>
+      </article>
+
+      <article class="surface" aria-labelledby="sx5">
+        <div class="surface-txt">
+          <h3 id="sx5">WhatsApp ordering</h3>
+          <p>Students can order by chatting with a WhatsApp bot that walks them through vendor, items, delivery spot and payment, then hands the order to the same queue the runners see.</p>
+          <p class="muted small">My part: shared with my co-developer.</p>
+        </div>
+        <p class="surface-note muted small">No screenshot here: the conversations in the bot's logs belong to real customers.</p>
+      </article>
+    </div>
+  </section>
+
+  <div class="wrap cs-body">
+    <section class="two-col" aria-labelledby="s3">
+      <div class="side"><h2 id="s3">The hard part</h2></div>
+      <div class="main prose">
+        <p>Terminals lose signal, and a counter can't stop selling while they do. The Moniepoint app keeps sales in a local database and replays them when the connection returns. Each offline sale carries a one-time reference, and the API treats a replay of an already-settled sale as a success rather than a new charge, so the terminal can clear its queue without billing anyone twice.</p>
+        <p>I built the terminal side. The server route that accepts the replays was written by both of us. Each terminal maker's SDK also has its own payment flow and printer API, so the terminal apps stay thin: they take the payment on the device and send orders to the same API the app uses, which keeps reports and vendor balances in one place.</p>
+      </div>
+    </section>
+
+    <section class="two-col" aria-labelledby="s4">
+      <div class="side"><h2 id="s4">Where it stands</h2></div>
+      <div class="main prose">
+        <p>The website is live. The Android app is in testing, and Apple rejected the first iOS submission, so the app is not yet in either store. I'm not quoting user or order numbers here because I can't verify them.</p>
+        <p>Next, I'd work through Apple's review feedback and add end-to-end tests that run a terminal sale and an app order against the same vendor.</p>
+      </div>
+    </section>
+
+    <nav class="next" aria-label="More case studies">
+      <a href="/work.html">All work</a>
+      <a href="/work/zedi.html">Next: ZeDI</a>
+    </nav>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="cta">Tell me what you need built.</p>
+    <ul class="contact-list">
+      <li><a href="mailto:adegbesanpatrick14@gmail.com">Email</a></li>
+      <li><a href="https://wa.me/2349054448465">WhatsApp</a></li>
+      <li><a href="https://www.linkedin.com/in/patrick-adegbesan-708631346/">LinkedIn</a></li>
+      <li><a href="https://github.com/patrickAdegbesan">GitHub</a></li>
+    </ul>
+    <p class="fine">© 2026 Patrick Adegbesan. <a href="/contact.html">All contact details</a></p>
+  </div>
+</footer>
+</body>
+</html>

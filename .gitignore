@@ -1,0 +1,3 @@
+# Internal notes: never commit or publish
+_private/
+.playwright-mcp/

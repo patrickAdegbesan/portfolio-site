@@ -1,279 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-NG">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About — Patrick Adegbesan</title>
-    <script>(function(){var t=localStorage.getItem('theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');})();</script>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Patrick Adegbesan</title>
+<meta name="description" content="Background, skills and working style of Patrick Adegbesan, a 2026 computer science graduate of Caleb University building web and mobile products in Lagos.">
+<link rel="canonical" href="https://mr-path.site/about.html">
+<meta name="theme-color" content="#23272A">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="About Patrick Adegbesan">
+<meta property="og:description" content="Background, skills with evidence, and how I work.">
+<meta property="og:url" content="https://mr-path.site/about.html">
+<meta property="og:image" content="https://mr-path.site/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
-
-    <nav>
-        <div class="nav-header">
-            <div class="nav-left">
-                <a href="index.html" class="logo">Mr-Path<span class="accent">.</span></a>
-            </div>
-            <div class="nav-center">
-                <div class="nav-menu">
-                    <a href="index.html">Home</a>
-                    <a href="about.html" class="active">About</a>
-                    <a href="work.html">Work</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-            </div>
-            <div class="nav-right">
-                <a href="contact.html" class="nav-cta">Hire Me</a>
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
-                    <i class="fas fa-sun  icon-sun"></i>
-                    <i class="fas fa-moon icon-moon"></i>
-                </button>
-                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Patrick Adegbesan</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul><li><a href="/work.html">Work</a></li><li><a href="/services.html">Services</a></li><li><a href="/about.html" aria-current="page">About</a></li><li><a href="/contact.html">Contact</a></li></ul>
     </nav>
+  </div>
+</header>
 
-    <main>
+<main id="main">
+  <div class="wrap">
+    <header class="page-head intro" style="padding-bottom:48px">
+      <figure>
+        <img src="/assets/img/portrait-360.webp" srcset="/assets/img/portrait-360.webp 360w, /assets/img/portrait-720.webp 720w" sizes="(max-width:860px) 260px, 25vw" width="360" height="480" alt="Portrait of Patrick Adegbesan">
+      </figure>
+      <div class="prose">
+        <h1>About me</h1>
+        <p class="lede">I'm a full-stack developer in Lagos. I like the unglamorous parts of a product: the payment that must not go through twice, the sale that has to survive a dropped connection, the screen a vendor uses at a busy counter.</p>
+        <dl class="meta" style="margin-top:24px">
+          <dt>Based in</dt><dd>Lagos, Nigeria</dd>
+          <dt>Looking for</dt><dd class="avail">Full-stack roles and freelance projects</dd>
+        </dl>
+      </div>
+    </header>
 
-        <!-- Page header -->
-        <section class="page-hero">
-            <div class="container">
-                <span class="section-label">About</span>
-                <h1 class="section-title">The developer<br>behind the code</h1>
-            </div>
-        </section>
+    <section class="section two-col" aria-labelledby="bg">
+      <div class="side"><h2 id="bg">Background</h2></div>
+      <div class="main prose">
+        <p>I graduated from Caleb University in 2026 with a B.Sc. in Computer Science. My final-year project, AttendX, took class attendance using QR codes and face recognition.</p>
+        <p>I'm a software engineer at 3O1Atech, a small product studio, where I build CampusDash, ZeDI and ShelfFlow. Alongside that I take on freelance clients: an inventory and point-of-sale system and website for Fortune et Feveur, a tiling company, and websites for 3O1Atech and Palmwine Merchants. I've also entered two hackathons. I haven't worked in a large engineering team yet, and it's one of the things I'm looking for.</p>
+      </div>
+    </section>
 
-        <!-- Bio section -->
-        <section>
-            <div class="container">
-                <div class="about-intro">
-                    <div class="about-intro-image">
-                        <img src="img/profile.jpg" alt="Patrick Adegbesan">
-                    </div>
-                    <div class="about-intro-text">
-                        <h2>Hi, I'm Patrick.</h2>
-                        <p>
-                            I'm a full-stack and AI engineer based in Lagos, Nigeria, building at 3O1Atech and
-                            independently. I work at the point where AI systems meet real infrastructure — the part
-                            where a clever prototype has to become something that runs on its own.
-                        </p>
-                        <p>
-                            My work spans multi-agent LLM systems and reinforcement learning through to production
-                            platforms in Python, TypeScript and React. I've built a fourteen-agent LLM system with a
-                            provider-agnostic backend, an ensemble RL system carried across seven milestones to
-                            unattended deployment, and an AI fraud-detection product delivered under hackathon pressure.
-                        </p>
-                        <p>
-                            What I care about most is the layer people skip: the runbook, the alerting that surfaces
-                            signal instead of noise, the promotion gate that refuses a worse model, the audit trail
-                            behind every automated decision. Anyone can ship a demo. I'm interested in what happens
-                            on day ninety.
-                        </p>
-                        <p>
-                            I work AI-native — Claude Code is my daily build tool, and this site is maintained through
-                            it. When a task repeats, I turn it into a script. When a system is worth keeping, I
-                            document it properly.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section class="section two-col" aria-labelledby="cap">
+      <div class="side"><h2 id="cap">What I work with</h2><p class="muted small" style="margin-top:8px">Each line points to where you can see it.</p></div>
+      <div class="main">
+        <ul class="facts">
+          <li><strong>Web front ends:</strong> React, Next.js, TypeScript, Tailwind. <span class="muted">ZeDI web app and admin, CampusDash admin and website.</span></li>
+          <li><strong>Mobile:</strong> React Native with Expo; Capacitor; some Kotlin for card terminals. <span class="muted">ZeDI and CampusDash apps, F&amp;F terminal app.</span></li>
+          <li><strong>APIs and data:</strong> Node.js (Express, NestJS), PostgreSQL with Prisma, MongoDB, SQLite; Python with Django, Flask and FastAPI. <span class="muted">ZeDI, CampusDash, F&amp;F, hackathon entries.</span></li>
+          <li><strong>Payments:</strong> Paystack and Payaza webhooks with signature checks, idempotent requests, a double-entry ledger. <span class="muted">ZeDI, CampusDash.</span></li>
+          <li><strong>Offline and devices:</strong> local-first storage, two-way sync, Moniepoint and NEXGO terminal SDKs, receipt printing. <span class="muted">F&amp;F, CampusDash, ShelfFlow.</span></li>
+          <li><strong>Testing and delivery:</strong> Jest and Vitest, CI on GitHub Actions, Docker, Electron packaging. <span class="muted">ZeDI, CampusDash, F&amp;F.</span></li>
+        </ul>
+      </div>
+    </section>
 
-        <!-- Skills section -->
-        <section class="skills-section">
-            <div class="container">
-                <span class="section-label">Skills</span>
-                <h2 class="section-title">What I work with</h2>
-                <div class="skills-grid">
+    <section class="section two-col" aria-labelledby="how">
+      <div class="side"><h2 id="how">How I work</h2></div>
+      <div class="main prose">
+        <p>I use AI coding assistants every day, and my commit history shows it. They write a lot of first drafts. I decide how the system is built, set the rules it has to keep, review every change, debug what breaks and write the tests that prove it works. That's the part I'd want an employer or client to judge me on.</p>
+        <p>I write down decisions and limits as I go. Each case study on this site says which parts I built and which were shared, and what isn't finished.</p>
+      </div>
+    </section>
 
-                    <div class="skill-item">
-                        <i class="fab fa-python"></i>
-                        <h4>Python</h4>
-                        <p>Automation, backend scripting, API integrations, and data analysis</p>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-js-square"></i>
-                        <h4>JavaScript</h4>
-                        <p>Interactive frontend with modern ES6+ features and API integration</p>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-java"></i>
-                        <h4>Java</h4>
-                        <p>OOP, enterprise application development, and scalable system architecture</p>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-node-js"></i>
-                        <h4>Node.js</h4>
-                        <p>Scalable backend applications, REST APIs, and server-side logic</p>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-react"></i>
-                        <h4>React</h4>
-                        <p>Component-based UIs with hooks, state management, and reusable components</p>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-bolt"></i>
-                        <h4>Vite</h4>
-                        <p>Fast build tool and dev server for modern, high-performance web projects</p>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-html5"></i>
-                        <h4>HTML5</h4>
-                        <p>Semantic, accessible markup for clean and maintainable web structures</p>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-css3-alt"></i>
-                        <h4>CSS3</h4>
-                        <p>Responsive design with Flexbox, Grid, animations, and modern UI techniques</p>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-wind"></i>
-                        <h4>Tailwind CSS</h4>
-                        <p>Utility-first CSS for rapid UI development and consistent design systems</p>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-database"></i>
-                        <h4>PostgreSQL</h4>
-                        <p>Relational DB management with advanced querying and data integrity</p>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-database"></i>
-                        <h4>MongoDB</h4>
-                        <p>NoSQL document database for flexible, scalable data storage</p>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-chart-bar"></i>
-                        <h4>Data Analytics</h4>
-                        <p>Data cleaning, EDA, and visualization using SQL and spreadsheets</p>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-robot"></i>
-                        <h4>Vector Embeddings</h4>
-                        <p>AI-powered semantic search and similarity analysis</p>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-brain"></i>
-                        <h4>OpenAI</h4>
-                        <p>AI integration, NLP, and intelligent application development</p>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-github"></i>
-                        <h4>Git &amp; GitHub</h4>
-                        <p>Version control, collaboration, and open-source contribution workflows</p>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-chart-line"></i>
-                        <h4>Algo Trading</h4>
-                        <p>Expert Advisor development with MQL5 and Python for automated Forex trading</p>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-plug"></i>
-                        <h4>API Integration</h4>
-                        <p>REST APIs for data fetching, third-party integration, and dynamic web interactions</p>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-cloud-upload-alt"></i>
-                        <h4>Deployment</h4>
-                        <p>Deploying to Netlify, Vercel, GitHub Pages, Render, and beyond</p>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-bug"></i>
-                        <h4>Problem Solving</h4>
-                        <p>Strong debugging, logical thinking, and algorithmic problem-solving</p>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-users"></i>
-                        <h4>Client Communication</h4>
-                        <p>Effective communication, remote collaboration, and project management</p>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-terminal"></i>
-                        <h4>Claude Code</h4>
-                        <p>Daily build tool — shipping features, refactoring, and automating repetitive work</p>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-diagram-project"></i>
-                        <h4>Multi-Agent Systems</h4>
-                        <p>Orchestrating coordinated LLM agent pipelines with shared state and defined roles</p>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-fire"></i>
-                        <h4>PyTorch</h4>
-                        <p>Deep reinforcement learning — DQN, duelling architectures, prioritised replay</p>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-docker"></i>
-                        <h4>Docker</h4>
-                        <p>Containerised deployment with Compose, health checks, and systemd service units</p>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-magnifying-glass-chart"></i>
-                        <h4>RAG &amp; Vector Search</h4>
-                        <p>ChromaDB and FAISS retrieval pipelines with embeddings and semantic search</p>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-book"></i>
-                        <h4>Runbooks &amp; Ops</h4>
-                        <p>Monitoring, throttled alerting, failure playbooks, and operational documentation</p>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-stripe-s"></i>
-                        <h4>Stripe Connect</h4>
-                        <p>Marketplace payments, split commissions, seller onboarding, and webhooks</p>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-universal-access"></i>
-                        <h4>Accessibility</h4>
-                        <p>WCAG-conscious builds — ARIA live regions, keyboard nav, high-contrast modes</p>
-                    </div>
+    <section class="section two-col" aria-labelledby="certs">
+      <div class="side"><h2 id="certs">Certificates</h2></div>
+      <div class="main">
+        <ul class="facts">
+          <li>AI and Software Development, certificate of proficiency, The Code Center, November 2025. <a href="/asset/Adegbesan%20Patrick%20O%20(1).pdf">View PDF</a></li>
+          <li>Data Analytics Essentials, course completion, Cisco Networking Academy, May 2025. <a href="/asset/Adegbesan%20Patrick%20Oluwaseun.pdf">View PDF</a></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</main>
 
-                </div>
-            </div>
-        </section>
-
-        <!-- Resume CTA -->
-        <div class="resume-cta">
-            <span class="section-label">Resume</span>
-            <h2 class="section-title">Want the full picture?</h2>
-            <p>View my CV for a complete overview of my experience, education, and skills.</p>
-            <a href="resume.html" class="btn-primary">
-                <i class="fas fa-file-alt"></i> View Resume
-            </a>
-        </div>
-
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="mailto:adegbesanpatrick14@gmail.com" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://wa.me/2349054448465" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/patrick-adegbesan-708631346/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/patrickAdegbesan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-                <p>&copy; 2026 Mr-Path &mdash; Built with clean code and good taste.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="navigation.js"></script>
-    <script src="scroll-animations.js"></script>
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="cta">Tell me what you need built.</p>
+    <ul class="contact-list">
+      <li><a href="mailto:adegbesanpatrick14@gmail.com">Email</a></li>
+      <li><a href="https://wa.me/2349054448465">WhatsApp</a></li>
+      <li><a href="https://www.linkedin.com/in/patrick-adegbesan-708631346/">LinkedIn</a></li>
+      <li><a href="https://github.com/patrickAdegbesan">GitHub</a></li>
+    </ul>
+    <p class="fine">© 2026 Patrick Adegbesan. <a href="/contact.html">All contact details</a></p>
+  </div>
+</footer>
 </body>
 </html>

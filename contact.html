@@ -1,346 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-NG">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact — Patrick Adegbesan</title>
-    <script>(function(){var t=localStorage.getItem('theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');})();</script>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Patrick Adegbesan</title>
+<meta name="description" content="Email, WhatsApp, LinkedIn and GitHub for Patrick Adegbesan, a full-stack developer in Lagos open to junior roles and freelance projects.">
+<link rel="canonical" href="https://mr-path.site/contact.html">
+<meta name="theme-color" content="#23272A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact Patrick Adegbesan">
+<meta property="og:description" content="For roles, freelance projects or questions about my work.">
+<meta property="og:url" content="https://mr-path.site/contact.html">
+<meta property="og:image" content="https://mr-path.site/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
-
-    <nav>
-        <div class="nav-header">
-            <div class="nav-left">
-                <a href="index.html" class="logo">Mr-Path<span class="accent">.</span></a>
-            </div>
-            <div class="nav-center">
-                <div class="nav-menu">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="work.html">Work</a>
-                    <a href="contact.html" class="active">Contact</a>
-                </div>
-            </div>
-            <div class="nav-right">
-                <a href="contact.html" class="nav-cta">Hire Me</a>
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
-                    <i class="fas fa-sun  icon-sun"></i>
-                    <i class="fas fa-moon icon-moon"></i>
-                </button>
-                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Patrick Adegbesan</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul><li><a href="/work.html">Work</a></li><li><a href="/services.html">Services</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html" aria-current="page">Contact</a></li></ul>
     </nav>
+  </div>
+</header>
 
-    <main>
+<main id="main">
+  <div class="wrap">
+    <header class="page-head">
+      <h1>Contact</h1>
+      <p class="lede">Email is best for roles and project briefs. WhatsApp is fine for a quick question.</p>
+    </header>
 
-        <!-- Page header -->
-        <section class="page-hero">
-            <div class="container">
-                <span class="section-label">Contact</span>
-                <h1 class="section-title">Let's build something<br>together.</h1>
-                <p class="section-subtitle">
-                    Have a project in mind? Tell me about it — I'll get back to you within 24 hours.
-                </p>
-            </div>
-        </section>
+    <section class="section" aria-labelledby="ch">
+      <h2 id="ch" class="vh">Ways to reach me</h2>
+      <ul class="channels">
+        <li><span class="label">Email</span><a href="mailto:adegbesanpatrick14@gmail.com">adegbesanpatrick14@gmail.com</a></li>
+        <li><span class="label">WhatsApp</span><a href="https://wa.me/2349054448465">+234 905 444 8465</a></li>
+        <li><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/patrick-adegbesan-708631346/">Patrick Adegbesan</a></li>
+        <li><span class="label">GitHub</span><a href="https://github.com/patrickAdegbesan">patrickAdegbesan</a></li>
+      </ul>
+    </section>
 
-        <!-- Contact grid -->
-        <section class="contact-section">
-            <div class="container">
-                <div class="contact-grid">
+    <section class="section two-col" aria-labelledby="inc">
+      <div class="side"><h2 id="inc">What to include</h2></div>
+      <div class="main prose">
+        <p><strong>Hiring for a role:</strong> the role, team, location or remote setup, and how your process works. I'm happy to walk through any project on this site in a technical interview, including the private ones.</p>
+        <p><strong>A project:</strong> what you need built, who will use it, anything that already exists (a site, designs, a spreadsheet), and any date it has to be ready by.</p>
+      </div>
+    </section>
+  </div>
+</main>
 
-                    <!-- Left: contact info -->
-                    <div class="contact-info-block">
-                        <h3>Reach me directly</h3>
-                        <p>
-                            Whether you need a full-stack web app, an AI integration, or want to
-                            discuss a project idea — I'm ready to listen.
-                        </p>
-                        <div class="contact-items">
-                            <a href="mailto:adegbesanpatrick14@gmail.com" class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                adegbesanpatrick14@gmail.com
-                            </a>
-                            <a href="tel:+2349054448465" class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                +234 905 444 8465
-                            </a>
-                            <a href="https://www.linkedin.com/in/patrick-adegbesan-708631346/" target="_blank" rel="noopener" class="contact-item">
-                                <i class="fab fa-linkedin"></i>
-                                linkedin.com/in/patrick-adegbesan
-                            </a>
-                            <a href="https://github.com/patrickAdegbesan" target="_blank" rel="noopener" class="contact-item">
-                                <i class="fab fa-github"></i>
-                                github.com/patrickAdegbesan
-                            </a>
-                            <div class="contact-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                Lagos, Nigeria
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right: form -->
-                    <div class="contact-form-section">
-                        <h3>Send me a message</h3>
-                        <form class="contact-form" id="contact-form" novalidate>
-
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="from_name" placeholder="Your Name" required minlength="2" maxlength="50">
-                                <span class="error-message" id="name-error"></span>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="from_email" placeholder="your@email.com" required>
-                                <span class="error-message" id="email-error"></span>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input type="text" id="subject" name="subject" placeholder="What's this about?" required minlength="5" maxlength="100">
-                                <span class="error-message" id="subject-error"></span>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" placeholder="Tell me about your project..." rows="5" required minlength="10" maxlength="1000"></textarea>
-                                <span class="error-message" id="message-error"></span>
-                                <span class="char-count">0/1000</span>
-                            </div>
-
-                            <!-- Honeypot spam protection -->
-                            <input type="text" name="honeypot" id="honeypot" style="display:none;" tabindex="-1" autocomplete="off">
-
-                            <div class="form-group checkbox-group">
-                                <input type="checkbox" id="privacy" name="privacy" required>
-                                <label for="privacy" class="checkbox-label">
-                                    I agree to the <a href="#" target="_blank">Privacy Policy</a> and consent to my data being used for this inquiry.
-                                </label>
-                                <span class="error-message" id="privacy-error"></span>
-                            </div>
-
-                            <button type="submit" class="btn-primary" id="submit-btn">
-                                <i class="fas fa-paper-plane"></i> Send Message
-                            </button>
-
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="mailto:adegbesanpatrick14@gmail.com" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://wa.me/2349054448465" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/patrick-adegbesan-708631346/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/patrickAdegbesan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-                <p>&copy; 2026 Mr-Path &mdash; Built with clean code and good taste.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        const EMAIL_CONFIG = {
-            publicKey:  'y3OD9xEoEyc4YHO0s',
-            serviceID:  'service_dcjtj6p',
-            templateID: 'template_ricqxza'
-        };
-
-        emailjs.init(EMAIL_CONFIG.publicKey);
-
-        const VALIDATION_PATTERNS = {
-            email:   /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-            name:    /^[a-zA-Z\s]{2,50}$/,
-            subject: /^.{5,100}$/,
-            message: /^[\s\S]{10,1000}$/
-        };
-
-        const form      = document.getElementById('contact-form');
-        const submitBtn = document.getElementById('submit-btn');
-        const msgArea   = document.getElementById('message');
-        const charCount = document.querySelector('.char-count');
-
-        function validateField(field) {
-            const value     = field.value.trim();
-            const fieldName = field.name;
-            const errorEl   = document.getElementById(`${field.id}-error`);
-            let isValid = true;
-            let errorMessage = '';
-
-            field.classList.remove('error', 'success');
-            field.parentElement.classList.remove('has-error', 'has-success');
-
-            if (!value && field.hasAttribute('required')) {
-                errorMessage = `${getDisplayName(fieldName)} is required.`;
-                isValid = false;
-            } else if (value) {
-                switch (fieldName) {
-                    case 'from_name':
-                        if (!VALIDATION_PATTERNS.name.test(value)) {
-                            errorMessage = 'Name must be 2–50 characters, letters only.';
-                            isValid = false;
-                        }
-                        break;
-                    case 'from_email':
-                        if (!VALIDATION_PATTERNS.email.test(value)) {
-                            errorMessage = 'Please enter a valid email address.';
-                            isValid = false;
-                        }
-                        break;
-                    case 'subject':
-                        if (!VALIDATION_PATTERNS.subject.test(value)) {
-                            errorMessage = 'Subject must be 5–100 characters.';
-                            isValid = false;
-                        }
-                        break;
-                    case 'message':
-                        if (!VALIDATION_PATTERNS.message.test(value)) {
-                            errorMessage = 'Message must be 10–1000 characters.';
-                            isValid = false;
-                        }
-                        break;
-                    case 'privacy':
-                        if (!field.checked) {
-                            errorMessage = 'You must agree to the privacy policy.';
-                            isValid = false;
-                        }
-                        break;
-                }
-            }
-
-            if (errorEl) {
-                errorEl.textContent = errorMessage;
-                errorEl.classList.toggle('show', !isValid);
-            }
-
-            if (value || field.type === 'checkbox') {
-                field.classList.add(isValid ? 'success' : 'error');
-                field.parentElement.classList.add(isValid ? 'has-success' : 'has-error');
-            }
-
-            return isValid;
-        }
-
-        function validateForm() {
-            const fields = form.querySelectorAll('input, textarea');
-            let valid = true;
-            fields.forEach(f => {
-                if (f.name !== 'honeypot' && !validateField(f)) valid = false;
-            });
-            return valid;
-        }
-
-        function getDisplayName(name) {
-            return { from_name: 'Name', from_email: 'Email', subject: 'Subject', message: 'Message', privacy: 'Privacy agreement' }[name] || name;
-        }
-
-        function updateCharCount() {
-            const len = msgArea.value.length;
-            charCount.textContent = `${len}/1000`;
-            charCount.classList.remove('warning', 'danger');
-            if (len > 800) charCount.classList.add('warning');
-            if (len > 950) charCount.classList.add('danger');
-        }
-
-        function setButtonState(state) {
-            submitBtn.classList.remove('loading', 'success', 'error');
-            submitBtn.disabled = false;
-            const icons = { loading: 'fa-spinner fa-spin', success: 'fa-check', error: 'fa-exclamation-triangle', default: 'fa-paper-plane' };
-            const labels = { loading: 'Sending...', success: 'Message Sent!', error: 'Failed to Send', default: 'Send Message' };
-            const s = state || 'default';
-            submitBtn.innerHTML = `<i class="fas ${icons[s]}"></i> ${labels[s]}`;
-            if (s === 'loading') { submitBtn.classList.add('loading'); submitBtn.disabled = true; }
-            if (s === 'success') submitBtn.classList.add('success');
-            if (s === 'error')   submitBtn.classList.add('error');
-        }
-
-        function showNotification(message, type = 'info') {
-            const icons = { success: 'fa-check-circle', error: 'fa-exclamation-triangle' };
-            const n = document.createElement('div');
-            n.className = `notification ${type}`;
-            n.setAttribute('role', 'alert');
-            n.innerHTML = `<i class="fas ${icons[type] || 'fa-info-circle'}"></i><span>${message}</span><button onclick="this.parentElement.remove()" aria-label="Close"><i class="fas fa-times"></i></button>`;
-            document.body.appendChild(n);
-            setTimeout(() => {
-                if (n.parentElement) { n.style.transform = 'translateX(420px)'; setTimeout(() => n.remove(), 300); }
-            }, 5000);
-        }
-
-        async function handleSubmit(e) {
-            e.preventDefault();
-            if (!validateForm()) { showNotification('Please fix the errors before submitting.', 'error'); return; }
-            if (document.getElementById('honeypot').value) return;
-
-            setButtonState('loading');
-            try {
-                await emailjs.sendForm(EMAIL_CONFIG.serviceID, EMAIL_CONFIG.templateID, form);
-                setButtonState('success');
-                showNotification("Your message has been sent! I'll get back to you soon.", 'success');
-                form.reset();
-                updateCharCount();
-                form.querySelectorAll('.error, .success').forEach(el => el.classList.remove('error', 'success'));
-                form.querySelectorAll('.has-error, .has-success').forEach(el => el.classList.remove('has-error', 'has-success'));
-                form.querySelectorAll('.error-message.show').forEach(el => el.classList.remove('show'));
-            } catch (err) {
-                setButtonState('error');
-                showNotification('Sorry, something went wrong. Please try again or contact me directly.', 'error');
-            }
-            setTimeout(() => setButtonState('default'), 3000);
-        }
-
-        form.addEventListener('submit', handleSubmit);
-        form.querySelectorAll('input, textarea').forEach(f => {
-            if (f.name !== 'honeypot') {
-                f.addEventListener('blur', () => validateField(f));
-                f.addEventListener('input', () => {
-                    if (f.classList.contains('error')) { f.classList.remove('error'); f.parentElement.classList.remove('has-error'); }
-                });
-            }
-        });
-        msgArea.addEventListener('input', updateCharCount);
-        updateCharCount();
-
-        form.querySelectorAll('input').forEach(input => {
-            input.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    e.preventDefault();
-                    const all = Array.from(form.querySelectorAll('input, textarea, button'));
-                    const next = all[all.indexOf(this) + 1];
-                    if (next) next.focus();
-                }
-            });
-        });
-    </script>
-
-    <script src="navigation.js"></script>
-    <script src="scroll-animations.js"></script>
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="cta">Tell me what you need built.</p>
+    <ul class="contact-list">
+      <li><a href="mailto:adegbesanpatrick14@gmail.com">Email</a></li>
+      <li><a href="https://wa.me/2349054448465">WhatsApp</a></li>
+      <li><a href="https://www.linkedin.com/in/patrick-adegbesan-708631346/">LinkedIn</a></li>
+      <li><a href="https://github.com/patrickAdegbesan">GitHub</a></li>
+    </ul>
+    <p class="fine">© 2026 Patrick Adegbesan.</p>
+  </div>
+</footer>
 </body>
 </html>
