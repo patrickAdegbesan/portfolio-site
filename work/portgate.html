@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en-NG">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PortGate Nexus, Patrick Adegbesan</title>
+<meta name="description" content="Patrick Adegbesan's part in PortGate Nexus, a Nigerian trade-compliance platform: payments and officer workflow, deployment hardening, and an LLM tariff-code classifier that can't invent codes.">
+<link rel="canonical" href="https://mr-path.site/work/portgate.html">
+<meta name="theme-color" content="#23272A">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PortGate Nexus, Patrick Adegbesan">
+<meta property="og:description" content="Trade-compliance platform: my part, including an LLM tariff classifier checked against the official tariff table.">
+<meta property="og:url" content="https://mr-path.site/work/portgate.html">
+<meta property="og:image" content="https://mr-path.site/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Patrick Adegbesan</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul><li><a href="/work.html" aria-current="true">Work</a></li><li><a href="/services.html">Services</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <header class="cs-head">
+      <p class="crumb"><a href="/work.html">Work</a> / Project</p>
+      <h1>PortGate Nexus</h1>
+      <p class="lede">A trade-compliance platform for Nigerian importers and exporters: SONCAP and NAFDAC processes, customs documents, duty estimates and offshore payments, with separate portals for customers and compliance officers.</p>
+      <p class="cond"><b>Condition:</b> tariff codes decide how much duty a business pays. An AI can suggest a code, but it must never be allowed to invent one.</p>
+      <dl class="credits">
+        <dt>Engagement</dt><dd>3O1Atech product, led by my co-developer</dd>
+        <dt>My part</dt><dd>Contributor, about one in six commits: payments and pricing, support and officer workflow, the LLM tariff classifier, security hardening and deployment</dd>
+        <dt>Status</dt><dd>Live. The LLM classifier is built on a branch and not yet released.</dd>
+        <dt>Stack</dt><dd>React, Django REST Framework, FastAPI, OpenAI-compatible LLM APIs (Gemini and others)</dd>
+        <dt>Links</dt><dd><a href="https://portgatenexus.com/">portgatenexus.com</a> (code is private)</dd>
+      </dl>
+    </header>
+  </div>
+
+  <section class="shot-band" aria-label="Screenshots">
+    <div class="wrap">
+      <div class="gallery wide">
+        <figure><img src="/assets/img/pg-home-1600.webp" srcset="/assets/img/pg-home-800.webp 800w, /assets/img/pg-home-1600.webp 1600w" sizes="(max-width:1320px) 100vw, 1200px" width="1600" height="1000" alt="PortGate Nexus home page: the digital nerve center for trade, compliance and cross-border intelligence, with links to start a compliance process or resolve a trade dispute"><figcaption>The public site at portgatenexus.com, captured live.</figcaption></figure>
+        <figure><img src="/assets/img/pg-services-1600.webp" srcset="/assets/img/pg-services-800.webp 800w, /assets/img/pg-services-1600.webp 1600w" sizes="(max-width:1320px) 100vw, 1200px" width="1600" height="898" loading="lazy" alt="Six service pillars, including compliance facilitation, customs liaison, offshore payments, trade finance, FX monitoring, and shipment tracking marked coming soon"><figcaption>Services. Shipment tracking is marked "Coming Soon" because it isn't built yet.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap cs-body">
+    <section class="two-col" aria-labelledby="s1">
+      <div class="side"><h2 id="s1">What I built</h2></div>
+      <div class="main prose">
+        <ul>
+          <li><strong>Payments and pricing.</strong> Pricing worked out from the number of containers in a shipment, payment verification, blocking incomplete duty submissions, and a pay-later option.</li>
+          <li><strong>Support and officer workflow.</strong> Support tickets that staff can claim and transfer, assigning officers to a client's transaction, and a message tab with in-page chat on each shipment.</li>
+          <li><strong>Security and deployment.</strong> Hardening and VPS deployment for the API and the AI service; a cookie notice and policy pages on the site.</li>
+          <li><strong>FX monitor.</strong> Shows how each official exchange rate has moved since the previous Central Bank publication.</li>
+        </ul>
+        <p>Most of PortGate was written by my co-developer. The list above is my part.</p>
+      </div>
+    </section>
+
+    <section class="two-col" aria-labelledby="s2">
+      <div class="side"><h2 id="s2">The hard part</h2></div>
+      <div class="main prose">
+        <p>Classifying goods into the right HS tariff code from a plain description, such as a line on an invoice. I built the classifier in the AI service so that the model chooses, but never makes up, the answer:</p>
+        <ol>
+          <li>A semantic search over Nigeria's Common External Tariff table finds the most likely candidate codes.</li>
+          <li>An LLM picks among them using two strategies at once: choosing straight from the candidates, and choosing the heading first and then the line within it.</li>
+          <li>Every code the model returns is checked against the tariff table, so an invented code can't get through. When both strategies agree, confidence goes up.</li>
+          <li>Answers already verified by officers come first; the older classifier remains as a fallback. Providers rotate when one is rate-limited, and whole invoices can be classified at once.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="two-col" aria-labelledby="s3">
+      <div class="side"><h2 id="s3">Where it stands</h2></div>
+      <div class="main prose">
+        <p>The platform is live. The site hardening, cookie notice and policy pages went live in November 2026. My classifier, the FX-change feature and the API and AI-service hardening are on a branch waiting to be merged and released, so the live site doesn't use them yet.</p>
+      </div>
+    </section>
+
+    <nav class="next" aria-label="More work">
+      <a href="/work.html">All work</a>
+      <a href="/work/pdf-chat.html">Next: PDF chat</a>
+    </nav>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="cta">Tell me what you need built.</p>
+    <ul class="contact-list">
+      <li><a href="mailto:adegbesanpatrick14@gmail.com">Email</a></li>
+      <li><a href="https://wa.me/2349054448465">WhatsApp</a></li>
+      <li><a href="https://www.linkedin.com/in/patrick-adegbesan-708631346/">LinkedIn</a></li>
+      <li><a href="https://github.com/patrickAdegbesan">GitHub</a></li>
+    </ul>
+    <p class="fine">© 2026 Patrick Adegbesan. <a href="/contact.html">All contact details</a></p>
+  </div>
+</footer>
+</body>
+</html>
